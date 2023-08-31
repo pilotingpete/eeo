@@ -1,0 +1,4 @@
+1
+9
+.tran 0.5us 2ms 0{return}{return}
+0

@@ -1,0 +1,10 @@
+1
+9
+.tran 100ms 10000ms{return}{return}
+2
+1
+Vin
+V
+1
+Vout
+V
