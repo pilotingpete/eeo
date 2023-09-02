@@ -1,0 +1,53 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{tabularray}
+
+\begin{document}
+	
+	
+	\title{EEO 352 Lab 2}
+	\author{Pete Mills}
+	
+	% Full-page width cover page
+	\IEEEoverridecommandlockouts
+	\maketitle
+	
+	\IEEEpubidadjcol % Adjusts column spacing for cover page
+	
+	\begin{table}
+		\centering
+		\caption{Scoring Table}
+		
+		\begin{tblr}{
+				colspec={X[l] X[.2,c] X[.2,c]},
+				hlines,
+				vlines,
+				row{1}={font=\bfseries},
+				rowhead=1,
+				cells={font=\small}
+			}
+			Item & Credit & Score \\
+			\SetCell[c=3]{c} Low-pass or High-pass Filter &  & \\
+			Circuit Diagram with Values of Components & 1 & \\
+			Measured and Calculated Frequency Plot; -3dB Point & 3 & \\
+			Transient, Time Response & 1 &\\
+			\SetCell[c=3]{c} Diodes & & 2 \\
+			I-V Plot & 2 & \\
+			Curve Fitting; IS, $\eta$ & 3 & \\
+			
+			Total  & 10 & \\
+		\end{tblr}
+	\end{table}
+	
+	\begin{abstract}
+		Abstract text here.
+	\end{abstract}
+	
+	\IEEEpubidadjcol % Adjusts column spacing for cover page
+	
+	%\newpage % Start IEEE formatting on a new page
+	
+	\title{Short Report Title} % Title for page 2 onwards
+	\maketitle
+	
+	
+\end{document}

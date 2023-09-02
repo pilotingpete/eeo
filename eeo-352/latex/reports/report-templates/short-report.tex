@@ -1,0 +1,66 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{tabularray}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Define a custom command for text fields with desired properties
+\newcommand{\customTextField}[1]{%
+	\TextField[bordercolor=red,width=2em]{#1}%
+}
+
+\begin{document}
+	
+	
+	\title{Short Report Title}
+	\author{Pete Mills}
+	
+	% Full-page width cover page
+	\IEEEoverridecommandlockouts
+	\maketitle
+	
+	\IEEEpubidadjcol % Adjusts column spacing for cover page
+	
+	\begin{table}
+		\centering
+		\caption{Scoring Table}
+		
+		\begin{tblr}{
+				colspec={X[l] X[.2,c] X[.2,c]},
+				hlines,
+				vlines,
+				row{1}={font=\bfseries},
+				rowhead=1,
+				cells={font=\small}
+			}
+			Item & Credit & Score \\
+			\SetCell[c=3]{c} Low-pass or High-pass Filter &  & \\
+			Circuit Diagram with Values of Components & 1 & \customTextField{} \\
+			Measured and Calculated Frequency Plot; -3dB Point & 3 & \\
+			Transient, Time Response & 1 &\\
+			\SetCell[c=3]{c} Diodes & & 2 \\
+			I-V Plot & 2 & \\
+			Curve Fitting; IS, $\eta$ & 3 & \\
+			
+			Total  & 10 & \\
+		\end{tblr}
+	\end{table}
+	
+	\begin{abstract}
+		The abstract is a short summary of the main ideas found in the lab report. It should include 1) the purpose of the study or the question being addressed by the study, 2) the procedures used in the study, 3) the major results of the study, and 4) any conclusions drawn by the author(s).
+	\end{abstract}
+	
+	\IEEEpubidadjcol % Adjusts column spacing for cover page
+	
+	%\newpage % Start IEEE formatting on a new page
+	
+	\title{Short Report Title} % Title for page 2 onwards
+	\maketitle
+	
+	\section{Data}
+	
+	\section{analysis}
+	
+	\section{conclusion}
+	
+	
+\end{document}

@@ -1,0 +1,291 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.1)  1 SEP 2023 06:32
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**lab-2.tex
+(./lab-2.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21> (./IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen138
+\@IEEEtrantmpdimenB=\dimen139
+\@IEEEtrantmpdimenC=\dimen140
+\@IEEEtrantmpcountA=\count185
+\@IEEEtrantmpcountB=\count186
+\@IEEEtrantmpcountC=\count187
+\@IEEEtrantmptoksA=\toks16
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
+03.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen141
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen142
+\CLASSINFOnormalsizeunitybaselineskip=\dimen143
+\IEEEnormaljot=\dimen144
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen145
+\IEEEquantizedlengthdiff=\dimen146
+\IEEEquantizedtextheightdiff=\dimen147
+\IEEEilabelindentA=\dimen148
+\IEEEilabelindentB=\dimen149
+\IEEEilabelindent=\dimen150
+\IEEEelabelindent=\dimen151
+\IEEEdlabelindent=\dimen152
+\IEEElabelindent=\dimen153
+\IEEEiednormlabelsep=\dimen154
+\IEEEiedmathlabelsep=\dimen155
+\IEEEiedtopsep=\skip47
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@IEEEsubequation=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\c@figure=\count193
+\c@table=\count194
+\@IEEEeqnnumcols=\count195
+\@IEEEeqncolcnt=\count196
+\@IEEEsubeqnnumrollback=\count197
+\@IEEEquantizeheightA=\dimen156
+\@IEEEquantizeheightB=\dimen157
+\@IEEEquantizeheightC=\dimen158
+\@IEEEquantizeprevdepth=\dimen159
+\@IEEEquantizemultiple=\count198
+\@IEEEquantizeboxA=\box50
+\@IEEEtmpitemindent=\dimen160
+\IEEEPARstartletwidth=\dimen161
+\c@IEEEbiography=\count199
+\@IEEEtranrubishbin=\box51
+) (/usr/share/texlive/texmf-dist/tex/latex/tabularray/tabularray.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count266
+\l__pdf_internal_box=\box52
+))
+Package: tabularray 2021-12-01 v2021Q Typeset tabulars and arrays with LaTeX3
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+\l__tblr_a_int=\count267
+\l__tblr_c_int=\count268
+\l__tblr_r_int=\count269
+\l__tblr_d_dim=\dimen162
+\l__tblr_h_dim=\dimen163
+\l__tblr_o_dim=\dimen164
+\l__tblr_p_dim=\dimen165
+\l__tblr_q_dim=\dimen166
+\l__tblr_r_dim=\dimen167
+\l__tblr_s_dim=\dimen168
+\l__tblr_t_dim=\dimen169
+\l__tblr_v_dim=\dimen170
+\l__tblr_w_dim=\dimen171
+\l__tblr_a_box=\box53
+\l__tblr_b_box=\box54
+\l__tblr_c_box=\box55
+\l__tblr_d_box=\box56
+\g__tblr_table_count_int=\count270
+\c@rownum=\count271
+\c@colnum=\count272
+\c@rowcount=\count273
+\c@colcount=\count274
+\abovesep=\dimen172
+\belowsep=\dimen173
+\leftsep=\dimen174
+\rightsep=\dimen175
+\g_tblr_level_int=\count275
+\g__tblr_data_row_key_count_int=\count276
+\g__tblr_data_column_key_count_int=\count277
+\g__tblr_data_cell_key_count_int=\count278
+\g__tblr_array_int=\count279
+\l__tblr_key_count_int=\count280
+\l__tblr_key_quotient_int=\count281
+\l__tblr_key_quotient_two_int=\count282
+\l__tblr_key_remainder_int=\count283
+\g__tblr_data_str_value_count_int=\count284
+\rulewidth=\dimen176
+\l__multicolumn_cell_number_int=\count285
+\l__tblr_strut_ht_box=\box57
+\l__tblr_strut_dp_box=\box58
+\g__tblr_cell_wd_dim=\dimen177
+\g__tblr_cell_ht_dim=\dimen178
+\g__tblr_cell_head_dim=\dimen179
+\g__tblr_cell_foot_dim=\dimen180
+\l__column_target_dim=\dimen181
+\l__tblr_caption_box=\box59
+\l__tblr_caption_left_box=\box60
+\l__tblr_row_head_box=\box61
+\l__tblr_row_foot_box=\box62
+\l__tblr_row_head_foot_dim=\dimen182
+\tablewidth=\dimen183
+\l__tblr_table_firsthead_box=\box63
+\l__tblr_table_middlehead_box=\box64
+\l__tblr_table_lasthead_box=\box65
+\l__tblr_table_firstfoot_box=\box66
+\l__tblr_table_middlefoot_box=\box67
+\l__tblr_table_lastfoot_box=\box68
+\l__tblr_remain_height_dim=\dimen184
+\l__tblr_long_from_int=\count286
+\l__tblr_long_to_int=\count287
+\l__tblr_curr_i_int=\count288
+\l__tblr_prev_i_int=\count289
+\l__tblr_table_page_int=\count290
+\l__tblr_table_head_box=\box69
+\l__tblr_table_foot_box=\box70
+\l__tblr_table_head_foot_dim=\dimen185
+\l__tblr_table_head_body_foot_dim=\dimen186
+\l__tblr_table_box=\box71
+\l__tblr_table_hlines_box=\box72
+\l__tblr_hline_box=\box73
+\l__tblr_row_box=\box74
+\l__tblr_col_o_wd_dim=\dimen187
+\l__tblr_col_b_wd_dim=\dimen188
+\l__tblr_hline_leftskip_dim=\dimen189
+\l__tblr_hline_rightskip_dim=\dimen190
+\l__tblr_row_ht_dim=\dimen191
+\l__tblr_row_dp_dim=\dimen192
+\l__tblr_row_abovesep_dim=\dimen193
+\l__tblr_row_belowsep_dim=\dimen194
+\l__tblr_row_vlines_box=\box75
+\l__tblr_vline_box=\box76
+\l__tblr_cell_box=\box77
+\l__row_upper_dim=\dimen195
+\l__row_lower_dim=\dimen196
+\l__row_vpace_dim=\dimen197
+\l__tblr_vline_aboveskip_dim=\dimen198
+\l__tblr_vline_belowskip_dim=\dimen199
+\l__tblr_cell_wd_dim=\dimen256
+\l__tblr_cell_ht_dim=\dimen257
+\l__tblr_diag_box=\box78
+)
+(./lab-2.aux)
+\openout1 = `lab-2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+
+-- Lines per column: 56 (exact).
+** ATTENTION: Overriding command lockouts (line 12).
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 39.
+> Step: build the whole table.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 39.
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+
+] (./lab-2.aux) ) 
+Here is how much of TeX's memory you used:
+ 3269 strings out of 480171
+ 78945 string characters out of 5894490
+ 376610 words of memory out of 5000000
+ 21272 multiletter control sequences out of 15000+600000
+ 502665 words of font info for 88 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 54i,9n,98p,223b,649s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb>
+Output written on lab-2.pdf (1 page, 40800 bytes).
+PDF statistics:
+ 29 PDF objects out of 1000 (max. 8388607)
+ 17 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
