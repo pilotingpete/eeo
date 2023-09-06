@@ -1,10 +1,20 @@
 \documentclass[conference]{IEEEtran}
 \usepackage{tabularray}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphics}
+
+% Define a custom command for text fields with desired properties
+\newcommand{\customTextField}[1]{%
+	\TextField[bordercolor=red,width=2em]{#1}%
+}
 
 \begin{document}
 	
 	
-	\title{EEO 352 Lab 2}
+	\title{EEO352 Lab 2}
 	\author{Pete Mills}
 	
 	% Full-page width cover page
@@ -25,29 +35,82 @@
 				rowhead=1,
 				cells={font=\small}
 			}
-			Item & Credit & Score \\
+			\SetCell[c=1]{c}Item & Credit & Score \\
 			\SetCell[c=3]{c} Low-pass or High-pass Filter &  & \\
-			Circuit Diagram with Values of Components & 1 & \\
-			Measured and Calculated Frequency Plot; -3dB Point & 3 & \\
-			Transient, Time Response & 1 &\\
-			\SetCell[c=3]{c} Diodes & & 2 \\
-			I-V Plot & 2 & \\
-			Curve Fitting; IS, $\eta$ & 3 & \\
+			Circuit Diagram with Values of Components & 1 & \customTextField{} \\
+			Measured and Calculated Frequency Plot; -3dB Point & 3 &  \customTextField{} \\
+			Transient, Time Response & 1 &  \customTextField{} \\
+			\SetCell[c=3]{c} Diodes & & \\
+			I-V Plot & 2 &  \customTextField{} \\
+			Curve Fitting; IS, $\eta$ & 3 & \customTextField{} \\
 			
-			Total  & 10 & \\
+			Total  & 10 & \customTextField{} \\
 		\end{tblr}
 	\end{table}
 	
 	\begin{abstract}
-		Abstract text here.
+		The abstract is a short summary of the main ideas found in the lab report. It should include 1) the purpose of the study or the question being addressed by the study, 2) the procedures used in the study, 3) the major results of the study, and 4) any conclusions drawn by the author(s).
 	\end{abstract}
 	
-	\IEEEpubidadjcol % Adjusts column spacing for cover page
+	\section{Circuit Design}
 	
-	%\newpage % Start IEEE formatting on a new page
+	A Low Pass Filter (LPF) shall be designed with a cutoff frequency around 20kHz +/-20\%. 
 	
-	\title{Short Report Title} % Title for page 2 onwards
-	\maketitle
+	The equation for a first-order low-pass filter is given by:
+	
+	\[
+	f_c = \frac{1}{2\pi RC} \tag{LPF Cutoff Frequency}
+	\]
+	
+	where \(R\) is resistance, \(C\) is the capacitance, and \(f_c\) is the cutoff frequency.
+		
+	The equation for resistance (\(R\)) is given by:
+	
+	\[
+	R = \frac{1}{2\pi Cf_c} \tag{LPF Resistance}
+	\]
+	
+	
+	
+	From the available capacitors in our kit I select 4700pf.
+	
+	Solving for (\(R\)) we have:
+	
+	\[
+	R = \frac{1}{2\pi 4700pF \cdot 20kHz}
+	\]
+	
+	\[
+	R = \SI{1692.58}{\ohm}
+	\]
+	
+	Selecting the nearest standard value (\SI{1.7}{\kohm}) we solve for frequency:
+	
+	\[
+	f_c = \frac{1}{2\pi 1k7 \cdot 4700pF}
+	\]
+	
+	\[
+	f_c \approx \SI{19827.51}{\hertz}
+	\]
+	
+	
+	The percent difference between \SI{19827.51}{\hertz} and \SI{20000}{\hertz} is approximately
+	\[
+	\left| \frac{\SI{19827.51}{\hertz} - \SI{20000}{\hertz}}{\frac{\SI{19827.51}{\hertz} + \SI{20000}{\hertz}}{2}} \right| \times 100\% \approx \SI{0.864}{\percent}.
+	\]
+	
+	Which is within the 20\% requirement so we can proceed.
+	
+	\section{Simulation}
+	
+	
+	
+	\section{Data}
+	
+	\section{analysis}
+	
+	\section{conclusion}
 	
 	
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.1)  1 SEP 2023 07:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.6.1)  5 SEP 2023 19:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -478,7 +478,7 @@ Package rerunfilecheck Info: File `short-report.out' has not changed.
 Here is how much of TeX's memory you used:
  11203 strings out of 480171
  200800 string characters out of 5894490
- 522954 words of memory out of 5000000
+ 523847 words of memory out of 5000000
  29066 multiletter control sequences out of 15000+600000
  504389 words of font info for 90 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -488,10 +488,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb>
-Output written on short-report.pdf (1 page, 46602 bytes).
+Output written on short-report.pdf (1 page, 46806 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 102 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  6 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
