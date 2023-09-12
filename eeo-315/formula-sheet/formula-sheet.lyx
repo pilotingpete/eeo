@@ -1,0 +1,1983 @@
+#LyX file created by tex2lyx 2.3
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin /home/pete/Downloads/formula-sheet-20230721T120803Z-001/formula-sheet/
+\textclass article
+\begin_preamble
+\usepackage{multicol}
+%\usepackage{calc}
+\usepackage{ifthen}
+%\usepackage{verbatim}
+\usepackage{siunitx}
+
+
+
+
+% This sets page margins to .5 inch if using letter paper, and to 1cm
+% if using A4 paper. (This probably isn't strictly necessary.)
+% If using another size paper, use default 1cm margins.
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+	{  }
+	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+		{ }
+		{ }
+	}
+
+% Turn off header and footer
+
+ 
+
+% Redefine section commands to use less space
+
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+
+
+% Define BibTeX command
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Don't print section numbers
+
+
+
+
+
+
+
+% -----------------------------------------------------------------------
+
+
+\end_preamble
+\use_default_options false
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation landscape
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 0
+\tocdepth 3
+\paragraph_separation skip
+\defskip 0pt plus 0.5ex
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+raggedright
+\end_layout
+
+\end_inset
+
+ 
+\size footnotesize
+
+\begin_inset Flex Flex:Multiple Columns
+status collapsed
+
+\begin_layout Standard
+
+\size footnotesize
+
+\begin_inset Argument 1
+status collapsed
+
+
+\begin_layout Standard
+
+\size footnotesize
+3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% multicol parameters
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% These lengths are set only within the two main columns
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%
+\backslash
+setlength{
+\backslash
+columnseprule}{0.25pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+setlength{
+\backslash
+premulticols}{1pt}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+setlength{
+\backslash
+postmulticols}{1pt}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+setlength{
+\backslash
+multicolsep}{1pt}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+setlength{
+\backslash
+columnsep}{2pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+% Page title
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size footnotesize
+
+\size larger
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\series bold
+EE Formula Sheet
+\series default
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+newlength{
+\backslash
+MyLen}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\end_layout
+
+\begin_layout Section
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+1.1 - Semiconductor Materials
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+DC variables are denoted by uppercase letters and uppercase subscripts.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="5" columns="3">
+<features rotate="0" tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="c">
+\begin_inset Text
+
+\begin_layout Standard
+
+\size larger
+Semiconductor constants
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\size larger
+Material 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $Eg(eV)$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $B(cm^{-3}K^{-3/2}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\size larger
+Silicon (Si) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\size larger
+1.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+num
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+5.23e-15
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\size larger
+Gallium arsenide (GaAs) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\size larger
+1.4 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+num
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+2.10e-14
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\size larger
+Germanium (Ge) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\size larger
+0.66 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+num
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+1.66e-15
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Intrinsic carrier concentration of Si
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $$
+\end_inset
+
+ni = BT
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+3/2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+e
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+frac
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+-Eg
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+2kT
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Where: 
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+k is Boltzmannâs constant 
+\begin_inset Formula $\SI{86e-6}{eV/K}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+
+\begin_inset Formula $B$
+\end_inset
+
+ is a coefficient related to the specific semiconductor material 
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+
+\begin_inset Formula $Eg$
+\end_inset
+
+ is the bandgap energy 
+\begin_inset Formula $(eV)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+
+\begin_inset Formula $T$
+\end_inset
+
+ is the temperature (K) 
+\end_layout
+
+\begin_layout Itemize
+
+\size larger
+
+\begin_inset Formula $e$
+\end_inset
+
+, in this context, represents the exponential function 
+\end_layout
+
+\begin_layout Subsection
+Extrinsic (doped) semiconductors
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $n_i = \SI{1.5e10}{cm^{-3}}$
+\end_inset
+
+, intrinsic carrier concentration @ 300K for Si
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $n_o = \frac{{n^2}_i}{N_a}$
+\end_inset
+
+, Electron concentration
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $p_o = \frac{{n^2}_i}{N_d}$
+\end_inset
+
+, Hole concentration
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+Majority carrier: N-type: electrons, P-type: holes
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Drift and Diffusion Currents
+\end_layout
+
+\begin_layout Subsection
+PN junction
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $V_{bi} = V_T\ln\left(\frac{N_a N_d}{{n^2}_i}\right)$
+\end_inset
+
+, Built In barrier (
+\begin_inset Formula $V_f$
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $C_j = C_{jo}\left(1+\frac{V_R}{V_{bi}}\right)$
+\end_inset
+
+, Junction Capacitance
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $i_D = I_S\left(e^{\left(\frac{v_D}{nV_T}\right)}-1\right)$
+\end_inset
+
+, Diode Current, where 
+\begin_inset Formula $V_T = 26mV$
+\end_inset
+
+ @ 300K
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\end_layout
+
+\begin_layout Section
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+S
+\end_layout
+
+\end_inset
+
+1.2 - Partial Fractions
+\end_layout
+
+\begin_layout Enumerate
+
+\size larger
+If the degree of the numerator is 
+\begin_inset Formula $\geq$
+\end_inset
+
+ to the degree of the denominator, first do long division. 
+\end_layout
+
+\begin_layout Enumerate
+
+\size larger
+In setting up the partial fraction, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+underline{the form only depends on the denominator}
+\end_layout
+
+\end_inset
+
+( after factoring ).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size larger
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+subitem
+\end_layout
+
+\end_inset
+
+ If there is 
+\begin_inset Formula $(x - a)$
+\end_inset
+
+ in the denominator, then the form is 
+\begin_inset Formula $\frac{A}{(x-a)}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+subitem
+\end_layout
+
+\end_inset
+
+ If there is 
+\begin_inset Formula $(x - a)^2$
+\end_inset
+
+ in the denominator, then the form is 
+\begin_inset Formula $\frac{A}{(x-a)^2} + \frac{B}{(x-a)}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+subitem
+\end_layout
+
+\end_inset
+
+ If there is 
+\begin_inset Formula $(x - a)^3$
+\end_inset
+
+ in the denominator, then the form is 
+\begin_inset Formula $\frac{A}{(x-a)^3} + \frac{B}{(x-a)^2} + \frac{C}{(x-a)}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+subitem
+\end_layout
+
+\end_inset
+
+ If there is 
+\begin_inset Formula $(x^2 + ax + b)$
+\end_inset
+
+ in the denominator, then the form is 
+\begin_inset Formula $\frac{Ax + B}{x^2 + ax + b}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\size larger
+The number of unknowns ( A, B, C, D, &c ) is equal to the degree of the denominator.
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\end_layout
+
+\begin_layout Section
+Convert Polar to Rectangular
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $$
+\end_inset
+
+x = r 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+cos
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+theta
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $$
+\end_inset
+
+ 
+\begin_inset Formula $$
+\end_inset
+
+y = r 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+sin
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+theta
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Exact Slope of a Tangent Line
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+frac
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+dy
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+dx
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+ = 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+frac
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+dy/dt
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+{
+\end_layout
+
+\end_inset
+
+dx/dt
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\end_layout
+
+\begin_layout Section
+Basic integration Rules
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $\int kf(u) du = k \int f(u) du + C$
+\end_inset
+
+, 
+\begin_inset Formula $\int [f(u) \pm g(u)]du = \int f(u) du \pm \int g(u) du$
+\end_inset
+
+, 
+\begin_inset Formula $\int du = u +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int u^n du = \frac{u^{n+1}}{n+1} +C, n \neq -1$
+\end_inset
+
+, 
+\begin_inset Formula $\int \frac{du}{u} = \ln |u| +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \frac{u}{du} = \frac{u^2}{2} +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int e^u du = e^u +C$
+\end_inset
+
+,
+\begin_inset Formula $\int e^{4u} = \frac{e^{4u}}{4} +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int a^u du = \left( \frac{1}{\ln a} \right) a^u +C$
+\end_inset
+
+, 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Some Integrals
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $\int \sin u du = -\cos u+C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \cos u du = \sin u +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \tan u du = -\ln| \cos u | +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \cot u du = \ln| \sin u | +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \sec u du = \ln| \sec u + \tan u | +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \csc u du = -\ln| \csc u + \cot u | +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \sec^2 u du = \tan u +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \csc^2 u du = -\cot u +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \sec u \tan u du = \sec u +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \csc u \cot u du = -\csc u +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \frac{du}{\sqrt{a^2-u^2}} = \arcsin \frac{u}{a} +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \frac{du}{a^2+u^2} = \frac{1}{a} \arctan \frac{u}{a} +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \frac{du}{u\sqrt{u^2-a^2}} = \frac{1}{a} $
+\end_inset
+
+arcsec
+\begin_inset Formula $ \frac{|u|}{a} +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \sin 3x = -\frac{1}{3} \cos 3x$
+\end_inset
+
+, 
+\begin_inset Formula $\int e^{-4x} = \frac{e^{-4x}}{-4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $\int k dx = kx+C$
+\end_inset
+
+, 
+\begin_inset Formula $\int x dx = \frac{1}{2}x^2 +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int x^2 dx = \frac{1}{3} x^3 +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \frac{1}{x} dx = \ln|x| + C$
+\end_inset
+
+, 
+\begin_inset Formula $\int e^x dx = e^x +C$
+\end_inset
+
+,
+\begin_inset Formula $\int k^u du = \frac{k^u}{\ln u} +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \ln x dx = x \ln x - x +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \cos x dx = \sin x +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \sin x dx = -\cos x +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \sec^2 x dx = \tan x +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int x^n dx = \frac{x^{n+1}}{n+1} +C$
+\end_inset
+
+, 
+\begin_inset Formula $\int \tan x = - \ln( \cos x ) +C$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\end_layout
+
+\begin_layout Subsection
+Integration by Parts
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+int
+\end_layout
+
+\end_inset
+
+ u dv = uv - 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+int
+\end_layout
+
+\end_inset
+
+ v du
+\begin_inset Formula $$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\end_layout
+
+\begin_layout Section
+Some Identities
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $\sin2x = 2 \sin x \cos x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Pythagorean:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $\sin^2 x+ \cos^2 x = 1$
+\end_inset
+
+, 
+\begin_inset Formula $1 + \tan^2 x = \sec^2x$
+\end_inset
+
+, 
+\begin_inset Formula $1 + cot^2 x = \csc^2 x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Reciprocal:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $\sin x = \frac{1}{\csc x}$
+\end_inset
+
+, 
+\begin_inset Formula $\cos x = \frac{1}{\sec x}$
+\end_inset
+
+, 
+\begin_inset Formula $\tan x = \frac{\sin x}{\cos x} = \frac{1}{\cot x}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\csc x = \frac{1}{\sin x}$
+\end_inset
+
+, 
+\begin_inset Formula $\sec x = \frac{1}{\cos x}$
+\end_inset
+
+, 
+\begin_inset Formula $\cot x = \frac{\cos x}{\sin x} = \frac{1}{\tan x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Half Angle:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $\sin^2 x = \frac{1}{2} (1 - \cos 2x)$
+\end_inset
+
+, 
+\begin_inset Formula $\cos^2 x = \frac{1}{2} ( 1 + \cos 2x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\end_layout
+
+\begin_layout Section
+Additional Notes:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $\ln ( x * y ) = \ln(x) + \ln(y)$
+\end_inset
+
+, 
+\begin_inset Formula $\ln ( x / y ) = \ln( x ) - \ln ( y )$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $\ln x^a = a \ln x$
+\end_inset
+
+, 
+\begin_inset Formula $\tan \theta = \frac{\sin \theta}{\cos \theta}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $ax^2+bx+c = 0$
+\end_inset
+
+, 
+\begin_inset Formula $x= \frac{-b \pm \sqrt{b^2-4ac}}{2a}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $\ln a = c \equiv e^c = a$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $\sqrt[n]{a} = a^\frac{1}{n}$
+\end_inset
+
+, 
+\begin_inset Formula $a^{-n} = \frac{1}{a^n}$
+\end_inset
+
+, 
+\begin_inset Formula $\sqrt[n]{a^m} = a^\frac{m}{n}$
+\end_inset
+
+, 
+\begin_inset Formula $a^0 = 1$
+\end_inset
+
+, 
+\begin_inset Formula $\left( a^m \right)^n = a^{mn}$
+\end_inset
+
+, 
+\begin_inset Formula $a^m * a^n = a^{m + n}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{ a^m }{ a^n } = a^{m-n}$
+\end_inset
+
+, Rewrite 
+\begin_inset Formula $\sqrt{5x}$
+\end_inset
+
+ as 
+\begin_inset Formula $\sqrt{5} \sqrt{x}$
+\end_inset
+
+, 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Some Derivatives:
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $\frac{d}{du} \sin u = (\cos u)u'$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{du} \cos u = -(\sin u)u'$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{du} \tan u = (\sec^2 u)u'$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{du} \cot u = -(\csc^2 u)u'$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{du} \sec u = (\sec u \tan u)u'$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{du} \csc u = -(\csc u \cot u)u'$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{du} \arcsin u = \frac{u'}{\sqrt{1 - u^2}}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{du} \arccos u = \frac{-u'}{\sqrt{1 - u^2}}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{du} \arctan u = \frac{u'}{1 + u^2}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{du} $
+\end_inset
+
+arccot 
+\begin_inset Formula $ u = \frac{-u'}{1 + u^2}$
+\end_inset
+
+, 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\frac{d}{du} $
+\end_inset
+
+arcsec 
+\begin_inset Formula $ u = \frac{u'}{|u|\sqrt{u^2 - 1}}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{du} $
+\end_inset
+
+arccsc 
+\begin_inset Formula $ u = \frac{-u'}{|u|\sqrt{u^2 - 1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Formula $\frac{d}{du}[\ln{u}] = \frac{1}{u}u'$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{dx}[e^{-x}] = -e^{-x}$
+\end_inset
+
+, 
+\begin_inset Formula $e^{\ln a} = a$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\frac{d}{du}[\sqrt{u}] = \frac{u'}{2 \sqrt{u}}$
+\end_inset
+
+, 
+\begin_inset Formula $e^{3x} = 3e^{3x}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{dx}\left[ x \right] = 1$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{dx}\left[ c \right] = 0$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{d}{du}[ \frac{1}{u} ] = \frac{1}{u^2}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{du}{u} = \ln |u|$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+
+\begin_inset Graphics 
+	filename unitCircle.png
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

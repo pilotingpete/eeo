@@ -1,0 +1,5 @@
+.title KiCad schematic
+C1 output 0 4700p
+R1 Input output 1.7k
+V1 Input 0 dc 0 ac 1 sin(0 1 50)
+.end

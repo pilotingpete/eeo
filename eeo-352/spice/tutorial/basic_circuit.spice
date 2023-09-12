@@ -1,0 +1,12 @@
+* Basic Resistor-Capacitor Circuit
+R1 1 0 1k
+C1 1 0 1u
+V1 0 1 DC 10V
+* DC Analysis
+.dc V1 0 10 1
+* AC Analysis
+.ac dec 10 1Hz 1kHz
+* Transient Analysis
+.tran 0.1ms 10ms
+* End of file
+.end

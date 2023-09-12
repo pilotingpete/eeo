@@ -1,0 +1,420 @@
+\documentclass[10pt,landscape]{article}
+\usepackage{multicol}
+%\usepackage{calc}
+\usepackage{amssymb}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage{graphicx}
+%\usepackage{verbatim}
+\usepackage{siunitx}
+
+
+
+% This sets page margins to .5 inch if using letter paper, and to 1cm
+% if using A4 paper. (This probably isn't strictly necessary.)
+% If using another size paper, use default 1cm margins.
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+	{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+	}
+
+% Turn off header and footer
+\pagestyle{empty}
+ 
+
+% Redefine section commands to use less space
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+
+% Define BibTeX command
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+% Don't print section numbers
+\setcounter{secnumdepth}{0}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+
+
+% -----------------------------------------------------------------------
+
+\begin{document}
+
+\raggedright
+\footnotesize
+\begin{multicols}{3}
+
+
+% multicol parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+% Page title
+\begin{center}
+     \Large{\textbf{EE Formula Sheet}} \\
+\end{center}
+
+\newlength{\MyLen}
+
+
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{\S1.1 - Semiconductor Materials}
+
+DC variables are denoted by uppercase letters and uppercase subscripts.
+
+\begin{tabular}{ |c||c|c|  }
+ \hline
+ \multicolumn{3}{|c|}{Semiconductor constants} \\
+ \hline
+ Material & $Eg(eV)$ & $B(cm^{-3}K^{-3/2}$)\\
+ \hline
+ Silicon (Si) & 1.1 & \num{5.23e-15}\\
+ Gallium arsenide (GaAs) & 1.4 & \num{2.10e-14}\\
+ Germanium (Ge) & 0.66 & \num{1.66e-15}\\
+ \hline
+\end{tabular}
+
+
+\subsection{Intrinsic carrier concentration of Si}
+
+$$n_i = BT^{3/2}e^{\frac{-Eg}{2kT}}$$
+
+Where:
+\begin{itemize}
+	\item k is Boltzmann’s constant $\SI{86e-6}{eV/K}$
+	\item $B$ is a coefficient related to the specific semiconductor material
+	\item $Eg$ is the bandgap energy $(eV)$
+	\item $T$ is the temperature (K)
+	\item $e$, in this context, represents the exponential function
+\end{itemize}
+	
+\subsection{Extrinsic (doped) semiconductors}
+
+$n_i = \SI{1.5e10}{cm^{-3}}$, intrinsic carrier concentration @ 300K for Si
+
+$n_o = \frac{{n^2}_i}{N_a}$, Electron concentration\\
+$p_o = \frac{{n^2}_i}{N_d}$, Hole concentration\\
+
+Majority carrier: N-type: electrons, P-type: holes\\
+
+\subsection{Drift and Diffusion Currents}
+
+-
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{\S1.2 - The PN Junction}
+
+$V_{bi} = V_T\ln\left(\frac{N_a N_d}{{n^2}_i}\right)$, Built In barrier ($V_f$)\\
+$C_j = C_{jo}\left(1+\frac{V_R}{V_{bi}}\right)$, Junction Capacitance\\
+$i_D = I_S\left(e^{\left(\frac{v_D}{nV_T}\right)}-1\right)$, Diode Current, where $V_T = 26mV$ @ 300K\\
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{\S1.3 - Diode Circuits: DC Analysis and Models}
+
+\begin{itemize}
+	\item Use KVL when $V_D \geq V_y$. Use open circuit when $V_D < V_y$
+	\item Use PWL to plot the diode voltage where slope of diode cut in voltage is $m = 1/R_f$
+	\item Use KVL formula of the circuit to plot the load line. (Arrange formula in slope-intercept form.)
+	\item The \textit{Q-point} is at the intersection of the PWL and load line plots.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{\S1.4 - Diode Circuits: AC Analysis and Models}
+
+First, analyze the DC portion, then the AC portion.
+
+\includegraphics[width = \linewidth]{./img/f1.36.png}
+
+$R_d = \frac{1}{g_d} = \frac{V_T}{I_{DQ}}$, Small Signal Diffusion Resistance\\
+$i_d = \left(\frac{I_{DQ}}{V_T}\right) \cdot v_d = g_d \cdot v_d$, AC diode current\\
+$v_d = \left(\frac{V_T}{I_{DQ}}\right) \cdot i_d = r_d \cdot i_d$, AC diode voltage\\
+where $g_d$ and $r_d$ respectively, are the diode small-signal incremental conductance and resistance, also called the diffusion conductance and diffusion resistance.\\
+$C_d = \left(\frac{d_Q}{dV_D}\right)$, Diffusion Capacitance\\
+
+\subsection{Small-Signal Equivalent Circuit}
+-\\
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{\S2.1 - Rectifier Circuits}
+$\frac{v_i}{v_s} = \frac{N_1}{N_2}$, Transformer voltage to turn-ratio relationship.\\
+
+\subsection{Center tapped formulae}
+$v_s(max)) = v_o(max) + V_y$, Peak\\
+$v_r(max) = 2v_S(max) - V_y$, Peak Inverse Voltage\\
+
+\subsection{Bridge rectifier formulae}
+
+\includegraphics[width = \linewidth]{./img/f2.9.png}
+
+$v_S(max) = v_O(max)$, Peak\\
+$v_R(max) = v_S(max) - V_y$, Peak Inverse Voltage\\
+$v_{o^{(t)}} = V_M e^{t'/RC}$, Average Vout\\
+$v_L = V_M e^{T'/RC}$, Minimum Vout\\
+$v_r = V_M - V_L = \frac{V_M}{2fRC}$, Ripple on Vout\\
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{\S2.4 - Clippers and Clampers}
+
+Clippers clip signals, and clampers shift the entire waveform.
+
+\includegraphics[width = \linewidth]{./img/f2.22.png}
+\includegraphics[width = \linewidth]{./img/f2.25.png}
+\includegraphics[width = \linewidth]{./img/f2.28.png}
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{\S3.1 - MOS Field-Effect Transistor}
+
+
+\subsection{N-Channel}
+
+\includegraphics[width = \linewidth]{./img/f3.12.png}
+
+$v_{DS}(sat) = v_{GS} - V_{TN}$, Saturation Voltage, where $V_{TN}$ is the threshold voltage.\\
+$i_D = K_n \left[2(v_{GS} - V_{TN} ) v_{DS} - v_{DS}^2\right]$, I-V Characteristic in non-saturation.\\
+$i_D = K_n (v_{GS} - V_{TN})^2$, I-V Characteristic in saturation.\\
+$C_{ox} = \epsilon_{ox} / t_{ox}$, Oxide capacitance per unit area.\\
+$\epsilon_{ox} = (3.9)(\SI{8.85e-14}{F/cm})$, Oxide permittivity for Si devices.\\
+$K_n = \frac{W \mu_n C_{ox}}{2L}$, Conduction Parameter\\
+$K_n = \frac{k'_n}{2} \cdot \frac{W}{L}$, Conduction Parameter\\
+$k'_n = \mu_nC_{ox}$, Process conduction parameter.\\
+$\mu_n$, Electron mobility in the inversion layer.\\
+
+\subsection{P-Channel}
+
+\includegraphics[width = \linewidth]{./img/f3.13.png}
+
+$i_D = K_p \left[2(v_{SG} - V_{TP} ) v_{SD} - v_{SD}^2\right]$, I-V Characteristic in non-saturation.\\
+$i_D = K_p (v_{SG} - V_{TP})^2$, I-V Characteristic in saturation.\\
+$K_p = \frac{W \mu_p C_{ox}}{2L}$, Conduction Parameter\\
+$K_p = \frac{k'_p}{2} \cdot \frac{W}{L}$, Conduction Parameter\\
+$k'_p = \mu_p C_{ox}$\\
+
+\includegraphics[width = \linewidth]{./img/t3.1.png}
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{\S3.2 - Mosfet DC Analysis}
+
+Establishes the DC operating point, $Q$. This is $I_D$ and $V_{DS}$\\
+A resistor on the source leg provides stability via negative feedback at the expense of reducing gain. Alternatively a CC bias may be used to increase stability without limiting gain.
+
+\subsection{Common Source Amplifiers}
+\subsubsection{N-Type}
+\includegraphics[width = \linewidth]{./img/nmos-common-source.png}
+
+$v_G = v_{GS} = \left(\frac{R2}{R1+R2}\right)V_{DD}$\\
+$I_D = K_n(V_{GS} - V_{TN})^2$\\
+$V_{DS} = V_{DD} - I_D R_D$\\
+$P_T = I_D V_{DS}$, Power\\
+If $V_{DS} > V_{DS}(sat)$, where $V_{DS}(sat) = V_{GS} - V_{TN}$, then the transistor is biased in the saturation region\\
+
+\subsubsection{P-Type}
+\includegraphics[width = \linewidth]{./img/pmos-common-source.png}
+
+$v_G = \left(\frac{R2}{R1+R2}\right)V_{DD}$\\
+$v_{SG} = V_{DD} - V_G$\\
+$I_D = K_p(V_{SG} + V_{TP})^2$\\
+$V_{SD} = V_{DD} - I_D R_D$\\
+$P_T = I_D V_{DS}$, Power\\
+If $V_{SD} > V_{SD}(sat)$, where $V_{SD}(sat) = V_{SG} + V_{TP}$, then the transistor is biased in the saturation region\\
+
+
+\includegraphics[width = \linewidth]{./img/small-signal.png}
+
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{\S4.1 - Mosfet amplifier}
+
+$g_m = 2\sqrt{K_n I_{DQ}}$, Trans-conductance\\
+$r_o = \frac{1}{\lambda I_D}$\\
+$r_{eq} = \frac{1}{g_m}$, Small Sig curr source equivalent resistance.\\
+
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{\S6 - BJT Amplifier}
+
+\includegraphics[width = \linewidth]{./img/6.11.png}
+
+$g_m = 2\sqrt{K_n I_{DQ}}$,\\
+$g_m = \frac{I_D}{V_{GS}}$,\\
+$g_m = 2K_n (V_{GS}-V_{TH})$,\\
+$g_m = \frac{I_C}{V_TH}$,\\
+$r_o = \frac{1}{\lambda I_{DQ}}$,\\
+$r_o = \frac{V_A}{I_C}$,\\
+$r_\pi = \frac{V_T}{I_B}$,\\
+$r_\pi = \frac{\beta}{g_m}$,\\
+$A_v = -g_m \cdot R_C || R_L$, Voltage Gain Formula\\
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\subsection{Transistor DC Equivalent}
+
+$V_{th} = \frac{V_{cc}}{R_1 + R_2} \cdot R_2$,\\
+$R_{th} = R_1 || R_2$,\\
+$V_{ce}(sat) \approxeq 0.2(typ)$,\\
+$I_E \approxeq I_C$, In active region\\
+$-\frac{1}{R_E-R_C}$, load line slope, where $R_C$ \& $R_E$ are from the AC or DC equivalent circuit. A load line plot is $I_C$ vs $V_{CE}$\\
+$I_{RE} = I_B (\beta + 1) R_E$,\\
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\subsection{Terminology}
+
+\textbf{Common Source:} Input connected to gate, output connected to drain.\\
+\textbf{Common Drain (Source Follower):} Input connected to gate, output connected to source.\\
+\textbf{Common Gate:} Input connected to source, output connected to drain.\\
+
+\subsection{Transistor formulas}
+$I_C = \beta \cdot I_B$, Conduction Parameter\\
+$I_B = \frac{I_E}{\beta + 1}$,\\
+$\alpha = \frac{I_C}{I_E}$, Current Ratio\\
+$I_C = I_E - I_B$, Kirchhoff's Current Law\\
+$V_{CE} = V_{BE} + V_{CB}$, Voltage Relationships\\
+$I_C = I_{C0} \left( e^{\frac{V_{BE}}{V_T}} - 1 \right)$, BJT Current Equation\\
+$I = I_0 \cdot \left( e^{\frac{V}{n \cdot V_T}} - 1 \right)$, Schottky Diode Equation\\
+$I_D = \frac{1}{2} \mu_n C_{ox} \frac{W}{L} \left( V_{GS} - V_{TH} \right)^2$, MOSFET Drain Current Equation\\
+$I_D = \mu_n C_{ox} \frac{W}{L} \left[ (V_{GS} - V_{TH})V_{DS} - \frac{V_{DS}^2}{2} \right]$, MOSFET Drain Current Equation (Triode Region)\\
+$g_m = \sqrt{2 \mu_n C_{ox} \frac{W}{L} I_D}$, Transconductance Parameter\\
+$A_v = -g_m \cdot R_D$, Voltage Gain Formula\\
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{EE General Formulae}
+$rms = \frac{1}{\sqrt{2}}$,\\
+$V = I \cdot R$, Ohm's law.\\
+$P = V \cdot I$, DC Power.\\
+$P = V \cdot I \cdot \cos(\theta)$, AC power.\\
+$E = P \cdot t$, Energy.\\
+$C = \frac{Q}{V}$, Capacitance.\\
+
+$V = L \cdot \frac{di}{dt}$, Inductance.\\
+$\tau = R \cdot C$, Time constant to reach 63.2\% of capacitors final voltage.\\
+$\tau = \frac{L}{R}$, Time constant to reach 63.2\% of inductors final value.
+$\frac{N_1}{N_2} = \frac{V_1}{V_2}$, Transformer turns ratio.\\
+$V_{\text{peak}} = \sqrt{2} \cdot V_{\text{rms}}$, Peak AC Voltage.\\
+$V_{\text{rms}} = \frac{V_{\text{peak}}}{\sqrt{2}}$, RMS AC Voltage.\\
+$V_{\text{avg}} = \frac{1}{T} \int_0^T V(t) \, dt$, RMS AC Voltage.\\
+$V_{\text{out}} = V_{\text{in}} \cdot \frac{R_2}{R_1 + R_2}$, voltage divider.\\
+$R_{\text{eq}} = R_1 + R_2 + \ldots + R_n$, series resistors.\\
+$\frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \ldots + \frac{1}{R_n}$, Parallel resistors.\\
+$\frac{1}{C_{\text{eq}}} = \frac{1}{C_1} + \frac{1}{C_2} + \ldots + \frac{1}{C_n}$, Series capacitors.\\
+$C_{\text{eq}} = C_1 + C_2 + \ldots + C_n$, parallel capacitors.\\
+
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{Convert Polar to Rectangular}
+
+$$x = r \cos \theta$$
+$$y = r \sin \theta$$
+
+\section{Exact Slope of a Tangent Line}
+
+$$\frac{dy}{dx} = \frac{dy/dt}{dx/dt}$$
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{Basic integration Rules}
+
+$\int kf(u) du = k \int f(u) du + C$, $\int [f(u) \pm g(u)]du = \int f(u) du \pm \int g(u) du$, 
+$\int du = u +C$, $\int u^n du = \frac{u^{n+1}}{n+1} +C, n \neq -1$, $\int \frac{du}{u} = \ln |u| +C$, $\int \frac{u}{du} = \frac{u^2}{2} +C$,
+$\int e^u du = e^u +C$,$\int e^{4u} = \frac{e^{4u}}{4} +C$, $\int a^u du = \left( \frac{1}{\ln a} \right) a^u +C$, \\
+
+\subsection{Some Integrals}
+
+$\int \sin u du = -\cos u+C$, $\int \cos u du = \sin u +C$,
+$\int \tan u du = -\ln| \cos u | +C$, $\int \cot u du = \ln| \sin u | +C$, $\int \sec u du = \ln| \sec u + \tan u | +C$,
+$\int \csc u du = -\ln| \csc u + \cot u | +C$, $\int \sec^2 u du = \tan u +C$, $\int \csc^2 u du = -\cot u +C$,
+$\int \sec u \tan u du = \sec u +C$, $\int \csc u \cot u du = -\csc u +C$, $\int \frac{du}{\sqrt{a^2-u^2}} = \arcsin \frac{u}{a} +C$,
+$\int \frac{du}{a^2+u^2} = \frac{1}{a} \arctan \frac{u}{a} +C$,
+$\int \frac{du}{u\sqrt{u^2-a^2}} = \frac{1}{a} $arcsec$ \frac{|u|}{a} +C$, $\int \sin 3x = -\frac{1}{3} \cos 3x$, $\int e^{-4x} = \frac{e^{-4x}}{-4}$
+
+$\int k dx = kx+C$, $\int x dx = \frac{1}{2}x^2 +C$, $\int x^2 dx = \frac{1}{3} x^3 +C$, $\int \frac{1}{x} dx = \ln|x| + C$,
+$\int e^x dx = e^x +C$,$\int k^u du = \frac{k^u}{\ln u} +C$,  $\int \ln x dx = x \ln x - x +C$, $\int \cos x dx = \sin x +C$,
+$\int \sin x dx = -\cos x +C$, $\int \sec^2 x dx = \tan x +C$, $\int x^n dx = \frac{x^{n+1}}{n+1} +C$, $\int \tan x = - \ln( \cos x ) +C$,
+
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\subsection{Integration by Parts}
+
+$$\int u dv = uv - \int v du$$
+
+
+
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{Some Identities}
+
+$\sin2x = 2 \sin x \cos x$
+
+\subsection{Pythagorean:}
+$\sin^2 x+ \cos^2 x = 1$, $1 + \tan^2 x = \sec^2x$, $1 + cot^2 x = \csc^2 x$ 
+
+\subsection{Reciprocal:}
+$\sin x = \frac{1}{\csc x}$, $\cos x = \frac{1}{\sec x}$, $\tan x = \frac{\sin x}{\cos x} = \frac{1}{\cot x}$\\
+$\csc x = \frac{1}{\sin x}$, $\sec x = \frac{1}{\cos x}$, $\cot x = \frac{\cos x}{\sin x} = \frac{1}{\tan x}$ 
+
+\subsection{Half Angle:}
+$\sin^2 x = \frac{1}{2} (1 - \cos 2x)$, $\cos^2 x = \frac{1}{2} ( 1 + \cos 2x)$
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{Additional Notes:}
+
+
+$\ln ( x * y ) = \ln(x) + \ln(y)$, $\ln ( x / y ) = \ln( x ) - \ln ( y )$
+
+$\ln x^a = a \ln x$, $\tan \theta = \frac{\sin \theta}{\cos \theta}$\\
+
+$ax^2+bx+c = 0$, $x= \frac{-b \pm \sqrt{b^2-4ac}}{2a}$\\
+
+$\ln a = c \equiv e^c = a$\\
+
+$\sqrt[n]{a} = a^\frac{1}{n}$, $a^{-n} = \frac{1}{a^n}$, $\sqrt[n]{a^m} = a^\frac{m}{n}$, $a^0 = 1$, $\left( a^m \right)^n = a^{mn}$, 
+$a^m * a^n = a^{m + n}$, $\frac{ a^m }{ a^n } = a^{m-n}$, Rewrite $\sqrt{5x}$ as $\sqrt{5} \sqrt{x}$, \\
+
+
+
+
+
+\section{Some Derivatives:}
+
+$\frac{d}{du} \sin u = (\cos u)u'$, $\frac{d}{du} \cos u = -(\sin u)u'$, $\frac{d}{du} \tan u = (\sec^2 u)u'$,
+$\frac{d}{du} \cot u = -(\csc^2 u)u'$, $\frac{d}{du} \sec u = (\sec u \tan u)u'$, $\frac{d}{du} \csc u = -(\csc u \cot u)u'$,
+$\frac{d}{du} \arcsin u = \frac{u'}{\sqrt{1 - u^2}}$, $\frac{d}{du} \arccos u = \frac{-u'}{\sqrt{1 - u^2}}$,
+$\frac{d}{du} \arctan u = \frac{u'}{1 + u^2}$, $\frac{d}{du} $arccot $ u = \frac{-u'}{1 + u^2}$, \\
+$\frac{d}{du} $arcsec $ u = \frac{u'}{|u|\sqrt{u^2 - 1}}$,
+$\frac{d}{du} $arccsc $ u = \frac{-u'}{|u|\sqrt{u^2 - 1}}$
+
+$\frac{d}{du}[\ln{u}] = \frac{1}{u}u'$, $\frac{d}{dx}[e^{-x}] = -e^{-x}$, $e^{\ln a} = a$ \\
+$\frac{d}{du}[\sqrt{u}] = \frac{u'}{2 \sqrt{u}}$, $e^{3x} = 3e^{3x}$, $\frac{d}{dx}\left[ x \right] = 1$, $\frac{d}{dx}\left[ c \right] = 0$, 
+$\frac{d}{du}[ \frac{1}{u} ] = \frac{1}{u^2}$, $\frac{du}{u} = \ln |u|$,
+
+
+\includegraphics[width = \linewidth]{./img/unitCircle}
+
+
+
+
+
+
+\end{multicols}
+\end{document}

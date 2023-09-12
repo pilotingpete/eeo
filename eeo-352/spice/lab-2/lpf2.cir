@@ -1,0 +1,24 @@
+* RC Low-Pass Filter Simulation
+* Components: 1.7k ohm resistor and 4700pF capacitor
+
+* Define the resistor and capacitor
+R1 1 0 1.7k
+C1 1 0 4700p
+
+* AC voltage source for frequency sweep
+V1 2 0 AC 1
+
+* AC analysis
+.AC DEC 10 10Hz 1MHz
+
+* Output voltage across the capacitor
+* Use the .PRINT command to save the output data
+* to a file for later plotting
+.PRINT AC V(2)
+
+* Run the AC analysis
+.AC DEC 10 10Hz 1MHz
+
+* Plot the magnitude response (dB) using a log scale
+* and find the -3dB point
+.PLOT AC MAG(V(2))

@@ -1,25 +1,22 @@
 * First-Order Low-Pass Filter
-* R is the resistance in ohms (1.7k ohms)
-* C is the capacitance in farads (4700 pF)
-
-* Define the components
-R1  In 0 1.7k  ; 1.7k ohm resistor
-C1  1 0 4700p  ; 4700 pF capacitor
-
-* AC analysis
-.ac dec 10 10 25k  ; AC sweep from 10 Hz to 25 kHz
 
 * Input voltage source
-Vin 0 1 ac 1 0   ; 1V amplitude AC voltage source at node 1 (input)
+Vin N1 0 AC 1V SIN(0 1V 10kHz)  ; 1V amplitude AC voltage source at node 1 (input)
 
-* Output voltage
-Vout 0 2 0       ; Node 2 is the output
+* Define the components
+R1 N1 N2 1k  ; 1.0k ohm resistor
+C1 N2 0 4.7n ; 4.7 nF capacitor
+
+* AC analysis
+.ac dec 10 1 100k  ; AC sweep 
+
+* Node N2: Output Node
 
 * Analysis
 .control
   run
-  plot mag(V(2))  ; Bode plot of the magnitude of Vout
-  plot phase(V(2))  ; Bode plot of the phase of Vout
+  plot mag(N2)  ; Bode plot of the magnitude of Vout
+  plot phase(N2)  ; Bode plot of the phase of Vout
 .endc
 
 .end
