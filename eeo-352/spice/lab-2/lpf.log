@@ -1,0 +1,18 @@
+Circuit: * C:\eeo\eeo-352\spice\lab-2\lpf.asc
+
+
+Date: Sat Sep 16 21:00:20 2023
+Total elapsed time: 0.028 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 0
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 3
+fillins = 0
+solver = Normal
+

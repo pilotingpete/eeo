@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{blindtext}
-\usepackage[letter, total={6.5in, 9in}]{geometry}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
 \usepackage{tabularray}
 \usepackage{hyperref}
 \usepackage{xcolor}
@@ -8,6 +8,7 @@
 \usepackage{siunitx}
 \usepackage{graphicx}
 \graphicspath{ {./img/} }
+\usepackage{pdfpages}
 
 \begin{document}
 	
@@ -17,41 +18,121 @@
 	
 	\maketitle
 	
+	\section*{Copy of Original Assignment}
+	
+	\includepdf[pages=-]{Assignment 2.pdf}
+	
 	\section*{1a}
 	
 	Using the LTspice simulator, design an RC filter with R=1k\(\Omega\) and C=4.7nF 
+	
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{lpf}
+	\end{center}
 	
 	\subsection*{a}
 	
 	Simulate and plot the response to a 1V 10kHz sinusoidal signal
 	
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{1v10k}
+	\end{center}
+	
 	\subsection*{b} 
 	
 	Simulate and plot the response to a 1V 100kHz sinusoidal signal and extract the phase shift
+
+	
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{1v100k}
+	\end{center}
+	
+	
+	\[
+	\theta = \frac{\Delta T}{T_0}2\pi
+	\]
+
+	Where:
+	\begin{itemize}
+		\item $\theta$ is the phase shift angle in radians.
+		\item $\Delta T$ is the time time difference.
+	   	\item $T_0$ is the period of the periodic signal.
+	  	\item $2\pi$ is the number of radians in one complete cycle.
+	\end{itemize}
+	
+	
+	Therefore, the phase shift is $$\theta = \frac{2\mu s}{10\mu s}2\pi = 0.4\pi \text{radians}$$
+	
 	
 	\subsection*{c}
 	
 	Simulate and plot the frequency response (Bode plot: magnitude and phase)
 	
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{bode}
+	\end{center}
+	
 	\subsection*{d}
 	
 	Extract the -3dB frequency and the corresponding phase shift
+
+	\begin{itemize}
+		\item From the plot in \textbf{c} above it can be seen the -3db point occurs at $\approx \SI{34}{\kilo\hertz}$
+		\item The phase shift is shown to be $\approx \SI{-45}{\degree}$
+	\end{itemize}
+	
+	As a point of interest, I placed the cursor at the $\approx \SI{100}{\kilo\hertz}$ and found the phase shift to be $\SI{-71.3}{\degree}$. This is very close to the $0.4\pi \text{radians}$ value extracted in section \textbf{b} above.
 	
 	\section*{1b}
 	
 	Using the Analog Discovery 2 and the components, build and measure the RC filter at (1a) (35 pts):
+
 	
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{lpf-setup}
+	\end{center}
+
 	\subsection*{a}
 	
 	Measure and plot the response to a 1V 10kHz sinusoidal signal
+	
+	The signal is slightly affected by the LPF as can be seen in the oscilloscope screenshot. There is a $\SI{16.4}{\degree}$ phase shift.
+
+
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{lpf_a1}
+	\end{center}
 	
 	\subsection*{b}
 	
 	Measure and plot the response to a 1V 100kHz sinusoidal signal and the phase shift
 	
+	The signal is significantly affected by the LPF as can be seen in the oscilloscope screenshot. There is a $\SI{64.4}{\degree}$ phase shift and the amplitude is reduced to $\SI{601}{\mV}$ p-p. 
+
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{lpf_a2}
+	\end{center}
+	
 	\subsection*{c}
 	
 	Measure (network function) and plot the frequency response (magnitude and phase)
+
+
+	Unfortunately I do not have the frequency analysis or function generator modules purchased for this scope.
+
+	Working withing the limitations of my setup, I attempted to perform a manual sweep with the function generator and capture the data on the scope. 
+	I exported the scope data to csv and wrote a python program to analyze the data. The program intent was to plot the frequency response of the filter
+	in a semilog plot and mark the -3db filter knee. Unfortunately, this method did not produce results I understand at this time.
+
+	
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{lpf_manual-sweep}
+	\end{center}
+
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{bode-py}
+	\end{center}
+	
 	
 	\subsection*{d}
 	
@@ -69,14 +150,53 @@
 	\subsection*{a}
 	
 	Simulate and plot the diode 1N4148 current for a -1V to +1V diode voltage swing
+
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{diode}
+	\end{center}
 	
 	\subsection*{b}
 	
 	Place the marker at the 20mA current, report the corresponding voltage and the dynamic resistance (derivative)
+
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{diode-calc}
+	\end{center}
+	
+	To extract the dynamic resistance consider
+	
+	\[
+		R = \frac{\Delta V}{\Delta I}
+	\]
+
+	Where:
+	\begin{itemize}
+		\item $\Delta V$ is the change in voltage.
+		\item $\Delta I$ is the change in current.
+	\end{itemize}
+	
+	then the dynamic resistance of the diode under test is 
+	 
+	\[
+		R = \frac{731.31 - 731.22}{20.01 - 19.98} \approx \SI{3.0}{\ohm}
+	\]
 	
 	\section*{2b}
 	
 	Using the Analog Discovery 2 and the diode 1N4001 (35 pts):
+
+
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{diode-setup}
+	\end{center}
+
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{diode1}
+	\end{center}
+
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{diode2}
+	\end{center}
 	
 	\subsection*{a}
 	
@@ -87,11 +207,30 @@
 		\item Use a +/- 4V 100Hz triangular waveform
 	\end{itemize}
 
+	Using x-y mode on the scope I am able to plot the I-V curve of the diode. A schematic of the connections are shown below.
+	I used diode 1N4148
+
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{sch}
+	\end{center}
+
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{diode3}
+	\end{center}
+
+
 	\subsection*{b}
-	
+		
 	Zoom to the 20mA current, report the diode voltage, extrapolate the dynamic resistance
 	
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{diode-dynamic-exp}
+	\end{center}
 	
-	
+	The dynamic resistance $\frac{dV}{dI}$ of the diode under test is calculated as
+	 
+	\[
+		R = \frac{\SI{580}{\mV} - \SI{475}{\mV}}{\SI{40}{\mA} - \SI{10}{\mA}} \approx \SI{3.5}{\ohm}
+	\]
 	
 \end{document}
