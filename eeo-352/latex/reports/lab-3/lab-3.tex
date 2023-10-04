@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+\usepackage{tabularray}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+
+\begin{document}
+	
+	
+	\title{EEO352 Lab 3\\DC Power Supplies}
+	\author{Pete Mills}
+	
+	\maketitle
+	
+	\section*{Copy of Original Assignment}
+	
+	\includepdf[pages=-]{Assignment 3.pdf}
+	
+	\section{Design and Simulate Three Circuits}
+	
+	\subsection*{a)}
+	
+	In this circuit D3 passes current during the positive portion of the sine wave from V1. D4 passes current during the positive portion of the sine wave from V2. D1 and D2 block reverse current, but they could simply be deleted from the circuit. R1 converts the current to a voltage so that it can be measured.
+	
+	This circuit does not seem to make a very useful power supply. The output simply follows the input voltages  minus diode forward voltage drop. It can also be seen that there is no negative voltage at the output. 
+
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{fig1a}
+	\end{center}
+
+	\subsection*{b)}
+
+	This circuit is the same as in section a, but has a low pass filter. This filter smooths the output and increases the effective DC voltage of the output. The output ripple is about \SI{330}{\mV} peak-peak.
+	
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{fig1b}
+	\end{center}
+	
+	\subsection*{c)}
+	
+	This circuit uses a linear voltage regulator IC to create a DC output voltage up to \SI{1.5}{\ampere}. The input voltage has \SI{100}{\mV} peak ripple. The output voltage has approximately \SI{30}{\uV} peak-peak. The output voltage of this circuit is very stable even with \SI{100}{\mV}input ripple.
+
+	With the use of \SI{200}{\ohm} resistors for R1 \& R2, the expected output voltage given by 
+	
+	$$Vout = \SI{1.25}{\volt} × (1 + \SI{200}{\ohm} / \SI{200}{\ohm}) = \SI{1.25}{\volt} × (1 + 1) = \SI{1.25}{\volt} * 2 = \SI{2.5}{\volt}$$
+		
+	The simulation shows DC output voltage is approx 2.494V.This is within \SI{0.2}{\percent} of the theoretical value. 
+	
+	The datasheet indicates a max line regulation of \SI{0.2}{\percent}, or \SI{5}{\mV} and a max load regulation of \SI{0.3}{\percent}, or \SI{7.5}{\mV}, both at Vout = \SI{2.5}{\V}. Without the addition of \SI{150}{\uF} aluminum electrolytic or a \SI{22}{\uF} solid tantalum on the output, stability may be affected, however it can be seen that the simulation is well withing the expected range for this part.
+	
+	
+	
+
+	
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{fig1c}
+	\end{center}
+
+	\section{Build and Measure Three Circuits}	
+	
+	\subsection*{a)}
+	
+	This circuit behaved very similar to that in the simulation. We see a peak voltage equal to the input wave minus diode drop. We also see a brief period of 0 volts before the second input wave creates another positive going pulse.
+	
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{fig2a-scope-2}
+	\includegraphics[width=0.7\textwidth]{rectifier}
+	\end{center}
+	
+	\subsection*{b)}
+	
+	This circuit also behaved very similar to the simulation, but the measured values differed slightly. In the simulation there is \SI{330}{\mV} peak-peak vs the circuit measurement of \SI{530}{\mV} peak-peak. Both the simulation and circuit have an output voltage centered about 4 V.
+	
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{fig2b-scope-2}
+	\end{center}
+	
+	\subsection*{c)}
+	
+	This circuit behaved very similar to the simulation, although the output ripple was somewhat higher. The circuit output \SI{2.52}{\V} with \SI{4.9}{\mV} peak-peak ripple. This is within \SI{26}{\mV} of the DC simulation, but significantly higher than the  \SI{30}{\uV} peak-peak from the spice model. The output voltage is within  \SI{20}{\mV} of the calculated value .0049and ripple is  \SI{0.2}{\percent}  which is below the tolerance per the data sheet. 
+	
+	\begin{center}
+	\includegraphics[width=0.7\textwidth]{fig2c-scope-2}
+	\includegraphics[width=0.7\textwidth]{regulator}
+	\end{center}
+	
+	
+\end{document}
