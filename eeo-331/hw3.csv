@@ -1,0 +1,6 @@
+Condition,Equations,Temperature (K),Nd (cm^-3),Na (cm^-3),Equilibrium Electron Concentration (n, cm^-3),Equilibrium Hole Concentration (p, cm^-3)
+a,"n_i^2 = p * n, p = n_i^2 / Nd, n = n_i^2 / Na",300,1e15,4e15,5.625e3,2.25e4
+b,"n_i^2 = p * n, n = sqrt(n_i^2 + (Nd - Na)^2)",300,3e16,0,3e16,0
+c,"n_i^2 = p * n, p = n_i^2 / (Nd - Na), n = n_i^2 / (Nd - Na)",300,2e15,0,1.125e5,1.125e5
+d,"n_i^2 = p * n, p = sqrt(n_i^2 + (Na - Nd)^2)",375,0,4e15,0,4e15
+e,"n_i^2 = p * n, n = sqrt(n_i^2 + (Nd - Na)^2)",450,1e14,0,1e14,0
