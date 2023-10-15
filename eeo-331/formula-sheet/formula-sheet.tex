@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 %\usepackage{verbatim}
 \usepackage{siunitx}
+\usepackage{amsmath}
 
 
 
@@ -159,167 +160,79 @@ The energy (\(E\)) of a photon is given by \(E = h\nu\), where \(h\) is Planck's
 The frequency (\(\nu\)) of a photon is inversely proportional to its wavelength (\(\lambda\)) and can be determined by the equation \(\nu = \frac{c}{\lambda}\), where \(c\) is the speed of light.
 
 
+\subsection{Constants}
+\begin{align*}
+q &= 1.602 \times 10^{-19}\ \mathrm{C} \\
+m_e &= 9.109 \times 10^{-31}\ \mathrm{kg} \\
+h &= 6.626 \times 10^{-34}\ \mathrm{J}\cdot\mathrm{s} \\
+k &= 1.381 \times 10^{-23}\ \mathrm{J/K} \\
+\varepsilon_0 &= 8.854 \times 10^{-12}\ \mathrm{C}^2/(\mathrm{N}\cdot\mathrm{m}^2) \\
+c &= 3.00 \times 10^8\ \mathrm{m/s}\\
+e &\approx 1.6 \times 10^{-19}\ \text{C}\\
+kT &\approx 0.026 \mathrm{eV} \mathrm{at} T = 300 \text{K}\\
+\end{align*}
+
+\subsection{Formulae}
+$kT_{temp} = 0.026 (\frac{temp}{300})$, kT at a temperature temp\\
+$\sigma = en\mu_n + ep\mu_p$, Conduction\\
+$ n_i^2 = n_0 p_0$, concentration at equilibrium\\
+$ n_i^2 = n_c n_v e^{-E_g/kT}$, \\
+$n_i^2 \propto T^3 e^{-E_g/kT}$, proportionality ratio\\
+$n_i^2 at {500} =(\frac{500}{300})^3 e^{-E_g/kT at 500} e^{E_g/kT at 300}$, proportional temp\\
+$E = \frac{hc}{\lambda}$, energy of photon\\
+$E_g = E_c - E_v$, Energy band gap\\
+$f(E) = \frac{1}{1 + e^{\frac{E - E_f}{kT}}}$,  Fermi-Dirac Distribution Function\\
+$n = N_c \cdot e^{-\frac{E_c - E_f}{kT}}$, Electron carrier concentration\\
+$p = N_v \cdot e^{-\frac{E_f - E_v}{kT}}$, Hole carrier concentration\\
+$J_d = q \cdot n \cdot \mu_n \cdot E$, Drift Current\\
+$J_n = q \cdot D_n \cdot \frac{dn}{dx}$, Diffusion Current\\
+$E_g = E_c - E_v$, Energy-Band Gap (Eg)
+
+$\frac{1}{m^*} = \frac{1}{m_l} + \frac{1}{m_t}$, Electron and Hole Effective Mass\\
+$q = 1.602 \times 10^{-19}\ \mathrm{C}$, Charge of an Electron\\
+$n = N_c \cdot e^{-\frac{E_c - E_f}{kT}}$, Electron Carrier Concentration\\
+$p = N_v \cdot e^{-\frac{E_f - E_v}{kT}}$, Hole Carrier Concentration\\
+$J_n = q \cdot n \cdot \mu_n \cdot E$, Drift Current Density for Electrons\\
+$J_p = q \cdot p \cdot \mu_p \cdot E$, Drift Current Density for Holes\\
+$J_n = q \cdot D_n \cdot \frac{dn}{dx}$, Diffusion Current Density for Electrons\\
+$J_p = q \cdot D_p \cdot \frac{dp}{dx}$, Diffusion Current Density for Holes\\
+$N_c = 2 \left(\frac{2\pi m_e kT}{h^2}\right)^{3/2}$, Density of States in the Conduction Band (Nc)\\
+$N_v = 2 \left(\frac{2\pi m_h kT}{h^2}\right)^{3/2}$, Density of States in the Valence Band (Nv)\\
+$P_0 = n_i e^{\frac{E_{fi} - E_f}{kT}}$\\
+$P_0 = \frac{N_A - N_D}{2} + \sqrt{(\frac{N_A - N_D}{2})^2 + n_i^2}$\\
+$N_0 = \frac{N_D - N_A}{2} + \sqrt{(\frac{N_D - N_A}{2})^2 + n_i^2}$\\
+$f_F(E) = \frac{1}{1 + e^{\frac{E - E_f}{kT}}}$, Fermi-Dirac Distribution Function\\
+$f_F(E) = e^{\frac{-(E - E_f)}{kT})}$, Boltzman Approximation when $E-E_F >> kT$\\
+$\mu_n = \frac{q \cdot \tau_n}{m^*}$, Electron Mobility\\
+$\mu_p = \frac{q \cdot \tau_p}{m^*}$, Hole Mobility\\
+$G = \alpha \cdot I$, Generation Rate of Electron-Hole Pairs\\
+$R = B \cdot np - A \cdot n_i^2$, Recombination Rate\\
+$\frac{\partial n}{\partial t} + \nabla \cdot \mathbf{J}_n = G - R$, Continuity Equation for Electron Current\\
+$\frac{\partial p}{\partial t} - \nabla \cdot \mathbf{J}_p = G - R$, Continuity Equation for Hole Current\\
+$P_0+N_D=n_0+N_A$, Charge neutrality\\
+$J_{drf} = e n \mu_n E + e p \mu_p E = \sigma E$, Total Drift\\
+$I = A J_{drf}$, Current\\
+$E = Volt/Len$, Electric Field\\
+$V_{dn} = \mu_nE$, Drift velocity for electrons\\
+$V_{dp} = \mu_pE$, Drift velocity for holes\\
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
 \section{\S1.2 - The PN Junction}
 
-$V_{bi} = V_T\ln\left(\frac{N_a N_d}{{n^2}_i}\right)$, Built In barrier ($V_f$)\\
-$C_j = C_{jo}\left(1+\frac{V_R}{V_{bi}}\right)$, Junction Capacitance\\
-$i_D = I_S\left(e^{\left(\frac{v_D}{nV_T}\right)}-1\right)$, Diode Current, where $V_T = 26mV$ @ 300K\\
 
 %%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\section{\S1.3 - Diode Circuits: DC Analysis and Models}
-
-\begin{itemize}
-	\item Use KVL when $V_D \geq V_y$. Use open circuit when $V_D < V_y$
-	\item Use PWL to plot the diode voltage where slope of diode cut in voltage is $m = 1/R_f$
-	\item Use KVL formula of the circuit to plot the load line. (Arrange formula in slope-intercept form.)
-	\item The \textit{Q-point} is at the intersection of the PWL and load line plots.
-\end{itemize}
-
-%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\section{\S1.4 - Diode Circuits: AC Analysis and Models}
-
-First, analyze the DC portion, then the AC portion.
-
-\includegraphics[width = \linewidth]{./img/f1.36.png}
-
-$R_d = \frac{1}{g_d} = \frac{V_T}{I_{DQ}}$, Small Signal Diffusion Resistance\\
-$i_d = \left(\frac{I_{DQ}}{V_T}\right) \cdot v_d = g_d \cdot v_d$, AC diode current\\
-$v_d = \left(\frac{V_T}{I_{DQ}}\right) \cdot i_d = r_d \cdot i_d$, AC diode voltage\\
-where $g_d$ and $r_d$ respectively, are the diode small-signal incremental conductance and resistance, also called the diffusion conductance and diffusion resistance.\\
-$C_d = \left(\frac{d_Q}{dV_D}\right)$, Diffusion Capacitance\\
-
-\subsection{Small-Signal Equivalent Circuit}
--\\
-
-%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\section{\S2.1 - Rectifier Circuits}
-$\frac{v_i}{v_s} = \frac{N_1}{N_2}$, Transformer voltage to turn-ratio relationship.\\
-
-\subsection{Center tapped formulae}
-$v_s(max)) = v_o(max) + V_y$, Peak\\
-$v_r(max) = 2v_S(max) - V_y$, Peak Inverse Voltage\\
-
-\subsection{Bridge rectifier formulae}
-
-\includegraphics[width = \linewidth]{./img/f2.9.png}
-
-$v_S(max) = v_O(max)$, Peak\\
-$v_R(max) = v_S(max) - V_y$, Peak Inverse Voltage\\
-$v_{o^{(t)}} = V_M e^{t'/RC}$, Average Vout\\
-$v_L = V_M e^{T'/RC}$, Minimum Vout\\
-$v_r = V_M - V_L = \frac{V_M}{2fRC}$, Ripple on Vout\\
-
-%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\section{\S2.4 - Clippers and Clampers}
-
-Clippers clip signals, and clampers shift the entire waveform.
-
-\includegraphics[width = \linewidth]{./img/f2.22.png}
-\includegraphics[width = \linewidth]{./img/f2.25.png}
-\includegraphics[width = \linewidth]{./img/f2.28.png}
-
-%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\section{\S3.1 - MOS Field-Effect Transistor}
-
-
-\subsection{N-Channel}
-
-\includegraphics[width = \linewidth]{./img/f3.12.png}
-
-$v_{DS}(sat) = v_{GS} - V_{TN}$, Saturation Voltage, where $V_{TN}$ is the threshold voltage.\\
-$i_D = K_n \left[2(v_{GS} - V_{TN} ) v_{DS} - v_{DS}^2\right]$, I-V Characteristic in non-saturation.\\
-$i_D = K_n (v_{GS} - V_{TN})^2$, I-V Characteristic in saturation.\\
-$C_{ox} = \epsilon_{ox} / t_{ox}$, Oxide capacitance per unit area.\\
-$\epsilon_{ox} = (3.9)(\SI{8.85e-14}{F/cm})$, Oxide permittivity for Si devices.\\
-$K_n = \frac{W \mu_n C_{ox}}{2L}$, Conduction Parameter\\
-$K_n = \frac{k'_n}{2} \cdot \frac{W}{L}$, Conduction Parameter\\
-$k'_n = \mu_nC_{ox}$, Process conduction parameter.\\
-$\mu_n$, Electron mobility in the inversion layer.\\
-
-\subsection{P-Channel}
-
-\includegraphics[width = \linewidth]{./img/f3.13.png}
-
-$i_D = K_p \left[2(v_{SG} - V_{TP} ) v_{SD} - v_{SD}^2\right]$, I-V Characteristic in non-saturation.\\
-$i_D = K_p (v_{SG} - V_{TP})^2$, I-V Characteristic in saturation.\\
-$K_p = \frac{W \mu_p C_{ox}}{2L}$, Conduction Parameter\\
-$K_p = \frac{k'_p}{2} \cdot \frac{W}{L}$, Conduction Parameter\\
-$k'_p = \mu_p C_{ox}$\\
-
-\includegraphics[width = \linewidth]{./img/t3.1.png}
-
-%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\section{\S3.2 - Mosfet DC Analysis}
-
-Establishes the DC operating point, $Q$. This is $I_D$ and $V_{DS}$\\
-A resistor on the source leg provides stability via negative feedback at the expense of reducing gain. Alternatively a CC bias may be used to increase stability without limiting gain.
-
-\subsection{Common Source Amplifiers}
-\subsubsection{N-Type}
-\includegraphics[width = \linewidth]{./img/nmos-common-source.png}
-
-$v_G = v_{GS} = \left(\frac{R2}{R1+R2}\right)V_{DD}$\\
-$I_D = K_n(V_{GS} - V_{TN})^2$\\
-$V_{DS} = V_{DD} - I_D R_D$\\
-$P_T = I_D V_{DS}$, Power\\
-If $V_{DS} > V_{DS}(sat)$, where $V_{DS}(sat) = V_{GS} - V_{TN}$, then the transistor is biased in the saturation region\\
-
-\subsubsection{P-Type}
-\includegraphics[width = \linewidth]{./img/pmos-common-source.png}
-
-$v_G = \left(\frac{R2}{R1+R2}\right)V_{DD}$\\
-$v_{SG} = V_{DD} - V_G$\\
-$I_D = K_p(V_{SG} + V_{TP})^2$\\
-$V_{SD} = V_{DD} - I_D R_D$\\
-$P_T = I_D V_{DS}$, Power\\
-If $V_{SD} > V_{SD}(sat)$, where $V_{SD}(sat) = V_{SG} + V_{TP}$, then the transistor is biased in the saturation region\\
-
-
-\includegraphics[width = \linewidth]{./img/small-signal.png}
-
-
-%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\section{\S4.1 - Mosfet amplifier}
-
-$g_m = 2\sqrt{K_n I_{DQ}}$, Trans-conductance\\
-$r_o = \frac{1}{\lambda I_D}$\\
-$r_{eq} = \frac{1}{g_m}$, Small Sig curr source equivalent resistance.\\
-
-
-%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\section{\S6 - BJT Amplifier}
-
-\includegraphics[width = \linewidth]{./img/6.11.png}
-
-$g_m = 2\sqrt{K_n I_{DQ}}$,\\
-$g_m = \frac{I_D}{V_{GS}}$,\\
-$g_m = 2K_n (V_{GS}-V_{TH})$,\\
-$g_m = \frac{I_C}{V_TH}$,\\
-$r_o = \frac{1}{\lambda I_{DQ}}$,\\
-$r_o = \frac{V_A}{I_C}$,\\
-$r_\pi = \frac{V_T}{I_B}$,\\
-$r_\pi = \frac{\beta}{g_m}$,\\
-$A_v = -g_m \cdot R_C || R_L$, Voltage Gain Formula\\
-
-%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\subsection{Transistor DC Equivalent}
-
-$V_{th} = \frac{V_{cc}}{R_1 + R_2} \cdot R_2$,\\
-$R_{th} = R_1 || R_2$,\\
-$V_{ce}(sat) \approxeq 0.2(typ)$,\\
-$I_E \approxeq I_C$, In active region\\
-$-\frac{1}{R_E-R_C}$, load line slope, where $R_C$ \& $R_E$ are from the AC or DC equivalent circuit. A load line plot is $I_C$ vs $V_{CE}$\\
-$I_{RE} = I_B (\beta + 1) R_E$,\\
-
-%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\subsection{Terminology}
+\subsection{Notes}
 
 \textbf{Common Source:} Input connected to gate, output connected to drain.\\
 \textbf{Common Drain (Source Follower):} Input connected to gate, output connected to source.\\
 \textbf{Common Gate:} Input connected to source, output connected to drain.\\
+
+When $N_A >> N_D$, the semiconductor is p-type.\\
+When $N_D >> N_A$, the semiconductor is n-type.\\
 
 \subsection{Transistor formulas}
 $I_C = \beta \cdot I_B$, Conduction Parameter\\
