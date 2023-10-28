@@ -1,0 +1,342 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+
+
+
+\begin{document}
+	
+	
+	\title{EEO352 Lab 4\\Digital Gates}
+	\author{Pete Mills}
+	
+	\maketitle
+	
+	\section*{Copy of Original Assignment}
+	
+	\includepdf[pages=-]{Assignment 4.pdf}
+	
+	%\listoffigures
+	
+	\section{Summary}
+	
+	In this lab we designed and tested several types of logic gates. In several cases we also modeled the behavior. Where we modeled the propagarion delay, we used fast rising signals. When modeling input voltages at the 50\% point of the output voltage, we used sawtooth input signals. 
+	
+	To measure the input/output delay in Digilent Waveforms, I applied the needed input signals. Then, I used the built in ``Midpoint'' measurement on the output channel. I used this value to set a trigger on the rising, then falling output channel signal. This allowed me to to directly measure the delay by using the cursor time delta feature.
+	
+	To measure the input voltage at the 50\% point of the output signal, I used the same Midpoint value \>\> trigger method described above. Then, zooming in on the signal I was able to use the built in ``Average'' measure on the input channel to determine the voltage.
+	
+	With respect to the circuits designed, we were not able to see the similarities or differences in the model behavior vs real-world measurements since none of models designed were based on the actual IC's used in the experiment. However, we were able to see real-world IC's do have propagation times that far exceed the idealized models behavior.Also, the Schmitt trigger produced signifigant asymmetry with respect to input voltage showing this type of circuit could be useful for cleaning up slow moving signals.
+	
+	\section{Design and Simulate}
+	
+	\subsection*{a)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-1-1-sim}
+	    \caption{CMOS inverter model using idealized parts}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-2-1-sim}
+	    \caption{Overview of triangular input signal}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-2-2-sim}
+	    \caption[Measuring the rising input signal]{Measuring the rising input signal at 50\% of the output swing with a \SI{100}{Hz} triangular waveform input, the input voltage is \SI{499.408}{mV}.}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-2-3-sim}
+	    \caption[Measuring the falling input signal]{Measuring the falling input signal at 50\% of the output swing with a \SI{100}{Hz} triangular waveform input, the input voltage is \SI{499.614}{mV}}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-3-1-sim}
+	    \caption{CMOS inverter model using Si7540DP parts}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-3-2-sim}
+	    \caption[Measuring the rising output time delay]{Measuring the time delay between the input signal and the output signal at 50\% point, the rising output lags the falling input by \SI{4.206}{nS}.}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-3-3-sim}
+	    \caption[Measuring the falling output time delay]{Measuring the time delay between the input signal and the output signal at 50\% point, the falling output lags the rising input by \SI{3.002}{nS}.}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-3-4-sim}
+	    \caption{Overview of triangular input signal}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-3-5-sim}
+	    \caption[Measuring the rising input signal]{Measuring the rising input signal at 50\% of the output swing with a \SI{100}{Hz} triangular waveform input, the input voltage is \SI{2.287432}{V}.}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-3-6-sim}
+	    \caption[Measuring the falling input signal]{Measuring the falling input signal at 50\% of the output swing with a \SI{100}{Hz} triangular waveform input, the input voltage is \SI{2.287220}{V}.}
+	\end{figure}
+
+
+	\subsection*{b)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1b-1-1-sim}
+	    \caption{Pulse input}
+	\end{figure}
+		
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1b-2-1-sim}
+	    \caption{Overview of triangular input signal}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1b-2-2-sim}
+	    \caption[Measuring the rising input signal]{Measuring the rising input signal at 50\% of the output swing with a \SI{100}{Hz} triangular waveform input, the input voltage is \SI{580.58899}{mV}.}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1b-2-3-sim}
+	    \caption[Measuring the falling input signal]{Measuring the falling input signal at 50\% of the output swing with a \SI{100}{Hz} triangular waveform input, the input voltage is \SI{419.41153}{mV}. }
+	\end{figure}
+	
+	
+	\subsection*{c)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1c-1-sim}
+	    \caption{NAND gate using discrete MOS models}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1c-2-sim}
+	    \caption{NOR gate using discrete MOS models}
+	\end{figure}
+	
+
+	\subsection*{d)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1d-sim}
+	    \caption{XOR gate using discrete NAND models}
+	\end{figure}
+
+
+	\subsection*{e)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1e-sim}
+	    \caption{XOR gate using discrete NOR and inverter models}
+	\end{figure}
+
+
+	\section{Using the CD4007 CMOS array, build and measure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-lab}
+	    \caption{Schematic of inverter circuit 1a}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-photo}
+	    \caption{Photo of test setup}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-1-lab}
+	    \caption{Overview of test signals for threshold measurement}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-1-delay-lab}
+	    \caption{Overview of test signals for delay measurement}
+	\end{figure}
+	
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-3-rising-delay-lab}
+	    \caption[Measuring the rising output time delay]{Measuring the time delay between the input signal and the output signal at 50\% point, the rising output lags the falling input by \SI{39.605}{nS}.}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-3-falling-delay-lab}
+	    \caption[Measuring the falling output time delay]{Measuring the time delay between the input signal and the output signal at 50\% point, the falling output lags the rising input by \SI{30.761}{nS}.}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-2-rising-thresh-lab}
+	    \caption[Measuring the falling input signal]{Measuring the falling input signal at 50\% of the output swing with a \SI{100}{Hz} triangular waveform input, the input voltage is \SI{2.3404}{V}.}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-2-falling-thresh-lab}
+	    \caption[Measuring the rising input signal]{Measuring the rising input signal at 50\% of the output swing with a \SI{100}{Hz} triangular waveform input, the input voltage is \SI{2.3460}{V}.}
+	\end{figure}
+		
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-lab}
+	    \caption{Schematic of Schmitt trigger circuit 1b}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-photo}
+	    \caption{Photo of test setup}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-1-lab}
+	    \caption{Overview of test signals for threshold measurement}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-1-delay-lab}
+	    \caption{Overview of test signals for delay measurement}
+	\end{figure}
+	
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-3-rising-delay-lab}
+	    \caption[Measuring the rising output time delay]{Measuring the time delay between the input signal and the output signal at 50\% point, the rising output lags the falling input by \SI{109.920}{nS}.}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-3-falling-delay-lab}
+	    \caption[Measuring the falling output time delay]{Measuring the time delay between the input signal and the output signal at 50\% point, the falling output lags the rising input by \SI{86.073}{nS}.}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-2-rising-thresh-lab}
+	    \caption[Measuring the falling input signal]{Measuring the falling input signal at 50\% of the output swing with a \SI{100}{Hz} triangular waveform input, the input voltage is \SI{1.5226}{V}.}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-2-falling-thresh-lab}
+	    \caption[Measuring the rising input signal]{Measuring the rising input signal at 50\% of the output swing with a \SI{100}{Hz} triangular waveform input, the input voltage is \SI{3.2609}{V}.}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c-nand-lab}
+	    \caption{Schematic of NAND gate circuit 1c}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c-nand-photo}
+	    \caption{Photo of test setup}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c-setup}
+	    \caption{Overview of input A and input B waveforms}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c-nand}
+	    \caption{Input B and output showing correct NAND logic}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c-nor-lab}
+	    \caption{Schematic of NOR gate circuit 1c}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c-nor-photo}
+	    \caption{Photo of test setup}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c-setup}
+	    \caption{Overview of input A and input B waveforms}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c-nor}
+	    \caption{Input B and output showing correct NOR logic}
+	\end{figure}
+	
+
+	\section{Using the 74LS00 NAND array, build and measure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3a-xor-lab}
+	    \caption{Schematic of XOR gate 1d}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3a-setup}
+	    \caption{Overview of input A and input B waveforms}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3a-xor-photo}
+	    \caption{Photo of test setup}
+	\end{figure}
+	
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3a-lab}
+	    \caption{Input B and output showing correct XOR logic}
+	\end{figure}
+
+	
+\end{document}

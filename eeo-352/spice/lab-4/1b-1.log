@@ -1,0 +1,24 @@
+Circuit: * C:\eeo\eeo-352\spice\lab-4\1b-1.asc
+
+WARNING: Specified period is not longer than the sum of Trise, Tfall, and Ton for v1.  Increasing period to 0.010001
+Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 0.00290294 +++++++++++to 0.00290295
+Heightened Def Con from 0.00790394 +++++++++to 0.00790394
+
+Date: Sat Oct 14 08:40:44 2023
+Total elapsed time: 0.060 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 5302
+traniter = 5286
+tranpoints = 1430
+accept = 1187
+rejected = 265
+matrix size = 7
+fillins = 0
+solver = Normal
+Matrix Compiler1: 304 bytes object code size  0.1/0.0/[0.0]
+Matrix Compiler2: off  [0.0]/0.1/0.1
+
