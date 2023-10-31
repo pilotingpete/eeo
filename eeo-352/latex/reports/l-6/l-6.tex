@@ -1,0 +1,222 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+
+
+
+\begin{document}
+	
+	
+	\title{EEO352 Lab 6\\Operational Amplifiers}
+	\author{Pete Mills}
+	
+	\maketitle
+	
+	\section*{Copy of Original Assignment}
+	
+	\includepdf[pages=-]{Assignment 6-1.pdf}
+	
+	%\listoffigures
+	
+	\section*{Summary}
+	
+	In this lab we simulated and built opamp circuits of inverting and non inverting designs and with different gain settings. We measured the -3db frequency point and plotted the input and output signals. We also computed the Gain Bandwidth Product for each circuit assembled and estimated the input resistance.
+	
+	In my simulation of unity gain opamp designs (1a, 1c) I was unable to measure a -3db point as the Bode plot in LTspice started at around -20db and never really increased. Confusingly, the experiment produced that -3db point for analysis. This could be due to an error in my simulation schematic or just the reality of the physical circuit.
+	
+	Also, when measuring the frequency response of some circuits I sometimes saw ``noisy'' signals. This too could be due to the circuit as it is built on the breadboard. I have noticed that the breadboards are of fairly poor quality and sometimes I have had to move my circuit to use a section of the breadboard with better connection properties.
+	
+	The simulation and actual circuit built showed a strong correlation when comparing the analog behavior. I was able to observe the signal inversion, phase shift and amplitude comparison to verify the gain of the circuit.
+	
+
+	\section{Design and Simulate}
+	
+	\subsection*{a)}
+	
+	\begin{itemize}
+		\item \SI{-3}{\decibel} frequency: N/A
+		\item Input impedance: $\infty \Omega$
+	\end{itemize}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-1}
+	    \caption{Non-inverting Buffer; Analog response}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-2}
+	    \caption{Non-inverting Buffer; Frequency response}
+	\end{figure}
+	
+	\subsection*{b)}
+
+	\begin{itemize}
+		\item \SI{-3}{\decibel} frequency: \SI{1.08}{\mega\hertz}, phase \SI{-97.0}{\degree}
+		\item Input impedance: $\infty \Omega$
+	\end{itemize}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1b-1}
+	    \caption{Non-inverting amp with gain 21; Analog Response}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1b-2}
+	    \caption{Non-inverting amp with gain 21; Frequency Response}
+	\end{figure}
+		
+	\subsection*{c)}
+	
+	\begin{itemize}
+		\item \SI{-3}{\decibel} frequency: N/A
+		\item Input impedance: $1k \Omega$
+	\end{itemize}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1c-1}
+	    \caption{Inverting buffer; Analog Response}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1c-2}
+	    \caption{Inverting buffer; Frequency Response}
+	\end{figure}
+	
+	\subsection*{d)}
+	
+	\begin{itemize}
+		\item \SI{-3}{\decibel} frequency: \SI{1.04}{\mega\hertz}, phase \SI{83.8}{\degree}
+		\item Input impedance: $1k \Omega$
+	\end{itemize}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1d-1}
+	    \caption{Inverting amp with gain 20; Analog Response}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1d-2}
+	    \caption{Inverting amp with gain 20; Frequency Response}
+	\end{figure}
+	
+	\section{Build and Measure}
+	
+	\subsection*{a)}
+	
+	\begin{itemize}
+		\item \SI{-3}{\decibel} frequency: \SI{3.17}{\mega\hertz}, phase \SI{-75.3}{\degree}
+		\item GBWP = 1 * \SI{3.17}{\mega\hertz} = \SI{3.17}{\mega\hertz}
+	\end{itemize}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-photo}
+	    \caption{Setup photo}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-1}
+	    \caption{Non-inverting Buffer; Analog response}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-2}
+	    \caption{Non-inverting Buffer; Frequency response}
+	\end{figure}
+	
+	\subsection*{b)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-photo}
+	    \caption{Setup photo}
+	\end{figure}
+
+	\begin{itemize}
+		\item \SI{-3}{\decibel} frequency: \SI{3.14}{\mega\hertz}, phase \SI{-122.9}{\degree}
+		\item GBWP = 21 * \SI{3.14}{\mega\hertz} = \SI{65.94}{\mega\hertz}
+	\end{itemize}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-1}
+	    \caption{Non-inverting amp with gain 21; Analog Response}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-2}
+	    \caption{Non-inverting amp with gain 21; Frequency Response}
+	\end{figure}
+	
+	\subsection*{c)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c-photo}
+	    \caption{Setup photo}
+	\end{figure}
+	
+	\begin{itemize}
+		\item \SI{-3}{\decibel} frequency: \SI{2.78}{\mega\hertz}, phase \SI{85.93}{\degree}
+		\item GBWP = 1 * \SI{2.78}{\mega\hertz} = \SI{2.78}{\mega\hertz}
+	\end{itemize}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c-1}
+	    \caption{Inverting buffer; Analog Response}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c-2}
+	    \caption{Inverting buffer; Frequency Response}
+	\end{figure}
+	
+	\subsection*{d)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2d-photo}
+	    \caption{Setup photo}
+	\end{figure}
+	
+	\begin{itemize}
+		\item \SI{-3}{\decibel} frequency: \SI{3.12}{\mega\hertz}, phase \SI{52.45}{\degree}
+		\item GBWP = 20 * \SI{3.12}{\mega\hertz} = \SI{62.40}{\mega\hertz}
+	\end{itemize}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2d-1}
+	    \caption{Inverting amp with gain 20; Analog Response}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2d-2}
+	    \caption{Inverting amp with gain 20; Frequency Response}
+	\end{figure}
+	
+		
+\end{document}

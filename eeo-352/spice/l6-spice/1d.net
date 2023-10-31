@@ -1,0 +1,12 @@
+* C:\eeo\eeo-352\spice\l6-spice\1d.asc
+V2 neg_5 0 -5
+XU1 0 N001 pos_5 neg_5 Vout OP27
+V1 pos_5 0 5
+V3 Vin 0 SINE(0 100m 50k) AC 100m
+R1 N001 Vin 1k
+R2 Vout N001 20k
+.tran 50u
+;.ac dec 100 100 25Meg
+.lib ADI.lib
+.backanno
+.end

@@ -1,0 +1,118 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+
+
+
+\begin{document}
+	
+	
+	\title{EEO352 Lab 5\\Counters}
+	\author{Pete Mills}
+	
+	\maketitle
+	
+	\section*{Copy of Original Assignment}
+	
+	\includepdf[pages=-]{Assignment 5.pdf}
+	
+	%\listoffigures
+	
+	\section*{Summary}
+	
+	In this lab we built frequency division circuits and a pseudorandom counter. To implement these circuits we used the following IC's.
+	
+	\begin{itemize}
+	  \item 74LS74 D-FF
+	  \item 74LS00 Quad 2-Input NAND Gate
+	  \item 74LS86 Quad 2-Input Exclusive-OR Gate
+	\end{itemize}
+	
+	There are several differences between the LTspice special function/mixed mode simulation devices and the actual CMOS components we prototyped. This required a different approach to specifying the circuit in LTspice vs on the breadboard.With the differences identified and accounted for, the simulation produced results identical to the real world experiment. 
+	
+	The divide by 16 circuit is a straight forward implementation of $2^n$ frequency division. Whereas the divide by 9 circuit required a different approach. Here we made a binary counter, then NAND a reset/clear signal when the binary value is equal to decimal 9.For my implementation of the pseudorandom counter it was necessary for me to start the DFF by taking DO high before reattaching to the output of the XOR. This procedure was described in the lab instructions.
+	
+	
+
+	\section{Design and Simulate}
+	
+	\subsection*{a)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a}
+	    \caption{Divide by 16 circuit}
+	\end{figure}
+	
+	\subsection*{b)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1b}
+	    \caption{Divide by 9 circuit. Note the asymmetrical duty cycle.}
+	\end{figure}
+		
+	\subsection*{c)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1c}
+	    \caption{Pseudo random generator}
+	\end{figure}
+	
+	\section{Build and Measure}
+	
+	\subsection*{a)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-wfm}
+	    \caption{Divide by 16 analysis}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-photo}
+	    \caption{Divide by 16 prototype circuit photo}
+	\end{figure}
+	
+
+	\subsection*{b)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-wfm}
+	    \includegraphics[width=0.7\textwidth]{2b-2-wfm}
+	    \caption{Divide by 9 analysis}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-photo}
+	    \caption{Divide by 9 prototype circuit photo}
+	\end{figure}
+	
+	\subsection*{c)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c-wfm}
+	    \caption{Pseudorandom counter analysis}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c-photo}
+	    \caption{Pseudorandom counter prototype circuit photo}
+	\end{figure}
+		
+\end{document}

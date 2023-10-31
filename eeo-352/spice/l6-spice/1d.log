@@ -1,0 +1,21 @@
+Circuit: * C:\eeo\eeo-352\spice\l6-spice\1d.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Fri Oct 27 20:26:06 2023
+Total elapsed time: 0.108 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2143
+traniter = 2118
+tranpoints = 1060
+accept = 1054
+rejected = 6
+matrix size = 12
+fillins = 3
+solver = Normal
+Matrix Compiler1: 580 bytes object code size  0.4/0.2/[0.1]
+Matrix Compiler2: off  [0.2]/0.3/0.3
+

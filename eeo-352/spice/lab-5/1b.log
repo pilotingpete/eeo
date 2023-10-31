@@ -1,0 +1,24 @@
+Circuit: * C:\eeo\eeo-352\spice\lab-5\1b.asc
+
+WARNING: Less than two connections to node C1.  This node is used by A2.
+WARNING: Less than two connections to node C2.  This node is used by A3.
+WARNING: Less than two connections to node N005.  This node is used by A5.
+Direct Newton iteration for .op point succeeded.
+
+Date: Sun Oct 22 18:23:01 2023
+Total elapsed time: 0.047 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 8129
+traniter = 8124
+tranpoints = 4028
+accept = 3507
+rejected = 521
+matrix size = 12
+fillins = 0
+solver = Normal
+Matrix Compiler1: 176 bytes object code size  0.0/0.0/[0.0]
+Matrix Compiler2: off  [0.0]/0.0/0.1
+
