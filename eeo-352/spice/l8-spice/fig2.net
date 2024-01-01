@@ -1,0 +1,16 @@
+* C:\eeo\eeo-352\spice\l8-spice\fig2.asc
+V2 N001 0 5
+V1 i 0 SINE(0 5m 50k) AC 1
+C1 g i 100n
+R1 o g 200k
+C2 N002 0 30p
+R3 N001 o 2k
+Q1 o g 0 0 2N3904
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\pmills\OneDrive - Navitas Systems\Documents\LTspiceXVII\lib\cmp\standard.bjt
+;.op
+;.tran 100u
+.ac dec 100 100 1500Meg
+.backanno
+.end

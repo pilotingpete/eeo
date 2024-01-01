@@ -1,0 +1,24 @@
+Circuit: * C:\eeo\eeo-352\spice\l7-spice\fig2.asc
+
+WARNING: Node NC_01 is floating.
+
+WARNING: Less than two connections to node NC_01.  This node is used by C2.
+Direct Newton iteration for .op point succeeded.
+
+Date: Sun Nov 12 21:32:11 2023
+Total elapsed time: 0.039 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2091
+traniter = 2084
+tranpoints = 1042
+accept = 1042
+rejected = 0
+matrix size = 11
+fillins = 0
+solver = Normal
+Matrix Compiler1: 502 bytes object code size  0.1/0.1/[0.1]
+Matrix Compiler2: 753 bytes object code size  0.1/0.1/[0.1]
+

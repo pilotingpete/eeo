@@ -1,0 +1,43 @@
+Circuit: * C:\eeo\eeo-352\spice\l9-spice\fig2.asc
+
+WARNING: Less than two connections to node NC_01.  This node is used by R:U1:OUT1:OUT.
+WARNING: Less than two connections to node NC_02.  This node is used by R:U2:OUT1:OUT.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-005
+Gmin = 1.6455e-006
+Gmin = 1.76685e-007
+Gmin = 1.89714e-008
+Gmin = 2.03704e-009
+Gmin = 2.18725e-010
+Gmin = 2.34854e-011
+Gmin = 2.52173e-012
+Gmin = 2.70769e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Date: Sun Dec 03 20:32:02 2023
+Total elapsed time: 45.620 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2255150
+traniter = 2254739
+tranpoints = 1000437
+accept = 999688
+rejected = 749
+matrix size = 151
+fillins = 16
+solver = Normal
+Thread vector: 4.0/2.6[5] 1.6/1.0[5] 0.7/0.5[4] 0.2/0.6[1]  2592/500
+Matrix Compiler1: 5.70 KB object code size  0.8/0.4/[0.3]
+Matrix Compiler2: 8.65 KB object code size  0.7/0.9/[0.4]
+

@@ -1,0 +1,201 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+
+
+
+\begin{document}
+	
+	
+	\title{EEO352 Lab 7\\Field Effect Transistors (FETs)}
+	\author{Pete Mills}
+	
+	\maketitle
+	
+	\section*{Copy of Original Assignment}
+	
+	\includepdf[pages=-]{Assignment 7.pdf}
+	
+	%\listoffigures
+	
+	\section*{Summary}
+	
+	In this lab we simulated and built circuits around the J113 JFET. We measured properties of the device in spice simulation and in physical experiments. We also built an amplifier and analyzed the performance. For the most part the experiment closely tracked the results in the simulation. One place there was signifigant difference was in section 4. In the physical experiment vs the simulation, the gain was measured to be 3x less. Also, I was not able to operate the network analyzer up near \SI{90}{\mega\hertz} as the simulation suggested would be necessary for measuring the \SI{-3}{\decibel} point. This looks to be a limitation of the Analog Discovery 3 hardware. 
+	
+	There were some small differences in the experiment vs the simulation when measuring $V_{gs} @ I_d = \SI{5}{\mA}$, however these are likely close enough to be considered part tolerance or setup deviation.
+	
+
+	\section{Circuit 1 Tasks}
+	
+	\subsection*{a)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a}
+	    \caption{Drain current Id vs Vds (range 0V to 3V) with parametric Vgs (-2V to 0V in 100mV steps)}
+	\end{figure}
+	
+	\subsection*{b)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1b}
+	    \caption{Drain current Id vs Vgs (range -2V to 0V) with parametric Vds (0V to 3V in 200mV steps)}
+	\end{figure}
+		
+	\subsection*{c)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1c}
+	    \caption{Drain current Id vs Vgs (range -2V to 0V) at Vds=2V, and extrapolate the Vgs at Id=5mA}
+	\end{figure}
+	
+	$V_{gs}$ @ $I_d$ = \SI{5}{\mA} is \SI{-641.55}{\mV}.
+	
+	\subsection*{d)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1d}
+	    \caption{Derivative (d(.)) of the drain current Id vs Vgs (range -2V to 0V) at Vds=2V, and extrapolate the
+transconductance at Id=5mA}
+	\end{figure}
+
+	The transconductance $g_m$ is found to be \SI{13.366}{\milli\ohm} @ Id = \SI{5}{\mA}
+	
+	\section{Circuit 2 Tasks}
+	
+	\subsection*{a)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a}
+	    \caption{Simulate the response to 50kHz 100mV sinusoidal signal (plot in separate panes) and extrapolate gain}
+	\end{figure}
+	
+	The input amplitude is \SI{100}{\mV} pp and output amplitude is \SI{1.5}{\volt} pp, centered about \SI{2.0}{\volt}, therefore the gain is 15.
+	
+	\subsection*{b)}
+	
+	Frequency response, extrapolating the gain and -3dB bandwidth without and with the 30pF load
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-3}
+	    \caption{Frequency analysis overview}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-4}
+	    \caption{The \SI{-3}{\decibel} point is found at \SI{91.43}{\mega\hertz}}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a-5}
+	    \caption{Without \SI{30}{\pico\farad} output capacitance there is no \SI{-3}{\decibel} point.}
+	\end{figure}
+	
+	
+
+	\section{Build and Measure}
+	
+	\subsection*{a)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3a-photo}
+	    \caption{Test Setup}
+	\end{figure}
+
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3a}
+	    \caption{Drain current Id vs Vds (range 0V to 3V) with parametric Vgs (see example in Fig.3)}
+	\end{figure}
+
+	\subsection*{b)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3b-photo}
+	    \caption{Test Setup}
+	\end{figure}
+
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3b}
+	    \caption{Drain current Id vs Vgs (range -2V to 0V) for Vds>2V, and extract the Vgs and the gm at Id=5mA}
+	\end{figure}
+	
+	\begin{itemize}
+		\item At $I_d = \SI{5}{\mA}$, $V_{gs} \approx \SI{850}{\mV}$
+	\end{itemize}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3b-2}
+	    \caption{Zooming in to see $\Delta I_d = \SI{0.2}{\mA}$ and $\Delta V_{gs} = \SI{20}{\mV}$}
+	\end{figure}
+	
+	\begin{itemize}
+		\item At $I_d = \SI{5}{\mA}$, $gm \approx \SI{10}{\milli\Omega}$
+	\end{itemize}
+	
+	
+	\subsection*{3)}
+	
+	Explain how the tools operating on voltages allow measuring currents and plotting the desired curves.
+	
+	
+	A: We are able to plot currents by using a resistor in series with the current signal which allows us to read an analog voltage proportional to the current in the circuit. Using Ohm's law the actual current can be determined using the voltagemeasured and the known resistance of the resistor selected.
+	
+	\subsection*{4)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{4-photo}
+	    \caption{Test Setup}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{4a}
+	    \caption{Measure the response to 50kHz 100mV sinusoidal signal and extract gain}
+	\end{figure}	
+	
+	The gain is calculated to be 4.65.
+	
+
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{image}
+	    \caption{	Based on feedback from the Professor  I change V3 to \SI{-3.5}{\volt}, then the gain increased to 8.6. Lowering V3 further did not increase the gain, but seems to cause noise on the lower half of the input sine wave. The output amplitude was observed to be around \SI{2.23}{\volt} max.}
+	\end{figure}	
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{4b}
+	    \caption{Frequency response, extracting the gain and the -3dB bandwidth}
+	\end{figure}	
+	
+	The Digilent Waveforms application indicated a bandwith limitation. It appears that the max bandwidth is less than \SI{25}{\mega\hertz}. This is 4x lower that what the simulation shows the \SI{-3}{\decibel} point to be. 
+	
+	
+	
+		
+\end{document}

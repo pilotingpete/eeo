@@ -1,0 +1,150 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+
+
+
+\begin{document}
+	
+	
+	\title{EEO352 Lab 9\\ Monostables and Rectifiers}
+	\author{Pete Mills}
+	
+	\maketitle
+	
+	\section*{Copy of Original Assignment}
+	
+	\includepdf[pages=-]{Assignment 9.pdf}
+	
+	%\listoffigures
+	
+	\section*{Summary}
+	
+	In this lab we perform timing control using monostable circuits and ac power control using an SCR.
+	
+
+	\section{Using the 74HC123 part in the 74HC library, design and simulate as follows, plotting the clock and the Q signals in separate panes and reporting the width of the Q pulses}
+	
+	\subsection*{a)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a}
+	    \caption{Q pulse width is $\approx \SI{170}{\micro\second}$}
+	\end{figure}
+	
+	\subsection*{b)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1b}
+	    \caption{Q1 pulse width is $\approx \SI{170}{\micro\second}$, and Q2 pulse width is $\approx \SI{62.5}{\micro\second}$}
+	\end{figure}
+	
+	\subsection*{c)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1c}
+	    \caption{Q1 pulse width is $\approx \SI{165}{\micro\second}$, and Q2 pulse width is $\approx \SI{62.5}{\micro\second}$}
+	\end{figure}
+
+
+	\section{Using the SCR 2N5062 develop the asynchronous rectifier as shown in Fig.2}
+	
+	\subsection*{a)}
+	
+	The two 74HC123 IC's are configured to form a self triggering monostable circuit. The output (Q2) then is a repeating square wave of fixed duty cycle. This signal is tied to the gate of an SCR. This means that while the gate input is high, the output will be clamped to 0.6V. There is an AC signal input to the anode of an SCR - this signal will be available at the output except when the gate input is high, then the output will be clamped to 0.6V. Only the positive half of the input AC wave form can be modified.
+	
+	The problem with this circuit is the lack of synchronization. Without synchronizing the self-triggering monostable circuit with the AC waveform on the anode of the SCR, the power is not able to be regulated in a meaningful way.
+	
+
+
+	\subsection*{b)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b}
+	    \caption{Asynchronous rectifier plots }
+	\end{figure}
+
+
+
+	\section{Using the 74LS123 part, build and measure the circuits at (1a), (1b) and (1c), plotting CK and Q for (a), the CK and Q2 for (b) and Q1 and Q2 for (c), and reporting the width of the Q pulses}
+	
+	\subsection*{a)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3a-setup}
+	    \caption{Test Setup}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3a}
+	    \caption{Waveform plots, Q = \SI{111}{\micro\second}}
+	\end{figure}
+
+	\subsection*{b)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3b-setup}
+	    \caption{Test Setup}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3b}
+	    \caption{Waveform plots, Q2 = \SI{36}{\micro\second}}
+	\end{figure}
+	
+	\subsection*{c)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3c-setup}
+	    \caption{Test Setup}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3c-2}
+	    \caption{Waveform plots, Q1 = \SI{110.5}{\micro\second}}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3c}
+	    \caption{Waveform plots, Q2 = \SI{35.5}{\micro\second}}
+	\end{figure}
+	
+	\section{Using the SCR MCR100-6 part, build and measure the circuit at (2), plot the signals s and o, and analyze the performance}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{4-setup}
+	    \caption{Test Setup}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{4}
+	    \caption{Waveform Plots}
+	\end{figure}
+	
+	It can be seen from the waveform plots that the circuit has similar performance to the simulation. It appears that the lack of synchronization is still an issue preventing useful circuit operation. 
+	
+	
+		
+\end{document}

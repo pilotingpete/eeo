@@ -1,0 +1,200 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+
+
+
+\begin{document}
+	
+	
+	\title{EEO352 Lab 8\\ Bipolar Junction Transistors (BJTs)}
+	\author{Pete Mills}
+	
+	\maketitle
+	
+	\section*{Copy of Original Assignment}
+	
+	\includepdf[pages=-]{Assignment 8.pdf}
+	
+	%\listoffigures
+	
+	\section*{Summary}
+	
+	In this lab we ...
+	
+
+	\section{Simulate and Measure Circuit 1}
+	
+	\subsection*{a)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a}
+	    \caption{Collector current Ic vs Vce (range 0V to 3V) with parametric Vbe (0.5V to 0.75V, 10mV steps)}
+	\end{figure}
+	
+	\subsection*{b)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1b}
+	    \caption{Collector current Ic vs Vbe (range 0.5V to 0.75V) with parametric Vce (0.5V to 3V in 100mV steps)}
+	\end{figure}
+	
+	\subsection*{c)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1c}
+	    \caption{Collector current Ic vs Vbe (range 0.5V to 0.75V) at Vce=2V, and extrapolate the Vbe at Ic=1mA}
+	\end{figure}
+	
+	$V_{be}$ is $\approx$ \SI{655}{\milli\volt} @ $I_c = $\SI{1}{\mA}
+	
+	\subsection*{d)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1d}
+	    \caption{Derivative (d(.)) of the collector current Ic vs Vbe (range 0.5V to 0.75V) at Vce=2V, and extrapolate the
+transconductance at Ic=1mA}
+	\end{figure}
+	
+	The transconductance $g_m$ is found to be \SI{39.042}{\milli\ohm} @ $I_c$ = \SI{1}{\mA}
+	
+	\subsection*{e)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1e}
+	    \caption{Current gain Ic/Ib vs Vbe (range 0.5V to 0.75V) at Vce=2V, and extrapolate the gain at Ic=1mA}
+	\end{figure}
+	
+	The gain is $\approx 303.3$
+
+	
+	
+	
+	
+	\section{Simulate and Measure Circuit 2}
+	
+	\subsection*{a)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a}
+	    \caption{Response to 50kHz 5mV sinusoidal signal (plot in separate panes) and extrapolate the gain}
+	\end{figure}
+	
+	The input amplitude is \SI{5}{\mV} pp and output amplitude is \SI{1.179}{\volt} pp, centered about \SI{1.77}{\volt}, therefore the gain is $\approx 236$.
+	
+	\subsection*{b)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b-1}
+	    \includegraphics[width=0.7\textwidth]{2b-2}
+	    \caption{Frequency response, extrapolating the gain and -3dB bandwidth without and with a 30pF load}
+	\end{figure}
+	
+	Without the \SI{30}{\pico\farad} output capacitance, the \SI{-3}{\decibel} point is found at \SI{1.0}{\giga\hertz}\\
+	With the \SI{30}{\pico\farad} output capacitance, the \SI{-3}{\decibel} point is found at \SI{259.2}{\mega\hertz}	
+	
+	
+
+	\section{Build and Measure Circuit 1}
+	
+	\subsection*{a)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3a-photo}
+	    \caption{Test Setup}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3a}
+	    \caption{Collector current Ic vs Vce (range 0V to 3V) with parametric Vbe (see example in Fig.3)}
+	\end{figure}
+	
+	\subsection*{b)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3b-photo}
+	    \caption{Test Setup}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3b}
+	    \caption{Collector current Ic vs Vbe (range 0.5 to 0.75V) for Vce>2V, and extract the Vbe and the gm at Ic=1mA}
+	\end{figure}
+	
+	$V_{be}$ is $\approx$ \SI{664}{\milli\volt} @ $I_c = $\SI{1}{\mA}
+
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3b-2}
+	    \caption{Zooming in to calculate $gm = \Delta V / \Delta I$}
+	\end{figure}
+	
+	At $I_c = \SI{1}{\mA}$, $gm \approx \SI{25}{\milli\Omega}$
+	
+	
+
+	\subsection*{c)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{3c}
+	    \caption{Gain Ic/Ib vs Collector current Ic (setting as in (b)) and extract the gain at Ic=1mA}
+	\end{figure}
+	
+	The gain is found to be $\approx 180$
+	
+	
+	
+	\section{Build and Measure Circuit 2}
+	
+	\subsection*{a)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{4a-photo}
+	    \caption{Test Setup}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{4a}
+	    \caption{Response to 50kHz 5mV sinusoidal signal and extract the gain}
+	\end{figure}
+	
+	The input amplitude is \SI{5}{\mV} pp and output amplitude is \SI{0.57}{\volt} pp, centered about \SI{2.4}{\volt}, therefore the gain is 114.
+	
+	\subsection*{b)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{4b}
+	    \caption{Frequency response, extracting the gain and the -3dB bandwidth}
+	\end{figure}
+	
+	 Using the Digilent Waveforms Network Analyzer it appears there is a \SI{-3}{\decibel} point at about \SI{900}{\hertz} and another at at about \SI{900}{\kilo\hertz}. At the time of writing, I am not sure what this means, but will continue to research to understand.
+	
+	
+	
+		
+\end{document}

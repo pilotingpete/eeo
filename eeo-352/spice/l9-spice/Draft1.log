@@ -1,0 +1,24 @@
+Circuit: * C:\eeo\eeo-352\spice\l9-spice\Draft1.asc
+
+Limiting rise time of source v2 to 0.01
+Limiting fall time of source v2 to 0.01
+WARNING: Less than two connections to node EWS_EN_MON.  This node is used by R2.
+Direct Newton iteration for .op point succeeded.
+
+Date: Fri Dec 22 14:32:16 2023
+Total elapsed time: 0.044 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 5685
+traniter = 5678
+tranpoints = 2079
+accept = 1842
+rejected = 237
+matrix size = 16
+fillins = 6
+solver = Normal
+Matrix Compiler1: 1.21 KB object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 1.32 KB object code size  0.1/0.1/[0.1]
+

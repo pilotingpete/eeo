@@ -77,79 +77,6 @@
 
 \newlength{\MyLen}
 
-%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\section{\S1 - The Crystal Structure of Solids}
-
-\subsection{Miller Index}
-
-\begin{enumerate}
-	\item Identify the intercepts: Locate the points where the plane intersects the crystallographic axes (usually denoted as $a$, $b$, and $c$).
-	\item Convert to fractional coordinates: Express these intercepts as fractions of the unit cell dimensions ($a$, $b$, $c$). To do this, divide each intercept by the respective unit cell dimension. If an intercept does not intersect the corresponding axis, use $\infty$ as the fraction.
-	\item Take reciprocals: Invert the fractional intercepts to obtain the reciprocal fractions.
-	\item Simplify the ratios: If any of the reciprocals are not integers, multiply all the indices by the smallest integer that makes them all whole numbers while maintaining the ratio. This ensures that the Miller indices are in the simplest form.
-	\item Enclose in parentheses: Write the indices as $(hkl)$, where $h$, $k$, and $l$ are the integers obtained after simplification. These are the Miller indices that represent the crystallographic plane.
-	\item Optional: If the plane is parallel to an axis (intercepts at infinity), write the corresponding Miller index as 0. For example, if a plane is parallel to the $a$-axis and intercepts the $b$ and $c$-axes at infinity, its Miller indices would be $(0bc)$.
-\end{enumerate}
-
-\subsection{Principles of Quantum Mechanics}
-
-\begin{enumerate}
-	\item Superposition Principle: Quantum systems can exist in a linear combination of multiple states simultaneously, described by a wavefunction.
-	
-	\item Wave-Particle Duality: Particles, such as electrons and photons, exhibit both wave-like and particle-like properties.
-	
-	\item Uncertainty Principle: There is a fundamental limit to the precision with which certain pairs of properties, such as position and momentum, can be simultaneously known.
-	
-	\item Quantum States and Operators: Quantum states are described by wavefunctions, and operators represent physical observables and transformations.
-	
-	\item Measurement and Collapse: Measurement of a quantum system collapses its wavefunction to one of its possible states, with probabilities determined by the square of the amplitude of the wavefunction.
-	
-	\item Quantum Entanglement: Entangled particles exhibit correlations that cannot be explained by classical physics, even when separated by large distances.
-	
-	\item Quantum Tunneling: Particles can penetrate energy barriers that classical physics predicts they should not be able to cross.
-	
-	\item Quantum Interference: Quantum systems can exhibit interference patterns when multiple pathways are available.
-	
-	\item Quantum Information: Quantum mechanics plays a crucial role in the field of quantum computing and quantum cryptography, offering advantages in information processing and security.
-\end{enumerate}
-
-\subsection{Broglie Wavelength}
-
-Convert energy from eV to J:
-
-\[ E = 1.0 \, \text{eV} = 1.60219 \times 10^{-19} \, \text{J} \]
-
-Calculate momentum of the proton or electron:
-
-\[
-p_{\text{proton}} = \sqrt{2 \cdot m_{\text{proton}} \cdot E}
-\]
-
-Where:
-\( p_{\text{proton}} \) = momentum of the proton, 
-\( m_{\text{proton}} \) = mass of the proton (\( \approx 1.6726219 \times 10^{-27} \) kg), 
-\( E \) = kinetic energy (in Joules)
-
-\[
-p_{\text{electron}} = \sqrt{2 \cdot m_{\text{electron}} \cdot E}
-\]
-
-Where:
-\( p_{\text{electron}} \) = momentum of the electron, 
-\( m_{\text{electron}} \) = mass of the electron (\( \approx 9.10938356 \times 10^{-31} \) kg), 
-\( E \) = kinetic energy (in Joules)
-
-
-
-Calculate the de Broglie wavelength:
-
-\[
-\lambda = \frac{h}{p}
-\]
-
-Where:
-\( \lambda \) = de Broglie wavelength, 
-\( h \) = Planck's constant (\(6.62607015 \times 10^{-34} \) m² kg/s)
 
 \subsection{Energy}
 
@@ -164,10 +91,15 @@ q &= 1.602 \times 10^{-19}\ \mathrm{C} \\
 m_e &= 9.109 \times 10^{-31}\ \mathrm{kg} \\
 h &= 6.626 \times 10^{-34}\ \mathrm{J}\cdot\mathrm{s} \\
 k &= 1.381 \times 10^{-23}\ \mathrm{J/K} \\
-\varepsilon_0 &= 8.854 \times 10^{-12}\ \mathrm{C}^2/(\mathrm{N}\cdot\mathrm{m}^2) \\
+\varepsilon_0 &= 8.854 \times 10^{-14}\ \mathrm{C}^2/(\mathrm{N}\cdot\mathrm{m}^2) \\
 c &= 3.00 \times 10^8\ \mathrm{m/s}\\
 e &\approx 1.6 \times 10^{-19}\ \text{C}\\
 kT &\approx 0.026 \mathrm{eV} \mathrm{at} T = 300 \text{K}\\
+h &= 6.62607015 \times 10^{-34} \mathrm{ m^2 kg/s}\\
+\varepsilon_{ox} &= (3.9)(8.85 \times 10^{-14}) = 3.45 \times 10^{-13}  \mathrm{F/m^2}\\
+\varepsilon_{s} &= (11.7)(8.85 \times 10^{-14}) = 1.04 \times 10^{-12}  \mathrm{F/m^2}\\
+E_g &= 1.12 \mathrm{V}\\
+n_i &= 1.5 \times 10^{10}\\
 \end{align*}
 
 \subsection{Formulae}
@@ -213,31 +145,87 @@ $I = A J_{drf}$, Current\\
 $E = Volt/Len$, Electric Field\\
 $V_{dn} = \mu_nE$, Drift velocity for electrons\\
 $V_{dp} = \mu_pE$, Drift velocity for holes\\
+$n_i^2 = N_c N_v \cdot e^{\frac{-Eg}{kT}}$, intrinsic Fermi energy\\
 
-
-
-
-\subsection{Schrodingers eq}
-
-\subsection{Intrinsic Fermi Energy}
-
-
-$$n_i^2 = N_c N_v \cdot e^{\frac{-Eg}{kT}}$$
-
-Where:
-\begin{itemize}
-	\item $N_c = \SI{2.8e19}{cm^3}$ for Si
-	\item $N_v = \SI{1.04e19}{cm^3}$ for Si 
-	\item $E_g$ is the bandgap energy
-	\item k is Boltzmann’s constant $\SI{86e-6}{eV/K}$
-\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\section{\S1.2 - The PN Junction}
+\section{\S H8}
+
+Banding: negative voltages shift plot up. For P-Type, $E_F < E_{Fi}$, Accumulation when $V_g < 0$, Depletion when $V_g>0$.
+
+$\phi_{ms} is the work function$
+$\phi_{ms} = \phi'_m - \left[x' + \frac{E_g}{2e} + |\phi_{fp}| \right] $,(V) Aluminum Gate\\
+$\phi_{ms} = -\left(\frac{E_g}{2e} + |\phi_{fp}| \right) $,(V) n* Polysilicon Gate\\
+$\phi_{ms} = \frac{E_g}{2e} - |\phi_{fp}| $,(V) p* Polysilicon Gate\\
+$\phi_{Fp} = -\frac{kT}{e}\ln\left(\frac{N_A}{n_i}\right)$, (V)\\
+$\phi_s = 2|\phi_{Fp}|$, (V) Surface Potential\\
+$x_{dt} = \left[ \frac{4\epsilon_s |\phi_{fp}|}{eN_A}\right]^{1/2}$ (cm)\\
+$V_G = V_{ox} + \phi_s + \phi_{ms}$\\
+$V_{FB} = V_{ox} + \phi_{ms}$, at flatband, $V_g \equiv V_{FB}$, $\phi_s = 0$\\
+$V_{FB} =  \phi_{ms} - \frac{Q'_{ss}}{C_{ox}}$, from above\\
+$Q'_{SD}(max) = -eN_Ax_{dt}$\\
+$Q'_{SS} = C_{ox}(\phi_{ms}-V_{FB})$, ($C/cm^2$)\\
+$V_{TN} = \frac{|Q'_{SD}(max)|}{C_{ox}} + V_{FB} + 2|\phi_{Fp}|$, threshold voltage\\
+$\gamma = \frac{\sqrt{2e\epsilon_sN_A}}{C_{ox}}$\\
+$V_{TN} = V_{FB} + 2|\phi_{Fp}| +\gamma\sqrt{2|\phi_{Fp}|}$, threshold voltage\\
+
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\subsection{Ideal C-V Characteristics}
+
+$C'_{(acc)} = C_{ox}$, Accumulation\\
+$C'_{(depl)} = C_{ox}, Depletion$\\
+$C_{total} \equiv C_{ox}$,  at low frequency\\
+$C_{total} \equiv C_{ox} || C'_{SD}$,  at high frequency\\
+$C_{ox} = \frac{\varepsilon_{ox}}{t_{ox}}$, Oxide Capacitance\\
+$C_{min} = \frac{\varepsilon_{ox}}{t_{ox} + ( \frac{\varepsilon_{ox}}{\varepsilon_s} )\cdot X_{dt}}$, \\
+$L_D = \sqrt{ \frac{kT}{e} \cdot \frac{e_S}{e_{N_A} }}$, \\
+$C_{FB} = \frac{\varepsilon_{ox}}{t_{ox} + ( \frac{\varepsilon_{ox}}{\varepsilon_s} )\cdot L_D}$, \\
+When $ V_{GD} = V_{TN}$, pinchoff occurs.\\
+$V_{DS}(sat) = V_{GS} - V_{TN}$\\
+$I_D = \frac{1}{2} \mu_n C_{ox} \frac{W}{L} \left( V_{GS} - V_{TH} \right)^2$, Saturation\\
+$I_D =  \frac{W\mu_n C_{ox}}{2L} \left[ 2(V_{GS} - V_{TH}) - V_{DS}^2 \right]$, Linear\\
+
+
+\includegraphics[width = \linewidth]{./img/123}
+\includegraphics[width = \linewidth]{./img/1234}
 
 
 
+
+\subsection{BJT}
+
+Operating regions
+\begin{itemize}
+	\item (BE Junction) Forward $V_{BE} > 0$
+	\item (BE Junction) Reverse $V_{BE} < 0$
+	\item (CB Junction) Forward $V_{CB} < 0$
+	\item (CB Junction) Reverse $V_{CB} > 0$
+\end{itemize}
+
+\begin{itemize}
+	\item Cutoff: BE reverse, CB reverse
+	\item Saturation: BE forward, CB forward
+	\item Active: BE forward, CB reverse
+	\item Inverse Active: BE reverse, CB forward
+\end{itemize}
+
+Depletion or enhancement
+
+Depletion mode when $V_{TN} < 0$, enhancement mode when $V_{TN} > 0$
+
+A mosfet is in Saturation when $V_{GS} > V_{TH}$ and $V_{DS} > V_{DS}(sat)$
+
+
+$V_{bi}(BE) = \frac{kT}{e}\ln{\frac{N_BN_E}{n_i^2}}$\\
+
+
+\subsection{Implantation}
+
+Add acceptor atoms to increase $V_{TN}$
+
+$\Delta V_{TN} = \frac{eD_I}{C_{ox}}$, number of atoms per cm sq
 
 %%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
 \subsection{Notes}
@@ -284,16 +272,6 @@ $\frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \ldots + \frac{1}{R_n
 $\frac{1}{C_{\text{eq}}} = \frac{1}{C_1} + \frac{1}{C_2} + \ldots + \frac{1}{C_n}$, Series capacitors.\\
 $C_{\text{eq}} = C_1 + C_2 + \ldots + C_n$, parallel capacitors.\\
 
-
-%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\section{Convert Polar to Rectangular}
-
-$$x = r \cos \theta$$
-$$y = r \sin \theta$$
-
-\section{Exact Slope of a Tangent Line}
-
-$$\frac{dy}{dx} = \frac{dy/dt}{dx/dt}$$
 
 
 
