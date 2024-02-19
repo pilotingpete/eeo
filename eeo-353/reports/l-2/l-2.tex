@@ -1,0 +1,178 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+
+
+
+\begin{document}
+	
+	
+	\title{EEO353 Lab 2\\ Negative Feedback and Push-Pull Amplifier}
+	\author{Pete Mills}
+	
+	\maketitle
+	
+	\section*{Copy of Original Assignment}
+	
+	\includepdf[pages=-]{Assignment 2.pdf}
+	
+	%\listoffigures
+	
+	\section*{Summary}
+	
+	In this lab we explore the negative feedback concept of amplifiers.
+	
+
+	\section{Using the simulator, design the configuration in Fig. 1 by connecting the top of capacitor C3 directly to the emitter of Q1}
+	
+	\subsection*{a)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a}
+	    \caption{Input amplitude of $\SI{13}{\milli\volt}$ to achieve output signal of $\approx \SI{1.5}{\volt}, \SI{2}{\kilo\hertz}$}
+	\end{figure}
+	
+	\subsection*{b)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1b}
+	    \caption{FFT With Hamming window.}
+	\end{figure}
+	
+	\subsection*{c)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1c}
+	    \caption{Bode plot showing the $\SI{-3}{\decibel}$ point at $\approx \SI{1.8}{\hertz}$ and $\approx \SI{-40}{\degree}$}
+	\end{figure}
+
+
+	\section{Starting from the previous configuration, connect the top of capacitor C3 at the node between R3 and R4 as shown in Fig. 1}
+	
+	\subsection*{a)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a}
+	    \caption{Input amplitude of $\SI{100}{\milli\volt}$ to achieve output signal of $\approx \SI{1.5}{\volt}, \SI{2}{\kilo\hertz}$}
+	\end{figure}
+	
+	\subsection*{b)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2b}
+	    \caption{FFT With Hamming window.}
+	\end{figure}
+	
+	\subsection*{c)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2c}
+	    \caption{Bode plot showing the $\SI{-3}{\decibel}$ point at $\approx \SI{1.9}{\hertz}$ and $\approx \SI{-57}{\degree}$}
+	\end{figure}
+
+
+	\section{Build the circuits at (1) and (2) and experimentally reproduce all simulations}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{photo-1}
+	    \caption{Circuit Prototype}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w1a}
+	    \caption{Input amplitude of $\approx \SI{70}{\milli\volt}$ to achieve output signal of $\approx \SI{1.5}{\volt}, \SI{2}{\kilo\hertz}$. The FFT shows a peak at $\approx \SI{2}{\kilo\hertz}$ }
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w1b}
+	    \caption{Bode plot showing the $\SI{-3}{\decibel}$ point at $\approx \SI{2.2}{\hertz}$ and $\approx \SI{-33}{\degree}$}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{photo-2}
+	    \caption{Circuit Prototype}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w2a}
+	    \caption{Input amplitude of $\approx \SI{433}{\milli\volt}$ to achieve output signal of $\approx \SI{1.5}{\volt}, \SI{2}{\kilo\hertz}$. The FFT shows a peak at $\approx \SI{2}{\kilo\hertz}$ }
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w2b}
+	    \caption{Bode plot showing the $\SI{-3}{\decibel}$ point at $\approx \SI{3.1}{\hertz}$ and $\approx \SI{-67}{\degree}$}
+	\end{figure}
+	
+	
+	\section{Using the simulator, design the configuration in Fig. 2 by connecting the right side of R2 to the output OA of U1}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{4ab}
+	    \caption{Input amplitude of $\SI{155}{\milli\volt}$ to achieve output signal of $\approx \SI{2}{\volt}, \SI{2}{\kilo\hertz}$}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{5ab}
+	    \caption{Input amplitude of $\SI{90}{\milli\volt}$ to achieve output signal of $\approx \SI{2}{\volt}, \SI{2}{\kilo\hertz}$}
+	\end{figure}
+	
+	\section{Build the circuits at (4) and (5) and experimentally reproduce all simulations}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{photo-3}
+	    \caption{Circuit Prototype}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w5a}
+	    \caption{Input amplitude of $\approx \SI{260}{\milli\volt}$ to achieve output signal of $\approx \SI{1.5}{\volt}, \SI{2}{\kilo\hertz}$. The FFT shows a peaks of many harmonics.}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{photo-4}
+	    \caption{Circuit Prototype}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w5b}
+	    \caption{Input amplitude of $\approx \SI{143}{\milli\volt}$ to achieve output signal of $\approx \SI{1.5}{\volt}, \SI{2}{\kilo\hertz}$. The FFT shows a peak at $\approx \SI{2}{\kilo\hertz}$ }
+	\end{figure}
+	
+	
+	
+	\section{Explain in your own words any difference between simulations and measurements, and why the configurations at (2) and (5) have lower distortion (less harmonics) than the configurations at (1) and (4)}
+	
+	
+I observe some variation between the simulation and experiments. I believe this can be attributed to the value and tolerance of parts used, the construction method (breadboard) and parallel/series combinations to achieve the desired values. It can also be observed that in the initial configurations the amplifiers exhibit signifiant noise. After adding negative feedback, the noise floor is lowered significantly. This comes at a cost of reduced amplifier gain. 
+
+Separately it is observed that the output of the second circuit has an output similar to that of a triac when no negative feedback is applied. Additionally, where negative feedback is applied to the second circuit, noise goes down, but it appears that the gain goes up.
+	
+		
+\end{document}

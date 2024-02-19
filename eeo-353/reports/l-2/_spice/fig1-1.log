@@ -1,0 +1,40 @@
+Circuit: * C:\eeo\eeo-353\reports\l-2\_spice\fig1-1.asc
+
+Direct Newton iteration for .op point succeeded.
+N-Period=100
+Fourier components of V(o)
+DC component:-0.0279816
+
+Harmonic	Frequency	 Fourier 	Normalized	 Phase  	Normalized
+ Number 	  [Hz]   	Component	 Component	[degree]	Phase [deg]
+    1   	2.000e+03	7.724e-01	1.000e+00	 -177.86°	    0.00°
+    2   	4.000e+03	9.183e-02	1.189e-01	   95.63°	  273.49°
+    3   	6.000e+03	6.425e-03	8.317e-03	   11.41°	  189.28°
+    4   	8.000e+03	4.224e-04	5.468e-04	 -136.53°	   41.33°
+    5   	1.000e+04	3.454e-04	4.472e-04	  176.11°	  353.97°
+    6   	1.200e+04	2.816e-04	3.646e-04	  175.77°	  353.63°
+    7   	1.400e+04	2.414e-04	3.125e-04	  176.36°	  354.23°
+    8   	1.600e+04	2.113e-04	2.735e-04	  176.83°	  354.70°
+    9   	1.800e+04	1.878e-04	2.432e-04	  177.20°	  355.06°
+   10   	2.000e+04	1.691e-04	2.189e-04	  177.48°	  355.35°
+Total Harmonic Distortion: 11.918350%(12.280872%)
+
+
+
+Date: Sun Feb 04 12:54:16 2024
+Total elapsed time: 2.828 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 1000042
+traniter = 1000035
+tranpoints = 500018
+accept = 500018
+rejected = 0
+matrix size = 12
+fillins = 0
+solver = Normal
+Matrix Compiler1: 660 bytes object code size  0.1/0.1/[0.1]
+Matrix Compiler2: 908 bytes object code size  0.1/0.1/[0.0]
+

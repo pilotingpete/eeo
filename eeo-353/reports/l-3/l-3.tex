@@ -1,0 +1,163 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+
+
+
+\begin{document}
+	
+	
+	\title{EEO353 Lab 3\\ Differential Amplifier}
+	\author{Pete Mills}
+	
+	\maketitle
+	
+	\section*{Copy of Original Assignment}
+	
+	\includepdf[pages=-]{Assignment 3.pdf}
+	
+	%\listoffigures
+	
+	\section*{Summary}
+	
+	In this lab we explore differential amplifiers and gain a deeper understanding thru simulation and experimentation.
+	
+
+	\section{Using the simulator, design the configuration in Fig. 1 and simulate as follows}
+	
+	\subsection*{a)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-1}
+	    \caption{Transient Response}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a-2}
+	    \caption{Frequency Response}
+	\end{figure}
+	
+	\subsection*{b)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1b-1}
+	    \caption{Transient Response}
+	\end{figure}
+	
+	\subsection*{c)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1c-1}
+	    \caption{Transient Response}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1c-2}
+	    \caption{Frequency Response}
+	\end{figure}
+
+	\subsection*{d)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1d-1}
+	    \caption{Transient Response}
+	\end{figure}
+	
+	\subsection*{e)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1e-1}
+	    \caption{Transient Response}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1e-2}
+	    \caption{Frequency Response}
+	\end{figure}
+
+	\section{Build the circuit at (1) and experimentally reproduce all the simulations except for the frequency response of case (e)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{breadboard}
+	    \caption{Discrete differential amplifier on breadboard}
+	\end{figure}
+	
+	\subsection*{a)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w1a-1}
+	    \caption{Transient Response}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w1a-2-3}
+	    \caption{Frequency Response}
+	\end{figure}
+	
+	\subsection*{b)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w1b-1-2}
+	    \caption{Transient Response}
+	\end{figure}
+	
+	\subsection*{c)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w1c-1}
+	    \caption{Transient Response}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w1c-2-3}
+	    \caption{Frequency Response}
+	\end{figure}
+
+	\subsection*{d)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w1d-1}
+	    \caption{Transient Response}
+	\end{figure}
+	
+	\subsection*{e)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w1e-1}
+	    \caption{Transient Response}
+	\end{figure}
+	
+	
+	\section{Explain in your own words why the configuration (d) has a much lower gain than the configuration (e)}
+	
+	The circuit built is a differential amplifier. It is designed to amplify the difference between its two inputs. In configuration d) the inputs are in-phase and of the same amplitiude, therefore there is no difference to amplify. In configuration e) the signals are of the same amplitude, but 180deg out of phase. Therefore, these signals have a difference everywhere except at the zero crossing nodes at 0 deg and 180 deg. 
+	
+	Of particular interest is the frequency shift of the -3db point when comparing the simulation to the prototype circuit. The analog discovery leads add 30pF to the circuit output. This additional capacitance shifted the -3dB point to 18\% of the original frequency. This change was so dramatic that I did not originally believe that it could be a factor. Only after discussions with Professor Gianluigi and subsequent modeling was this phenomenon understood. 
+	
+		
+\end{document}

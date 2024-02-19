@@ -78,85 +78,6 @@
 \newlength{\MyLen}
 
 %%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
-\section{\S1 - The Crystal Structure of Solids}
-
-\subsection{Miller Index}
-
-\begin{enumerate}
-	\item Identify the intercepts: Locate the points where the plane intersects the crystallographic axes (usually denoted as $a$, $b$, and $c$).
-	\item Convert to fractional coordinates: Express these intercepts as fractions of the unit cell dimensions ($a$, $b$, $c$). To do this, divide each intercept by the respective unit cell dimension. If an intercept does not intersect the corresponding axis, use $\infty$ as the fraction.
-	\item Take reciprocals: Invert the fractional intercepts to obtain the reciprocal fractions.
-	\item Simplify the ratios: If any of the reciprocals are not integers, multiply all the indices by the smallest integer that makes them all whole numbers while maintaining the ratio. This ensures that the Miller indices are in the simplest form.
-	\item Enclose in parentheses: Write the indices as $(hkl)$, where $h$, $k$, and $l$ are the integers obtained after simplification. These are the Miller indices that represent the crystallographic plane.
-	\item Optional: If the plane is parallel to an axis (intercepts at infinity), write the corresponding Miller index as 0. For example, if a plane is parallel to the $a$-axis and intercepts the $b$ and $c$-axes at infinity, its Miller indices would be $(0bc)$.
-\end{enumerate}
-
-\subsection{Principles of Quantum Mechanics}
-
-\begin{enumerate}
-	\item Superposition Principle: Quantum systems can exist in a linear combination of multiple states simultaneously, described by a wavefunction.
-	
-	\item Wave-Particle Duality: Particles, such as electrons and photons, exhibit both wave-like and particle-like properties.
-	
-	\item Uncertainty Principle: There is a fundamental limit to the precision with which certain pairs of properties, such as position and momentum, can be simultaneously known.
-	
-	\item Quantum States and Operators: Quantum states are described by wavefunctions, and operators represent physical observables and transformations.
-	
-	\item Measurement and Collapse: Measurement of a quantum system collapses its wavefunction to one of its possible states, with probabilities determined by the square of the amplitude of the wavefunction.
-	
-	\item Quantum Entanglement: Entangled particles exhibit correlations that cannot be explained by classical physics, even when separated by large distances.
-	
-	\item Quantum Tunneling: Particles can penetrate energy barriers that classical physics predicts they should not be able to cross.
-	
-	\item Quantum Interference: Quantum systems can exhibit interference patterns when multiple pathways are available.
-	
-	\item Quantum Information: Quantum mechanics plays a crucial role in the field of quantum computing and quantum cryptography, offering advantages in information processing and security.
-\end{enumerate}
-
-\subsection{Broglie Wavelength}
-
-Convert energy from eV to J:
-
-\[ E = 1.0 \, \text{eV} = 1.60219 \times 10^{-19} \, \text{J} \]
-
-Calculate momentum of the proton or electron:
-
-\[
-p_{\text{proton}} = \sqrt{2 \cdot m_{\text{proton}} \cdot E}
-\]
-
-Where:
-\( p_{\text{proton}} \) = momentum of the proton, 
-\( m_{\text{proton}} \) = mass of the proton (\( \approx 1.6726219 \times 10^{-27} \) kg), 
-\( E \) = kinetic energy (in Joules)
-
-\[
-p_{\text{electron}} = \sqrt{2 \cdot m_{\text{electron}} \cdot E}
-\]
-
-Where:
-\( p_{\text{electron}} \) = momentum of the electron, 
-\( m_{\text{electron}} \) = mass of the electron (\( \approx 9.10938356 \times 10^{-31} \) kg), 
-\( E \) = kinetic energy (in Joules)
-
-
-
-Calculate the de Broglie wavelength:
-
-\[
-\lambda = \frac{h}{p}
-\]
-
-Where:
-\( \lambda \) = de Broglie wavelength, 
-\( h \) = Planck's constant (\(6.62607015 \times 10^{-34} \) m² kg/s)
-
-\subsection{Energy}
-
-The energy (\(E\)) of a photon is given by \(E = h\nu\), where \(h\) is Planck's constant and \(\nu\) is the frequency.
-
-The frequency (\(\nu\)) of a photon is inversely proportional to its wavelength (\(\lambda\)) and can be determined by the equation \(\nu = \frac{c}{\lambda}\), where \(c\) is the speed of light.
-
 
 \subsection{Constants}
 \begin{align*}
@@ -214,23 +135,30 @@ $E = Volt/Len$, Electric Field\\
 $V_{dn} = \mu_nE$, Drift velocity for electrons\\
 $V_{dp} = \mu_pE$, Drift velocity for holes\\
 
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{\S EEO 311}
 
+$A_v = \frac{V_{out}}{V_{in}}$, Voltage Gain Formula\\
+$\lvert A_v \rvert = gm R_D $, \\
+$A_v = \frac{R_D}{1/gm} $, \\
+$V_{ov} = V_{bias} - V_{th}$, Overdrive Voltage\\
+$g_m = K'_n \frac{W}{L} V_{ov}$, transconductance parameter\\
+$g_m = \frac{2I_D}{V_{ov}}$\\
+$I_D = \frac{1}{2} gm V_{ov}$, Drain Current Equation\\
+$I_D = \frac{1}{2} K'_n \frac{W}{L} V_{ov}^2$, Drain Current Equation\\
+$I_D = gm \cdot V_{gs}$, Drain current\\
+$I_D = \frac{V_{DD}}{R_D}$, Drain current\\
+$g_m = \frac{\Delta I_D}{\Delta V_{GS}} = K'_n \frac{W}{L} V_{ov}$,\\
+$V_{DD} = V_{DS} + I_D \cdot R_D$, Load line equation\\
+$V_{DD} = V_{DS} + I_D \cdot R_D$, Load line equation\\
+$r_o = \frac{V_A}{I_D}$, Early voltage $V_A$\\
+$V'_A = \frac{V_A}{L}$, early voltage process parameter $= 20V/\mu m$\\
+$A_o = gm \cdot r_o$, Intrinsic gain for bjt and mosfet\\
+$A_o = \frac{2V_A}{V_{ov}}$, Intrinsic gain\\
+$A_o = \frac{2V'_AL}{V_{ov}}$, Intrinsic gain\\
 
-
-\subsection{Schrodingers eq}
-
-\subsection{Intrinsic Fermi Energy}
-
-
-$$n_i^2 = N_c N_v \cdot e^{\frac{-Eg}{kT}}$$
-
-Where:
-\begin{itemize}
-	\item $N_c = \SI{2.8e19}{cm^3}$ for Si
-	\item $N_v = \SI{1.04e19}{cm^3}$ for Si 
-	\item $E_g$ is the bandgap energy
-	\item k is Boltzmann’s constant $\SI{86e-6}{eV/K}$
-\end{itemize}
+\subsection{Proportionalities}
+$I_D \propto V_{ov}^2$, drain current and overdrive voltage proportionality\\
 
 
 %%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
@@ -249,8 +177,32 @@ Where:
 When $N_A >> N_D$, the semiconductor is p-type.\\
 When $N_D >> N_A$, the semiconductor is n-type.\\
 
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{BJT Amplifier}
+
+$g_m = 2\sqrt{K_n I_{DQ}}$,\\
+$g_m = \frac{I_D}{V_{GS}}$,\\
+$g_m = 2K_n (V_{GS}-V_{TH})$,\\
+$g_m = \frac{I_C}{V_TH}$,\\
+$g_m = \frac{I_C}{V_T}$\\
+$r_o = \frac{1}{\lambda I_{DQ}}$,\\
+$r_o = \frac{V_A}{I_C}$,\\
+$r_\pi = \frac{V_T}{I_B}$,\\
+$r_\pi = \frac{\beta}{g_m}$,\\
+$A_v = -g_m \cdot R_C || R_L$, Voltage Gain Formula\\
+
+%%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\subsection{Transistor DC Equivalent}
+$V_{th} = \frac{V_{cc}}{R_1 + R_2} \cdot R_2$,\\
+$R_{th} = R_1 || R_2$,\\
+$V_{ce}(sat) \approxeq 0.2(typ)$,\\
+$I_E \approxeq I_C$, In active region\\
+$-\frac{1}{R_E-R_C}$, load line slope, where $R_C$ \& $R_E$ are from the AC or DC equivalent circuit. A load line plot is $I_C$ vs $V_{CE}$\\
+$I_{RE} = I_B (\beta + 1) R_E$,\\
+
 \subsection{Transistor formulas}
 $I_C = \beta \cdot I_B$, Conduction Parameter\\
+$I_C = I_S e^{\frac{V_{BE}}{V_T}}$,\\
 $I_B = \frac{I_E}{\beta + 1}$,\\
 $\alpha = \frac{I_C}{I_E}$, Current Ratio\\
 $I_C = I_E - I_B$, Kirchhoff's Current Law\\
@@ -263,6 +215,28 @@ $g_m = \sqrt{2 \mu_n C_{ox} \frac{W}{L} I_D}$, Transconductance Parameter\\
 $A_v = -g_m \cdot R_D$, Voltage Gain Formula\\
 
 %%%%%%%%%%%%%%%%%%_ Begin New Section _%%%%%%%%%%%%%%%%%%%
+\section{MOS Field-Effect Transistor}
+
+
+\subsection{N-Channel}
+$v_{DS}(sat) = v_{GS} - V_{TN}$, Saturation Voltage, where $V_{TN}$ is the threshold voltage.\\
+$i_D = K_n \left[2(v_{GS} - V_{TN} ) v_{DS} - v_{DS}^2\right]$, I-V Characteristic in non-saturation.\\
+$i_D = K_n (v_{GS} - V_{TN})^2$, I-V Characteristic in saturation.\\
+$C_{ox} = \epsilon_{ox} / t_{ox}$, Oxide capacitance per unit area.\\
+$\epsilon_{ox} = (3.9)(\SI{8.85e-14}{F/cm})$, Oxide permittivity for Si devices.\\
+$K_n = \frac{W \mu_n C_{ox}}{2L}$, Conduction Parameter\\
+$K_n = \frac{k'_n}{2} \cdot \frac{W}{L}$, Conduction Parameter\\
+$k'_n = \mu_nC_{ox}$, Process conduction parameter.\\
+$\mu_n$, Electron mobility in the inversion layer.\\
+
+\subsection{P-Channel}
+$i_D = K_p \left[2(v_{SG} - V_{TP} ) v_{SD} - v_{SD}^2\right]$, I-V Characteristic in non-saturation.\\
+$i_D = K_p (v_{SG} - V_{TP})^2$, I-V Characteristic in saturation.\\
+$K_p = \frac{W \mu_p C_{ox}}{2L}$, Conduction Parameter\\
+$K_p = \frac{k'_p}{2} \cdot \frac{W}{L}$, Conduction Parameter\\
+$k'_p = \mu_p C_{ox}$\\
+
+
 \section{EE General Formulae}
 $rms = \frac{1}{\sqrt{2}}$,\\
 $V = I \cdot R$, Ohm's law.\\
