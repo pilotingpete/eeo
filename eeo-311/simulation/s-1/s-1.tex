@@ -1,0 +1,117 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+
+
+\begin{document}
+	
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.45\textwidth]{sbu}\par\vspace{1cm}
+	{\LARGE \textsc{EEO311}\par}
+	\vspace{1cm}
+	{\Large \textsc{Spring 2024}\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Transfer and output characteristics of NMOS and PMOS Field Effect Transistors\par}
+	\vspace{2cm}
+	{\Large\itshape Pete Mills\\ID: 115009163\par}
+	\vfill
+	Associate Professor\par
+	Dmitri \textsc{Donetski}
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+% Include the original assignment
+	\newcommand{\assName}{EEO311 Simulation 1_S24.pdf}
+
+	\includepdf[pages=-,pagecommand=\section*{Copy of Original Assignment}]{\assName}
+	%\includepdf[pages=2-,pagecommand={}]{\assName}
+	
+	%\listoffigures
+	
+% Begin report
+
+	\section*{Overview}
+	
+	 In simulation 1 our primary objective is to explore the transfer and output characteristics of MOSFETs. Through simulation, we gain a deep understanding of how these transistors operate in real-world applications. Our focus lies in graphing the relationship between drain current $I_D$ and gate-source voltage $V_{GS}$, particularly emphasizing the exponential behavior observed in the subthreshold range. We plot transfer and output characteristics for both NMOS and PMOS devices, and compare their responses. Furthermore, we estimate Early voltages for both types of transistors under similar conditions, to learn about their operational dynamics. 
+
+	
+	\section{Transfer Characteristics}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1-sch}
+	    \caption{NMOS and PMOS schematic for simulation.}
+	\end{figure}
+
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1-nmos-lin}
+	    \caption{NMOS - linear y-axis.}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1-nmos-log}
+	    \caption{NMOS - logarithmic y-axis. In the subthreshold range, drain current changes by an order of magnitude when $\Delta V_{GS} \approx \SI{800}{\mV}$.}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1-pmos-lin}
+	    \caption{PMOS - linear y-axis.}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1-pmos-log}
+	    \caption{PMOS - logarithmic y-axis. In the subthreshold range, drain current changes by an order of magnitude when $\Delta V_{GS} \approx \SI{900}{\mV}$.}
+	\end{figure}
+
+
+	\section{Output Characteristics}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2-nmos-lin}
+	    \caption{NMOS output characteristics.}
+	\end{figure}
+
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2-pmos-lin}
+	    \caption{PMOS output characteristics.}
+	\end{figure}
+	
+	\section{Early Voltage}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{nmos-early}
+	    \caption{Adding two cursors to the plot and extracting the X-Y coordinates reveal an early voltage of \SI{-3.87e6}{\volt}.}
+	\end{figure}
+
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{pmos-early}
+	    \caption{Adding two cursors to the plot and extracting the X-Y coordinates reveal an early voltage of \SI{-1.21e7}{\volt}}
+	\end{figure}
+	
+\end{document}

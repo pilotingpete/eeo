@@ -1,0 +1,239 @@
+
+**** 03/22/24 21:19:27 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pmos"  [ C:\eeo\eeo-311\simulation\s-1\_spice\pm-sim1\pm-sim1-pspicefiles\schematic1\pmos.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pmos.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/eeo/eeo-311/simulation/s-1/ese311models.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V4 0 3 .01 
++ LIN V_V3 .8 1 .02 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PM-SIM1
+M_M1         N00175 N00133 0 0 CMOSN  
++ L=0.6u  
++ W=2.2u          
++ M=1
+V_V1         N00133 0 0Vdc
+V_V2         N00175 0 0Vdc
+V_V3         N00822 N00815 0Vdc
+V_V4         N00822 0 0Vdc
+M_M2         0 N00815 N00822 N00822 CMOSP  
++ L=0.6u  
++ W=2.2u          
++ M=1
+
+**** RESUMING pmos.cir ****
+.END
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSN: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSN: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M2, model CMOSP: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M2, model CMOSP: Ps = 0 is less than W
+
+INFO(ORPSIM-15454): Model CMOSN: Using BSIM VERSION 3.1 or lower
+
+INFO(ORPSIM-15454): Model CMOSP: Using BSIM VERSION 3.1 or lower
+
+**** 03/22/24 21:19:27 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pmos"  [ C:\eeo\eeo-311\simulation\s-1\_spice\pm-sim1\pm-sim1-pspicefiles\schematic1\pmos.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               CMOSN           CMOSP           
+               NMOS            PMOS            
+  T_Measured   27              27            
+   T_Current   27              27            
+       LEVEL    7               7            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO     .650464        -.93898      
+          KP  147.991900E-06  147.991900E-06 
+       GAMMA    0               0            
+      LAMBDA    0               0            
+         RSH   79.6           101.9          
+          IS    1.000000E-15    1.000000E-15 
+          JS  100.000000E-06  100.000000E-06 
+          PB     .99             .950493     
+        PBSW     .1              .99         
+          CJ  420.723800E-06  726.880400E-06 
+        CJSW  327.876600E-12  264.809400E-12 
+          MJ     .44673          .495407     
+        MJSW     .117014         .294044     
+        CGSO  200.000000E-12  252.000000E-12 
+        CGDO  200.000000E-12  252.000000E-12 
+        CGBO    1.000000E-09    1.000000E-09 
+         TOX   14.000000E-09   14.000000E-09 
+          XJ  150.000000E-09  150.000000E-09 
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA     .01             .01         
+          KF  200.000000E-27  350.000000E-27 
+          AF     .72             .95         
+      DIOMOD    2               2            
+          K1     .874675         .544468     
+          K2    -.095286         .010635     
+        LETA    0               0            
+        WETA    0               0            
+          U0  452.5819        218.7592       
+       XPART     .5              .5          
+        VTH0     .650464        -.93898      
+          K3   25.86693         6.844851     
+          W0   10.000000E-09   10.000000E-09 
+         NLX    1.000000E-09    1.000000E-09 
+        DVT0    3.702709        2.577757     
+        DVT1     .408127         .535562     
+          UA  100.000000E-15    3.029461E-09 
+          UB    1.351173E-18    1.000000E-21 
+          UC   13.200030E-12  -56.350800E-12 
+        VSAT  163.416100E+03  180.265300E+03 
+        RDSW    1.119403E+03    2.794425E+03 
+        VOFF    0               -.049952     
+     NFACTOR     .675259         .905627     
+        PCLM    2.627889        2.180432     
+      PDIBL1    -.10571          .084068     
+      PDIBL2    2.351583E-03    4.063444E-03 
+       DROUT     .524785         .268639     
+      PSCBE1  577.927100E+06   13.238990E+09 
+      PSCBE2   79.674190E-06    1.289795E-09 
+          A0     .584538         .853557     
+          A1   26.381370E-06    0            
+          A2     .356878         .3          
+       NPEAK  170.000000E+15  170.000000E+15 
+         LDD    0               0            
+        LITL   79.372540E-09   79.372540E-09 
+         UA1    4.310000E-09    4.310000E-09 
+         UB1   -7.610000E-18   -7.610000E-18 
+         UC1  -56.000000E-12  -56.000000E-12 
+        KETA   -1.873074E-03   -2.317380E-03 
+        ETA0     .033081         .157391     
+        ETAB -866.809300E-06    -.067905     
+         K3B   -8.132957        -.958659     
+        DVT2    -.095138        -.115073     
+        DSUB     .269658         .99424      
+      MOBMOD    1               1            
+         AGS     .130113         .14044      
+       DVT1W    0               0            
+       DVT2W    0               0            
+        PRWG     .096515        -.048095     
+        PRWB     .052593        -.049755     
+     PDIBLCB    -.108329        -.051069     
+         DWG   -5.327466E-09  -19.468120E-09 
+         DWB   50.590050E-09   17.193090E-09 
+          B0    2.597673E-06  975.001300E-09 
+          B1    5.000000E-06    5.000000E-06 
+        LINT   27.854900E-09   59.756600E-09 
+        WINT  234.158000E-09  310.801400E-09 
+         DLC   27.854900E-09   59.756600E-09 
+         DWC  234.158000E-09  310.801400E-09 
+          CF    0               0            
+        NOIA  100.000000E+18    9.900000E+18 
+        NOIB   50.000000E+03    2.400000E+03 
+        NOIC   -1.400000E-12    1.400000E-12 
+       LKETA    2.322883E-03   -5.675893E-03 
+       WKETA    -.031361        1.999387E-03 
+       PVTH0     .092253        5.980160E-03 
+       PRDSW  -82.82922        14.85984      
+         PK2    -.034671        3.739810E-03 
+         VTM     .025864         .025864     
+     VERSION    3.1             3.1          
+       PBSWG     .1              .99         
+       MJSWG     .117014         .294044     
+       CJSWG  164.000000E-12   64.000000E-12 
+
+
+INFO(ORPSIM-16627): The following imported models were detected in the design: CMOSN(ese311models.lib), CMOSP(ese311models.lib)
+
+ERROR(ORPSIM-16583): More than one imported model containing transistors or diodes is detected. To simulate this circuit, a minimum of 1 and a maximum of 4 traces are required. Reduce the number of traces and simulate again.
+
+
+ABORTING SIMULATION
+**** 03/22/24 21:19:27 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pmos"  [ C:\eeo\eeo-311\simulation\s-1\_spice\pm-sim1\pm-sim1-pspicefiles\schematic1\pmos.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =           5
+  External (NCNODS)                 =           5
+  Total (NUMNOD)                    =           5
+
+Total device count (NUMEL)          =           6
+  MosFETs (M)                       =           2
+  Voltage Sources (V)               =           4
+
+Number of subcircuits (X)           =           0
+
+Matrix statistics:
+  Matrix size (NSTOP)               =           9
+  Initial no. elements (NTTAR)      =          18
+  No. elements w/ fillin (NTTBR)    =          18
+  No. fillins (IFILL)               =           0
+  No. overflows (NTTOV)             =           0
+  No. LU operations (IOPS)          =           0
+  Percent sparsity (PERSPA)         =      77.778
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =           0
+  No. rejected time points (NUMRTP) =           0
+  No. iterations (NUMNIT)           =           0
+
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations
+  Matrix load                       =        0.00
+  Matrix solution                   =        0.00               1
+  Readin                            =         .02
+  General setup                     =        4.58
+  CMI setup                     =        0.00
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =         .22
+  Total job time (using Solver 1)   =        4.59
+

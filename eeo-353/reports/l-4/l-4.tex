@@ -16,148 +16,150 @@
 \begin{document}
 	
 	
-	\title{EEO353 Lab 3\\ Differential Amplifier}
+	\title{EEO353 Lab 4\\ Multi-Stage Amplifier Project - ABET}
 	\author{Pete Mills}
 	
 	\maketitle
 	
 	\section*{Copy of Original Assignment}
 	
-	\includepdf[pages=-]{Assignment 3.pdf}
+	\includepdf[pages=-]{Assignment 4.pdf}
 	
 	%\listoffigures
 	
 	\section*{Summary}
 	
-	In this lab we explore differential amplifiers and gain a deeper understanding thru simulation and experimentation.
+	In this laboratory experiment, we began with the design and simulation of a multi-stage amplifier tailored to meet specific performance criteria and component constraints. Following the initial design, we proceeded to adjust the circuit to create a variant with reduced gain. Subsequently, we further refined this second amplifier to address issues related to output offset voltage.
+
+Transitioning from simulation to practical implementation, we constructed the lower-gain BJT amplifier and conducted  measurements, the same as those performed during the simulation phase.
+
+Concluding our practical endeavors, we are tasked with providing recommendations for enhancing the circuit's performance and functionality. These suggestions aim to refine the amplifier's characteristics beyond the initial specifications, offering avenues for optimization.
 	
 
-	\section{Using the simulator, design the configuration in Fig. 1 and simulate as follows}
-	
-	\subsection*{a)}
+	\section{Using the simulator, design and simulate a multi-stage amplifier using the following specifications and constraints}
 
 	\begin{figure}[H]
 	    \centering
-	    \includegraphics[width=0.7\textwidth]{1a-1}
-	    \caption{Transient Response}
+	    \includegraphics[width=0.7\textwidth]{t1-sch}
+	    \caption{Schematic}
 	\end{figure}
 	
 	\begin{figure}[H]
 	    \centering
-	    \includegraphics[width=0.7\textwidth]{1a-2}
-	    \caption{Frequency Response}
+	    \includegraphics[width=0.7\textwidth]{t1-op}
+	    \caption{DC Operating Points showing compliance with stage current requirements.}
 	\end{figure}
 	
 	\subsection*{b)}
 	
 	\begin{figure}[H]
 	    \centering
-	    \includegraphics[width=0.7\textwidth]{1b-1}
-	    \caption{Transient Response}
-	\end{figure}
-	
-	\subsection*{c)}
-
-	\begin{figure}[H]
-	    \centering
-	    \includegraphics[width=0.7\textwidth]{1c-1}
-	    \caption{Transient Response}
+	    \includegraphics[width=0.7\textwidth]{t1-trans}
+	    \caption{Transient Response showing total gain exceeding the required minimum.}
 	\end{figure}
 	
 	\begin{figure}[H]
 	    \centering
-	    \includegraphics[width=0.7\textwidth]{1c-2}
-	    \caption{Frequency Response}
+	    \includegraphics[width=0.7\textwidth]{t1-ac}
+	    \caption{AC Analysis showing both the $\SI{-3}{\decibel}$ frequency and the Gain-Bandwidth product.}
 	\end{figure}
 
-	\subsection*{d)}
+	\section{Using the simulator, design and simulate a non-inverting amplifier with gain $\approx 10$ by applying a negative feedback network to the multi-stage amplifier developed in task 1}
 	
 	\begin{figure}[H]
 	    \centering
-	    \includegraphics[width=0.7\textwidth]{1d-1}
-	    \caption{Transient Response}
-	\end{figure}
-	
-	\subsection*{e)}
-
-	\begin{figure}[H]
-	    \centering
-	    \includegraphics[width=0.7\textwidth]{1e-1}
-	    \caption{Transient Response}
+	    \includegraphics[width=0.7\textwidth]{t2-sch}
+	    \caption{Schematic}
 	\end{figure}
 	
 	\begin{figure}[H]
 	    \centering
-	    \includegraphics[width=0.7\textwidth]{1e-2}
-	    \caption{Frequency Response}
+	    \includegraphics[width=0.7\textwidth]{t2-trans}
+	    \caption{Transient analysis showing an average system gain.}
 	\end{figure}
-
-	\section{Build the circuit at (1) and experimentally reproduce all the simulations except for the frequency response of case (e)}
+	
+	\subsection*{a)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{t1-ac}
+	    \caption{AC Analysis showing both the $\SI{-3}{\decibel}$ frequency and the Gain-Bandwidth product.}
+	\end{figure}
+	
+	\subsection*{b)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{t2-b}
+	    \caption{Transient Analysis showing the effect of a bypass capacitor to strip the DC component from the output signal}
+	\end{figure}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{t2-b2}
+	    \caption{Alternative approach to compensating for the DC offset on the output signal. A gain-corrected series voltage.}
+	\end{figure}
+	
+	The offset adjustment is needed to ensure that the amplifier operates at its desired DC operating point. By applying an offset to the sinusoidal input such that the average output is approximately 0V, we effectively bias the amplifier to its quiescent point. This biasing is essential for maintaining linearity, stability, and minimizing distortion in the amplifier circuit. Without proper biasing, the amplifier may exhibit distortion and operate inefficiently. Therefore, adjusting the input offset is necessary to set the amplifier's DC operating point accurately and ensure specified performance.
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{cap-sweep}
+	    \caption{Sweeping the gain capacitor suggests a $\SI{150}{\pF}$ would smooth out a bunp in the frequency response without overdamping the response.}
+	\end{figure}
+	
+	A suggestion from professor led to the investigation above.
+	
+	\section{Build the circuit at (2) and experimentally reproduce the simulations}
 	
 	\begin{figure}[H]
 	    \centering
 	    \includegraphics[width=0.7\textwidth]{breadboard}
-	    \caption{Discrete differential amplifier on breadboard}
+	    \caption{Circuit layout}
 	\end{figure}
 	
-	\subsection*{a)}
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{added_caps}
+	    \caption{Adding filter caps as suggested in the instructions.}
+	\end{figure}
+	
+	
+	
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{wfm-gain}
+	    \caption{Oscilloscope measurements showing a system gain of about 10.}
+	\end{figure}
+	
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{wfm-freq}
+	    \caption{Network analysis showing the $\SI{-3}{\decibel}$.}
+	\end{figure}
+	
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{wfm-offset}
+	    \caption{Compensating for the DC offset on the output signal.A DC offset to the input signal.}
+	\end{figure}
+	
 
-	\begin{figure}[H]
-	    \centering
-	    \includegraphics[width=0.7\textwidth]{w1a-1}
-	    \caption{Transient Response}
-	\end{figure}
 	
-	\begin{figure}[H]
-	    \centering
-	    \includegraphics[width=0.7\textwidth]{w1a-2-3}
-	    \caption{Frequency Response}
-	\end{figure}
 	
-	\subsection*{b)}
 	
-	\begin{figure}[H]
-	    \centering
-	    \includegraphics[width=0.7\textwidth]{w1b-1-2}
-	    \caption{Transient Response}
-	\end{figure}
-	
-	\subsection*{c)}
+	\section{Suggest ways to improve beyond specifications the performance of the amplifier at (1)}
 
-	\begin{figure}[H]
-	    \centering
-	    \includegraphics[width=0.7\textwidth]{w1c-1}
-	    \caption{Transient Response}
-	\end{figure}
-	
-	\begin{figure}[H]
-	    \centering
-	    \includegraphics[width=0.7\textwidth]{w1c-2-3}
-	    \caption{Frequency Response}
-	\end{figure}
 
-	\subsection*{d)}
-	
-	\begin{figure}[H]
-	    \centering
-	    \includegraphics[width=0.7\textwidth]{w1d-1}
-	    \caption{Transient Response}
-	\end{figure}
-	
-	\subsection*{e)}
+Improving the physical layout and assembly of the circuit onto a printed circuit board (PCB) can have significant benefits. By carefully designing the layout, we can enhance noise immunity, reduce parasitic capacitances, and minimize crosstalk between different circuit components. Incorporating a ground plane into the PCB design further aids in minimizing signal interference and improving overall signal integrity.
 
-	\begin{figure}[H]
-	    \centering
-	    \includegraphics[width=0.7\textwidth]{w1e-1}
-	    \caption{Transient Response}
-	\end{figure}
-	
-	
-	\section{Explain in your own words why the configuration (d) has a much lower gain than the configuration (e)}
-	
-	The circuit built is a differential amplifier. It is designed to amplify the difference between its two inputs. In configuration d) the inputs are in-phase and of the same amplitiude, therefore there is no difference to amplify. In configuration e) the signals are of the same amplitude, but 180deg out of phase. Therefore, these signals have a difference everywhere except at the zero crossing nodes at 0 deg and 180 deg. 
-	
-	Of particular interest is the frequency shift of the -3db point when comparing the simulation to the prototype circuit. The analog discovery leads add 30pF to the circuit output. This additional capacitance shifted the -3dB point to 18\% of the original frequency. This change was so dramatic that I did not originally believe that it could be a factor. Only after discussions with Professor Gianluigi and subsequent modeling was this phenomenon understood. 
-	
-		
+Furthermore, employing shielded input wiring with the shield connected to ground at one end helps to effectively reduce noise within the system, ensuring cleaner signal transmission. Equally important is the implementation of proper power supply regulation to maintain stable operating conditions.
+
+In addition to layout considerations, selecting higher precision passive components with superior thermal characteristics can greatly enhance the stability and accuracy of the circuit. Utilizing matched BJT pairs also contributes to temperature stability, ensuring consistent circuit performance across varying environmental conditions.
+
+Finally, employing optimization techniques such as sweep parameters or Monte Carlo simulations as well as worst-case-analysis during component selection enables fine-tuning of values for noise reduction and performance optimization within each amplifier stage.
+
 \end{document}

@@ -1,0 +1,50 @@
+
+**** 03/20/24 16:26:06 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-V2"  [ c:\cds_spb_home\cdssetup\projects\pm-sim1\pm-sim1-PSpiceFiles\SCHEMATIC1\V2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "V2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/eeo/eeo-311/simulation/s-1/ese311models.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V2 1 3 1 
++ LIN V_V2 1 3 1 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PM-SIM1
+M_M1         N00175 N00133 0 0 CMOSN  
++ L=0.6u  
++ W=2.2u          
++ M=1
+V_V1         N00133 0 0Vdc
+V_V2         N00175 0 1Vdc
+
+**** RESUMING V2.cir ****
+.END
+
+
+ERROR(ORPSIM-15051): A device may appear in .DC and .STEP commands only once
+

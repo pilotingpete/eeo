@@ -1,0 +1,133 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+
+
+
+\begin{document}
+	
+	
+	\title{EEO353 Lab 5\\ Oscillators}
+	\author{Pete Mills}
+	
+	\maketitle
+	
+	\section*{Copy of Original Assignment}
+	
+	\includepdf[pages=-]{Assignment 5-2.pdf}
+	
+	%\listoffigures
+	
+	\section*{Summary}
+	
+	This lab explores oscillator circuits through simulation and practical implementation. It begins with simulating a particular oscillator, analyzing its frequency, voltage swing, and the importance of limiting the supply voltage. Then, we build and verify the oscillator experimentally. Next, a different type of oscillator is simulated, and differences between ideal and real-world inductors are observed. Finally, the this oscillator circuit is constructed and validated through practical experimentation, providing an understanding of oscillator circuit operation and design.
+	
+	
+	
+
+	\section{Using the simulator, design the configuration in Fig. 1}
+
+	\subsection*{a)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{sim1}
+	    \caption{The simulation reveals an output swing of \SI{275}{\mV} at \SI{450}{\kilo\hertz}}
+	\end{figure}
+	
+	\subsection*{b)}
+	For this circuit to operate, an initial pulse is provided to the circuit. After each PNP-NPN stage, there is a Low Pass Filter (LPF). The LPF and internal switching time of the BJT causes a delay in the signal by about \SI{1.5}{\us}. The signal is also inverted after each stage. By the third phase, the signal is restored to its original polarity, and delayed by \SI{3.0}{\us}. This signal is routed back to the input of the circuit and starts the process over again. In this way the circuit is able to oscillate.
+	
+	\subsection*{c)}
+	
+	This circuit will not oscillate if the supply voltage increased to \SI{1.45}{\volt} as the feedback voltage from the third stage keeps the first transistor pair in saturation i.e., $V_{be}(NPN) > \SI{0.6}{\volt}$ and $V_{be}(PNP) > \SI{-0.65}{\volt}$. Given this observation we can conclude that the transistors will not turn OFF and thus no oscillation can occur. Of course, the $V_{be}$ above are typical values and may vary from part to part.
+	
+	During simulation it is further observed that when V+ is \SI{1.55}{\volt}, the collector current exceeds the maximum rating of the 2N3906 and 2N3904 transistors of \SI{200}{\mA}. For this reason the supply should not exceed \SI{1.4}{\volt} because when the transistors are operated beyond their absolute maximum operating limits permanent damage can occur.
+	
+	\section{Build the circuit at (1) and experimentally reproduce all the simulation}
+	
+	\subsection*{a)}
+	
+	\sout{I was never able to get circuit 1 to oscillate. I reviewed the schematic and circuit build many times over and did not find an error. I built a transistor curve tracer with the Analog discovery to test each PNP and NPN transistor in the circuit and found that they all function as expected. I attempted starting the oscillator by pulling up and pulling down the pulse input. I also attempted to source and sink a short pulse to the pulse input as was done in the simulation. At stage 1 of the oscilator I measured $V_{be} = \SI{0.23}{\volt}$ and stage 2 I measured  $V_{be} = \SI{0.7}{\volt}$. None of these activities helped. }
+	
+	With much help from the professor I was able to make some changes to get the output of this oscillator closer to what is expected. The signal is still higher amplitude and much higher frequency than the simulation. Since the frequency is a factor of 8 faster, I believe there is an error. Without an error, the simulation and experiment should match much closer. 
+	
+	To investigate the error I confirmed circuit layout, and component values - both by visual inspection and physical measurement. While the capacitors I used were 10\% higher than the simulation, this is still within the toleance band of the caps. To confirm this is not an issue, I modified the simulation to use capacitance values that match the real-world values and found thet the oscillation frequency remains the same as with the original cap value. Still, the circuit operates much higher than the simulation. I also reconfirmed that each NPN and PNP in the circuit is not damaged by running them thru a curve tracer i made on the AD3.
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{circuit1}
+	    \caption{Building circuit 1 on a breadboard }
+	\end{figure}	
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w3}
+	    \caption{Esperimental circuit showing an output swing of \SI{600}{\mV} at \SI{3.7}{\mega\hertz}}
+	\end{figure}	
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{transistor-tester}
+	    \caption{Transistor tester used to test each transistor in circuit1}
+	\end{figure}	
+	
+	\section{Using the simulator, design the configuration in Fig. 2}
+	
+	\subsection*{a)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{sim2-a}
+	    \caption{The simulation reveals an output of \SI{\approx8.1}{\volt} at \SI{480}{\kilo\hertz}}
+	\end{figure}
+
+	\subsection*{b)}
+	
+	This heart of this oscillator is the LC tank circuit formed by L1, C1, and C2. This circuit receives feedback from the emitter of Q1. It is Q1 that also amplifies the signal allowing for higher output voltage and continued oscillation via the feedback already described. C4 removes the DC offset so the output signal has a balanced output signal either side of 0V.
+	
+	\subsection*{c)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{sim2-idelaVsActual}
+	    \caption{The simulation reveals an output of \SI{\approx8.1}{\volt} at \SI{480}{\kilo\hertz} for both the ideal inductor and the CTX20-2 Spice model.}
+	\end{figure}	
+	
+	
+	\section{Build the circuit at (3) and experimentally reproduce the simulation}
+
+	\subsection*{a)}
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{circuit2}
+	    \caption{Building circuit 2 on a breadboard }
+	\end{figure}	
+	
+	
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{w2}
+	    \caption{Building the circuit I measure \SI{\approx2.3}{\volt} p-p at \SI{\approx500}{\kilo\hertz}.  }
+	\end{figure}	
+	    
+	    Notice that the simulation is centered on \SI{0}{\volt}, whereas the experimental circuit measurement is centered on \SI{5.0}{\volt}. I believe this is because the Analog Discovery does not support AC coupling. I was able to find the coupling setting, but it is disabled and set to DC. Further evidence of this hypothesis is confirmed when probing the simulation on the R3-C5 net and observing the same waveform as the experimental circuit.
+	    
+	    However, when comparing the simulatio vs experiment it is observed the the frequency is a near match, while the amplitude is off by a factor of 4. So there is something workng here. Reviewing the circuit build I find no errors, and the components measure to be the correct value. Then, I recall step 3C - to simulate with an ideal inductor vs CTX20-2 spice model and that I could observe no difference. This leads me to a hypothesis that the simulated circuit is only using the ideal inductor and that when measuring the experimental circuit, the inductor's DC resistance and impedance is causing the attenuation observed. If professor could offer feedback on this hypothesis it would be appreciated.
+	    
+	    
+	    
+	
+
+\end{document}

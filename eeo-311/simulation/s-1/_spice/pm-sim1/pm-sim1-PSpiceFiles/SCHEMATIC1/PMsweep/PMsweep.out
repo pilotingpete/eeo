@@ -1,0 +1,204 @@
+
+**** 03/20/24 14:47:11 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PMsweep"  [ c:\cds_spb_home\cdssetup\projects\pm-sim1\pm-sim1-PSpiceFiles\SCHEMATIC1\PMsweep.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "PMsweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/eeo/eeo-311/simulation/s-1/ese311models.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V1 0 1 .01 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PM-SIM1
+M_M1         N00175 N00133 0 0 CMOSN  
++ L=0.6u  
++ W=2.2u          
++ M=1
+V_V1         N00133 0 0Vdc
+V_V2         N00175 0 1Vdc
+
+**** RESUMING PMsweep.cir ****
+.END
+
+INFO(ORPSIM-15423): Unable to find index file ese311models.ind for library file ese311models.lib.
+
+INFO(ORPSIM-15422): Making new index file ese311models.ind for library file ese311models.lib.
+
+Index has 2 entries from 1 file(s).
+
+
+INFO(ORPSIM-15423): Unable to find index file nom_pspti.ind for library file nom_pspti.lib.
+
+INFO(ORPSIM-15422): Making new index file nom_pspti.ind for library file nom_pspti.lib.
+
+Index has 114938 entries from 5258 file(s).
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSN: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSN: Ps = 0 is less than W
+
+INFO(ORPSIM-15454): Model CMOSN: Using BSIM VERSION 3.1 or lower
+
+**** 03/20/24 14:47:11 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PMsweep"  [ c:\cds_spb_home\cdssetup\projects\pm-sim1\pm-sim1-PSpiceFiles\SCHEMATIC1\PMsweep.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               CMOSN           
+               NMOS            
+  T_Measured   27            
+   T_Current   27            
+       LEVEL    7            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO     .650464     
+          KP  147.991900E-06 
+       GAMMA    0            
+      LAMBDA    0            
+         RSH   79.6          
+          IS    1.000000E-15 
+          JS  100.000000E-06 
+          PB     .99         
+        PBSW     .1          
+          CJ  420.723800E-06 
+        CJSW  327.876600E-12 
+          MJ     .44673      
+        MJSW     .117014     
+        CGSO  200.000000E-12 
+        CGDO  200.000000E-12 
+        CGBO    1.000000E-09 
+         TOX   14.000000E-09 
+          XJ  150.000000E-09 
+       UCRIT   10.000000E+03 
+       DELTA     .01         
+          KF  200.000000E-27 
+          AF     .72         
+      DIOMOD    2            
+          K1     .874675     
+          K2    -.095286     
+        LETA    0            
+        WETA    0            
+          U0  452.5819       
+       XPART     .5          
+        VTH0     .650464     
+          K3   25.86693      
+          W0   10.000000E-09 
+         NLX    1.000000E-09 
+        DVT0    3.702709     
+        DVT1     .408127     
+          UA  100.000000E-15 
+          UB    1.351173E-18 
+          UC   13.200030E-12 
+        VSAT  163.416100E+03 
+        RDSW    1.119403E+03 
+        VOFF    0            
+     NFACTOR     .675259     
+        PCLM    2.627889     
+      PDIBL1    -.10571      
+      PDIBL2    2.351583E-03 
+       DROUT     .524785     
+      PSCBE1  577.927100E+06 
+      PSCBE2   79.674190E-06 
+          A0     .584538     
+          A1   26.381370E-06 
+          A2     .356878     
+       NPEAK  170.000000E+15 
+         LDD    0            
+        LITL   79.372540E-09 
+         UA1    4.310000E-09 
+         UB1   -7.610000E-18 
+         UC1  -56.000000E-12 
+        KETA   -1.873074E-03 
+        ETA0     .033081     
+        ETAB -866.809300E-06 
+         K3B   -8.132957     
+        DVT2    -.095138     
+        DSUB     .269658     
+      MOBMOD    1            
+         AGS     .130113     
+       DVT1W    0            
+       DVT2W    0            
+        PRWG     .096515     
+        PRWB     .052593     
+     PDIBLCB    -.108329     
+         DWG   -5.327466E-09 
+         DWB   50.590050E-09 
+          B0    2.597673E-06 
+          B1    5.000000E-06 
+        LINT   27.854900E-09 
+        WINT  234.158000E-09 
+         DLC   27.854900E-09 
+         DWC  234.158000E-09 
+          CF    0            
+        NOIA  100.000000E+18 
+        NOIB   50.000000E+03 
+        NOIC   -1.400000E-12 
+       LKETA    2.322883E-03 
+       WKETA    -.031361     
+       PVTH0     .092253     
+       PRDSW  -82.82922      
+         PK2    -.034671     
+         VTM     .025864     
+     VERSION    3.1          
+       PBSWG     .1          
+       MJSWG     .117014     
+       CJSWG  164.000000E-12 
+
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSN: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSN: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSN: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSN: Ps = 0 is less than W
+
+
+          JOB CONCLUDED
+
+**** 03/20/24 14:47:11 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-PMsweep"  [ c:\cds_spb_home\cdssetup\projects\pm-sim1\pm-sim1-PSpiceFiles\SCHEMATIC1\PMsweep.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =       13.03
+

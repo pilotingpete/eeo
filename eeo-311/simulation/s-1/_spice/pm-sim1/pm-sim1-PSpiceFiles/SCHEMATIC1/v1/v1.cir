@@ -1,0 +1,23 @@
+** Profile: "SCHEMATIC1-v1"  [ C:\eeo\eeo-311\simulation\s-1\_spice\pm-sim1\pm-sim1-pspicefiles\schematic1\v1.sim ] 
+
+** Creating circuit file "v1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/eeo/eeo-311/simulation/s-1/ese311models.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V2 0 3 .01 
++ LIN V_V1 .7 .9 .02 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 ID(M_M1)
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

@@ -1,0 +1,13 @@
+* source PM-SIM1
+M_M1         N00175 N00133 0 0 CMOSN  
++ L=0.6u  
++ W=2.2u          
++ M=1
+V_V1         N00133 0 0Vdc
+V_V2         N00175 0 0Vdc
+V_V3         N00822 N00815 0Vdc
+V_V4         N00822 0 0Vdc
+M_M2         0 N00815 N00822 N00822 CMOSP  
++ L=0.6u  
++ W=2.2u          
++ M=1

@@ -1,0 +1,1 @@
+{"TimeStamp":"Wed Mar 20 14:47:25 2024\n","Circuits":{"ExitCode":"0","TraceCount":"12","Mode":"SPICE","Type":"TIFullMode","Models":[{"ModelName":"CMOSN","FileName":"c:\\eeo\\eeo-311\\simulation\\s-1\\ese311models.lib","ModelType":".model","DeviceType":"m","Source":"FROM_INC","isLibSigned":"false","isAllowed":"true"}]}}
