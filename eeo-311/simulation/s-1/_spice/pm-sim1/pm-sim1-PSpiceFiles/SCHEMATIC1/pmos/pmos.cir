@@ -16,7 +16,7 @@
 + LIN V_V3 .8 1 .02 
 .OPTIONS ADVCONV
 .OPTIONS FILEMODELSEARCH
-.PROBE64 IS(M_M2)
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
 
 

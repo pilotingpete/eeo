@@ -1,0 +1,76 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+\usepackage{booktabs}
+
+\graphicspath{ {./img/} }
+\newcommand \imgWidthFactor{0.8}
+
+
+\begin{document}
+	
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.45\textwidth]{sbu}\par\vspace{1cm}
+	{\LARGE \textsc{EEO311}\par}
+	\vspace{1cm}
+	{\Large \textsc{Spring 2024}\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Design of Common-Source Gain Stage Loaded with Current Mirror\par}
+	\vspace{2cm}
+	{\Large\itshape Pete Mills\\ID: 115009163\par}
+	\vfill
+	Associate Professor\par
+	Dmitri \textsc{Donetski}
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+% Include the original assignment
+	\newcommand{\assName}{ESE411Sim3}
+
+	\includepdf[pages=-,pagecommand=\section*{Copy of Original Assignment}]{\assName}
+	%\includepdf[pages=2-,pagecommand={}]{\assName}
+	
+	%\listoffigures
+	
+% Begin report
+
+	\section*{Overview}
+	
+	 In simulation 3 we design a differential amplifier. We are actually designing the L/W of each mosfet at makes up the amplifier, initially starting with gm/Id and Id/W charts to get approximate values. From there, the parameters are tuned based on the performance objectives of the amplifier. This is analogous to how an IC designer would design an amplifier directly on silicon. This is actually very exciting.
+	
+	\section{Assignment}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\imgWidthFactor\textwidth]{sch}
+			\caption{Bias point simulation with reference current resistor value set to \SI{163}{\kohm}.}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\imgWidthFactor\textwidth]{ad}
+			\caption{Simulation Showing Ad gain of about \SI{70}{} and bandwidth of \SI{25.6}{\MHz}.}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\imgWidthFactor\textwidth]{acm}
+			\caption{Simulation Showing Acm gain of about \SI{-88}{} and bandwidth of \SI{11.8}{\MHz}.}
+		\end{figure}
+
+
+\end{document}

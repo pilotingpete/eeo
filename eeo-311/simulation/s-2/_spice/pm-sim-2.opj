@@ -1,0 +1,93 @@
+(ExpressProject "pm-sim-2"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "23.1-2024 S001-[04/20/24]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (Allegro Netlist Directory "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\pm-sim-2.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\pm-sim-2-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\pm-sim-2-pspicefiles\schematic1\bias_pt.sim"
+        (DisplayName "SCHEMATIC1-bias_pt")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\pm-sim-2-pspicefiles\schematic1\dcxfer.sim"
+        (DisplayName "SCHEMATIC1-dcxfer")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\pm-sim-2-pspicefiles\schematic1\ac-response.sim"
+        (DisplayName "SCHEMATIC1-ac-response")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\pm-sim-2-pspicefiles\schematic1\ac-response.sim"))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\ese311models.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\ese311models.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (Folder "Logs")
+  (MPSSessionName "pmills")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "c:\eeo\eeo-311\simulation\s-2\_spice\pm-sim-2.dsn")
+      (Path "Design Resources"
+         "c:\eeo\eeo-311\simulation\s-2\_spice\pm-sim-2.dsn" "SCHEMATIC1")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 352 0 795"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1054 24 813")
+        (Scroll "-4 -4")
+        (Zoom "104")
+        (Occurrence "/"))
+      (Path "C:\EEO\EEO-311\SIMULATION\S-2\_SPICE\PM-SIM-2.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (PartMRUSelector
+    (CMOSP
+      (FullPartName "CMOSP.Normal")
+      (LibraryName "C:\EEO\EEO-311\SIMULATION\S-1\ESE311MODELS.OLB")
+      (DeviceIndex "0"))
+    (CMOSN
+      (FullPartName "CMOSN.Normal")
+      (LibraryName "C:\EEO\EEO-311\SIMULATION\S-1\ESE311MODELS.OLB")
+      (DeviceIndex "0"))
+    (MbreakN
+      (FullPartName "MbreakN.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))))

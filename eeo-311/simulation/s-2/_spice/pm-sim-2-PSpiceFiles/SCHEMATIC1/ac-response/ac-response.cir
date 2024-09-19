@@ -1,0 +1,23 @@
+** Profile: "SCHEMATIC1-ac-response"  [ c:\eeo\eeo-311\simulation\s-2\_spice\pm-sim-2-pspicefiles\schematic1\ac-response.sim ] 
+
+** Creating circuit file "ac-response.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ese311models.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 40 10k 10G
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 N([VOUT1])
+.PROBE64 N([VOUT2])
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

@@ -1,0 +1,22 @@
+** Profile: "SCHEMATIC1-dcxfer"  [ C:\eeo\eeo-311\simulation\s-2\_spice\pm-sim-2-pspicefiles\schematic1\dcxfer.sim ] 
+
+** Creating circuit file "dcxfer.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ese311models.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V_V2 -0.2 0.2 0.01 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 N([VOUT1])
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

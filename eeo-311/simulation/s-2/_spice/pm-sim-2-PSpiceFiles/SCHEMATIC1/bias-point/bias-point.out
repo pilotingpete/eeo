@@ -1,0 +1,172 @@
+
+**** 04/16/24 19:57:05 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias-point"  [ C:\eeo\eeo-311\simulation\s-2\_spice\pm-sim-2-PSpiceFiles\SCHEMATIC1\bias-point.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias-point.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PM-SIM-2
+V_Vdd         N01279 0 2Vdc
+V_V1         VIN2 0 DC 0Vdc AC -0.5Vac 
+V_Vss         0 N01097 2Vdc
+V_V2         VIN1 0 DC 0Vdc AC 0.5Vac 
+M_M1         VOUT1 N01032 N01097 N01097 MbreakN  
++ L=0.6u  
++ W=10u          
++ M=1
+M_M2         N01036 N01036 N01279 N01279 MbreakP  
++ L=0.6u  
++ W=5u          
++ M=1
+M_M3         VOUT1 N00782 N00809 N00809 MbreakP  
++ L=0.6u  
++ W=60u          
++ M=1
+M_M4         VOUT2 N00805 N00809 N00809 MbreakP  
++ L=0.6u  
++ W=60u          
++ M=1
+M_M5         VOUT2 N01032 N01097 N01097 MbreakN  
++ L=0.6u  
++ W=10u          
++ M=1
+M_M6         N00809 N01036 N01279 N01279 MbreakP  
++ L=0.6u  
++ W=45u          
++ M=1
+M_M7         N01032 N01032 N01097 N01097 MbreakN  
++ L=0.6u  
++ W=5u          
++ M=1
+R_R1         N01032 N01036  663k TC=0,0 
+C_C1         VOUT1 0  1f  TC=0,0 
+C_C2         0 VOUT2  1f  TC=0,0 
+R_R2         N00782 VIN1  1 TC=0,0 
+R_R3         VIN2 N00805  1 TC=0,0 
+
+**** RESUMING bias-point.cir ****
+.END
+
+**** 04/16/24 19:57:05 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias-point"  [ C:\eeo\eeo-311\simulation\s-2\_spice\pm-sim-2-PSpiceFiles\SCHEMATIC1\bias-point.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MbreakN         MbreakP         
+               NMOS            PMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    0               -.7          
+          KP   20.000000E-06   18            
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               1.000000E-03 
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 04/16/24 19:57:05 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias-point"  [ C:\eeo\eeo-311\simulation\s-2\_spice\pm-sim-2-PSpiceFiles\SCHEMATIC1\bias-point.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VIN1)    0.0000  ( VIN2)    0.0000  (VOUT1)    1.9999  (VOUT2)    1.9999      
+
+(N00782)    0.0000 (N00805)    0.0000 (N00809)    1.9999 (N01032)   -1.7645     
+
+(N01036)    1.2998 (N01097)   -2.0000 (N01279)    2.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -2.311E-05
+    V_V1         0.000E+00
+    V_Vss       -2.311E-05
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   9.24E-05  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/16/24 19:57:05 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias-point"  [ C:\eeo\eeo-311\simulation\s-2\_spice\pm-sim-2-PSpiceFiles\SCHEMATIC1\bias-point.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .33
+

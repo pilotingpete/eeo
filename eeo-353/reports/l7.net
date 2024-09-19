@@ -1,0 +1,17 @@
+* C:\eeo\eeo-353\reports\l7.asc
+Q1 N001 N003 N004 0 2N3904
+R1 Vcc N003 56k
+R2 N003 0 5.6k
+R3 Vcc N001 4.7k
+R4 N004 0 470
+C1 N004 0 .1µ
+C2 N003 N002 .1µ
+C3 out N001 .1µ
+V1 Vcc 0 9
+V2 N002 0 SINE(0 .01 5k)
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\pmills\OneDrive - Navitas Systems\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.tran 3m
+.backanno
+.end

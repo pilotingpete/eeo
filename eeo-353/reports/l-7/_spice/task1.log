@@ -1,0 +1,26 @@
+Circuit: * C:\eeo\eeo-353\reports\l-6\_spice\task1.asc
+
+Direct Newton iteration for .op point succeeded.
+
+vin_pp: PP(v(input))=0.02 FROM 0 TO 0.0005
+vout_pp: PP(v(output))=0.873398 FROM 0 TO 0.0005
+gain_pp: vout_pp/vin_pp=43.67
+
+
+Date: Tue Mar 19 20:11:45 2024
+Total elapsed time: 0.148 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2144
+traniter = 2112
+tranpoints = 1056
+accept = 1053
+rejected = 3
+matrix size = 22
+fillins = 8
+solver = Normal
+Matrix Compiler1: 1.63 KB object code size  0.5/0.2/[0.1]
+Matrix Compiler2: off  [0.2]/0.4/0.4
+

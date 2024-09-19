@@ -1,0 +1,145 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+\usepackage{booktabs}
+
+\graphicspath{ {./img/} }
+\newcommand \imgWidthFactor{0.8}
+
+
+\begin{document}
+	
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.45\textwidth]{sbu}\par\vspace{1cm}
+	{\LARGE \textsc{EEO311}\par}
+	\vspace{1cm}
+	{\Large \textsc{Spring 2024}\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Analysis of the common-source differential stage\par}
+	\vspace{2cm}
+	{\Large\itshape Pete Mills\\ID: 115009163\par}
+	\vfill
+	Associate Professor\par
+	Dmitri \textsc{Donetski}
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+% Include the original assignment
+	\newcommand{\assName}{EEO311 Simulation assignment 2_AnalysisOfCommonSourceGainStage}
+
+	\includepdf[pages=-,pagecommand=\section*{Copy of Original Assignment}]{\assName}
+	%\includepdf[pages=2-,pagecommand={}]{\assName}
+	
+	%\listoffigures
+	
+% Begin report
+
+	\section*{Overview}
+	
+	 In simulation 2 our primary objective is to observe how changes in mosfet construction parameters can influence a design. Here we made adjustments to mosfets used in the implementation of a differential amplifier. By making adjustments to the width parameter and current mirror reference resistor we are able to tune the amplifier to improve efficiency and minimize distortion.
+	
+	\section{Assignment}
+
+	\subsection{Part A}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\imgWidthFactor\textwidth]{a1}
+			\caption{Bias point simulation with reference current resistor value set to \SI{663}{\kohm}.}
+		\end{figure}
+
+	\subsection{Part B}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\imgWidthFactor\textwidth]{b1}
+			\caption{M10 width changed to \SI{51}{\um}.}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\imgWidthFactor\textwidth]{b2}
+			\caption{DC Transfer characteristic for Vout1 reveals a range $\approx \SIrange{-90}{100}{\mV}$.}
+		\end{figure}
+
+	\subsection{Part C}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\imgWidthFactor\textwidth]{c1}
+			\caption{Cutoff frequency: \SI{114.3}{\MHz}. Gain: \SI{24.3}{}. GBP: \SI{1.87}{\GHz}.}
+		\end{figure}
+
+	\subsection{Part D}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\imgWidthFactor\textwidth]{d1}
+			\caption{Cutoff frequency: \SI{17.3}{\MHz}. Gain: \SI{24.3}{}. GBP: \SI{282.9}{\GHz}. Unity Gain: \SI{286.5}{\MHz}}
+		\end{figure}
+	
+	\subsection{Part E}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\imgWidthFactor\textwidth]{e1}
+			\caption{DC transfer characteristic.}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\imgWidthFactor\textwidth]{e2}
+			\caption{Schematic}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\imgWidthFactor\textwidth]{e3}
+			\caption{Cutoff frequency: \SI{23.3}{\MHz}. Gain: \SI{24.3}{}. GBP: \SI{381.4}{\GHz}. Unity Gain: \SI{386.5}{\MHz}}
+		\end{figure}
+
+	\subsection{Part F}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\imgWidthFactor\textwidth]{f1}
+			\caption{Cutoff frequency: \SI{2.5}{\MHz}. Unity Gain: \SI{40.4}{\MHz}, Pole 1: \SI{2.5}{\MHz}, Pole 2: \SI{200}{\MHz} }
+		\end{figure}
+
+	\subsection{Part G}
+	
+	\begin{table}[htbp]
+		\centering
+		\caption{Simulation Data Summary}
+		\label{tab:state_machine}
+		\begin{tabular}{lllllll}
+			\toprule
+			\textbf{Case} & \textbf{Bias Current} & \textbf{Gain (SE)} & \textbf{Gain (DO)} & \textbf{Bandwidth} & \textbf{GBP} & \textbf{Unity Gain}\\
+			\midrule
+			3D & \SI{48.1}{\uA} & \SI{24.3}{} & \SI{32.5}{} & \SI{17.3}{\MHz} & \SI{282.9}{\GHz} & \SI{286.5}{\MHz}\\
+			3E & \SI{48.1}{\uA} & \SI{24.3}{} & \SI{32.7}{} & \SI{23.3}{\MHz} & \SI{381.4}{\GHz} & \SI{386.5}{\MHz}\\
+			3F & \SI{71.3}{\uA} & \SI{24.3}{} & \SI{32.7}{} & \SI{2.5}{\MHz}  & \SI{41.3}{\MHz} & \SI{40.4}{\MHz}\\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+
+	\section{Bonus}
+
+	I will return to complete if time permits.
+
+
+\end{document}

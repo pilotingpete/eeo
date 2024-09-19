@@ -1,0 +1,106 @@
+
+**** 04/16/24 15:22:22 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias-point"  [ C:\eeo\eeo-311\simulation\s-2\_spice\pm-sim-2-PSpiceFiles\SCHEMATIC1\bias-point.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias-point.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PM-SIM-2
+V_Vdd         N01279 GND_POWER 2Vdc
+V_V1         VIN2 GND_POWER DC 0Vdc AC -0.5Vac 
+V_Vss         GND_POWER N01097 2Vdc
+V_V2         VIN1 GND_POWER DC 0Vdc AC 0.5Vac 
+M_M1         VOUT1 N01032 N01097 N01097 MbreakN  
++ L=0.6u  
++ W=10u          
++ M=1
+M_M2         N01036 N01036 N01279 N01279 MbreakP  
++ L=0.6u  
++ W=5u          
++ M=1
+M_M3         VOUT1 N00782 N00809 N00809 MbreakP  
++ L=0.6u  
++ W=60u          
++ M=1
+M_M4         VOUT2 N00805 N00809 N00809 MbreakP  
++ L=0.6u  
++ W=60u          
++ M=1
+M_M5         VOUT2 N01032 N01097 N01097 MbreakN  
++ L=0.6u  
++ W=10u          
++ M=1
+M_M6         N00809 N01036 N01279 N01279 MbreakP  
++ L=0.6u  
++ W=45u          
++ M=1
+M_M7         N01032 N01032 N01097 N01097 MbreakN  
++ L=0.6u  
++ W=5u          
++ M=1
+R_R1         N01032 N01036  663k TC=0,0 
+C_C1         VOUT1 GND_POWER  1f  TC=0,0 
+C_C2         GND_POWER VOUT2  1f  TC=0,0 
+R_R2         N00782 VIN1  1 TC=0,0 
+R_R3         VIN2 N00805  1 TC=0,0 
+
+**** RESUMING bias-point.cir ****
+.END
+
+
+INFO(ORPSIM-15423): Unable to find index file nom.ind for library file nom.lib.
+
+INFO(ORPSIM-15422): Making new index file nom.ind for library file nom.lib.
+
+Index has 1955 entries from 6 file(s).
+
+ERROR(ORPSIM-15142): Node N01279 is floating
+
+ERROR(ORPSIM-15142): Node GND_POWER is floating
+
+ERROR(ORPSIM-15142): Node VIN2 is floating
+
+ERROR(ORPSIM-15142): Node N01097 is floating
+
+ERROR(ORPSIM-15142): Node VIN1 is floating
+
+ERROR(ORPSIM-15142): Node VOUT1 is floating
+
+ERROR(ORPSIM-15142): Node N01032 is floating
+
+ERROR(ORPSIM-15142): Node N01036 is floating
+
+ERROR(ORPSIM-15142): Node N00782 is floating
+
+ERROR(ORPSIM-15142): Node N00809 is floating
+
+ERROR(ORPSIM-15142): Node VOUT2 is floating
+
+ERROR(ORPSIM-15142): Node N00805 is floating
+

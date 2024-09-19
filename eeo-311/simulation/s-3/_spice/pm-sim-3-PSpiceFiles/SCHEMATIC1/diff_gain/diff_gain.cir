@@ -1,0 +1,24 @@
+** Profile: "SCHEMATIC1-diff_gain"  [ C:\eeo\eeo-311\simulation\s-3\_spice\pm-sim-3-pspicefiles\schematic1\diff_gain.sim ] 
+
+** Creating circuit file "diff_gain.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ese311models.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 10 1k 10G
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 N([VOUT])
+.PROBE64 N([N00782])
+.PROBE64 N([N00798])
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

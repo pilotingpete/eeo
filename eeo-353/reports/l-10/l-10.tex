@@ -1,0 +1,108 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+\pdfminorversion=6
+
+\begin{document}
+	
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.45\textwidth]{sbu}\par\vspace{1cm}
+	{\LARGE \textsc{EEO335}\par}
+	\vspace{1cm}
+	{\Large \textsc{Spring 2024}\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Electrocardiogram (ECG)\par}
+	\vspace{2cm}
+	{\Large\itshape Pete Mills\\ID: 115009163\par}
+	\vfill
+	Professor\par
+	Gianluigi \textsc{De Geronimo}
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+% Include the original assignment
+	\newcommand{\assName}{Assignment 10r.pdf}
+
+	\includepdf[pages=-,pagecommand=\section*{Copy of Original Assignment}]{\assName}
+	%\includepdf[pages=2-,pagecommand={}]{\assName}
+	
+	%\listoffigures
+	
+% Begin report
+
+	\section*{Overview}
+	
+	In this lab, we design, simulate, and build an Electrocardiogram (ECG) circuit to deepen our understanding of its operation. Through simulations, the response to a 50Hz 1mV sinusoidal signal is analyzed, with subsequent experimental tasks using components like the INA111 or AMP02 and the AD711 amplifiers. Finally, ECG measurements are demonstrated by connecting electrodes to our wrists, with precautions taken against microphonics and 60 Hz interference.
+	
+	\section{Using the simulator, design the circuit shown in Fig. 1}
+
+		\subsection*{a)}
+
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{sch}
+				\caption{Simulate and show the input and the response at the output}
+			\end{figure}
+
+		\subsection*{b)}
+			Show in Figure 1 is a two stage differential amplifier. U1 is a differential amplifier used to amplify the difference in ECG signals in the human body. U2 is an inverting voltage gain amplifier used to amplify the relatively small output from U1 by about 100x so we can easily display on our Analog Discovery Oscilloscope. Naturally, the signal will be inverted. U2 also forms a low pass filter to remove high frequency noise from our signal.
+
+	\section{Build the circuit at (1) and experimentally reproduce the simulations}
+
+		\subsection*{a)}
+			For this circuit I chose the AMP02 IC designed by Analog Devices.
+
+		\subsection*{b)}
+			For this circuit I chose the AD711 IC designed by Analog Devices.
+
+		\subsection*{c)}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{w1}
+				\caption{Negative input in- grounded and apply a 1mV ~signal at the positive input by using a
+				~10mV and a ~x10 resistor divider. There is a system gain of $\approx 2000$.}
+			\end{figure}
+
+	\section{Demonstrate a ECG measurement}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{p1}
+			\caption{Circuit prototype.}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{p2}
+			\caption{Electrodes soldered and strain-relieved with hot glue.}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{wn2}
+			\caption{After many hours of troubleshooting over several days, I was not able to get a characteristic heartbeat waveform. I verified the circuit build and tests OK, verified electrode path match, verified no electrode wiring shorts, increased conductivity of electrode contact, moved away form 60Hz sources, and more.}
+		\end{figure}
+
+		%\begin{figure}[H]
+		%	\centering
+		%	\includegraphics[width=0.7\textwidth]{w2}
+		%	\caption{Interference of \SI{60}{\Hz} AC superimposed on signal prior to moving outside.}
+		%\end{figure}
+
+
+\end{document}

@@ -1,0 +1,38 @@
+* source PM-SIM-2
+V_Vdd         N01279 0 2Vdc
+V_V1         N00798 0 DC 0Vdc AC -0.5Vac 
+V_Vss         0 N01097 2Vdc
+V_V2         N00786 0 DC 0Vdc AC 0.5Vac 
+R_R1         N01032 N01036  330k TC=0,0 
+C_C1         VOUT1 0  100f  TC=0,0 
+C_C2         0 VOUT2  100f  TC=0,0 
+R_R2         N00782 N00786  1 TC=0,0 
+R_R3         N00798 N00805  1 TC=0,0 
+M_M8         N01032 N01032 N01097 N01097 CMOSN  
++ L=0.6u  
++ W=5u          
++ M=1
+M_M9         N01036 N01036 N01279 N01279 CMOSP  
++ L=0.6u  
++ W=5u          
++ M=1
+M_M10         N00809 N01036 N01279 N01279 CMOSP  
++ L=0.6u  
++ W=42u          
++ M=1
+M_M11         VOUT1 N00782 N00809 N00809 CMOSP  
++ L=0.6u  
++ W=60u          
++ M=1
+M_M12         VOUT2 N00805 N00809 N00809 CMOSP  
++ L=0.6u  
++ W=60u          
++ M=1
+M_M13         VOUT1 N01032 N01097 N01097 CMOSN  
++ L=0.6u  
++ W=10u          
++ M=1
+M_M14         VOUT2 N01032 N01097 N01097 CMOSN  
++ L=0.6u  
++ W=10u          
++ M=1

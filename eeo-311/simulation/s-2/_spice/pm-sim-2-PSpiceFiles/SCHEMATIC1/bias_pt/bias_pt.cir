@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-bias_pt"  [ c:\eeo\eeo-311\simulation\s-2\_spice\pm-sim-2-pspicefiles\schematic1\bias_pt.sim ] 
+
+** Creating circuit file "bias_pt.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ese311models.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 ID(M_M10)
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

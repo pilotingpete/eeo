@@ -1,0 +1,4 @@
+* source TEST1
+R_R1         N00097 N00109  1k TC=0,0 
+R_R2         N00109 0  1k TC=0,0 
+V_V1         N00097 0 DC 0Vdc AC 1Vac 

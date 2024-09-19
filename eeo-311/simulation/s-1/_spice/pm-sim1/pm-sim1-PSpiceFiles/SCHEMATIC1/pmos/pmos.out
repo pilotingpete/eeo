@@ -1,5 +1,5 @@
-
-**** 03/22/24 21:19:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+**** 04/18/24 16:20:14 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-pmos"  [ C:\eeo\eeo-311\simulation\s-1\_spice\pm-sim1\pm-sim1-pspicefiles\schematic1\pmos.sim ] 
 
@@ -28,7 +28,7 @@
 + LIN V_V3 .8 1 .02 
 .OPTIONS ADVCONV
 .OPTIONS FILEMODELSEARCH
-.PROBE64 IS(M_M2)
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
 
 
@@ -63,7 +63,7 @@ INFO(ORPSIM-15454): Model CMOSN: Using BSIM VERSION 3.1 or lower
 
 INFO(ORPSIM-15454): Model CMOSP: Using BSIM VERSION 3.1 or lower
 
-**** 03/22/24 21:19:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+**** 04/18/24 16:20:14 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-pmos"  [ C:\eeo\eeo-311\simulation\s-1\_spice\pm-sim1\pm-sim1-pspicefiles\schematic1\pmos.sim ] 
 
@@ -177,26 +177,13 @@ INFO(ORPSIM-15454): Model CMOSP: Using BSIM VERSION 3.1 or lower
        CJSWG  164.000000E-12   64.000000E-12 
 
 
-WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSN: Pd = 0 is less than W
+INFO(ORPSIM-16627): The following imported models were detected in the design: CMOSN(ese311models.lib), CMOSP(ese311models.lib)
 
-WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSN: Ps = 0 is less than W
-
-WARNING(ORPSIM-15235): Mosfet M_M2, model CMOSP: Pd = 0 is less than W
-
-WARNING(ORPSIM-15235): Mosfet M_M2, model CMOSP: Ps = 0 is less than W
-
-WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSN: Pd = 0 is less than W
-
-WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSN: Ps = 0 is less than W
-
-WARNING(ORPSIM-15235): Mosfet M_M2, model CMOSP: Pd = 0 is less than W
-
-WARNING(ORPSIM-15235): Mosfet M_M2, model CMOSP: Ps = 0 is less than W
+ERROR(ORPSIM-16583): More than one imported model containing transistors or diodes is detected. To simulate this circuit, a minimum of 1 and a maximum of 4 traces are required. Reduce the number of traces and simulate again.
 
 
-          JOB CONCLUDED
-
-**** 03/22/24 21:19:39 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+ABORTING SIMULATION
+**** 04/18/24 16:20:14 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-pmos"  [ C:\eeo\eeo-311\simulation\s-1\_spice\pm-sim1\pm-sim1-pspicefiles\schematic1\pmos.sim ] 
 
@@ -208,5 +195,45 @@ WARNING(ORPSIM-15235): Mosfet M_M2, model CMOSP: Ps = 0 is less than W
 
 
 
-  Total job time (using Solver 1)   =        1.88
+Node counts:
+  Top level (NUNODS)                =           5
+  External (NCNODS)                 =           5
+  Total (NUMNOD)                    =           5
+
+Total device count (NUMEL)          =           6
+  MosFETs (M)                       =           2
+  Voltage Sources (V)               =           4
+
+Number of subcircuits (X)           =           0
+
+Matrix statistics:
+  Matrix size (NSTOP)               =           9
+  Initial no. elements (NTTAR)      =          18
+  No. elements w/ fillin (NTTBR)    =          18
+  No. fillins (IFILL)               =           0
+  No. overflows (NTTOV)             =           0
+  No. LU operations (IOPS)          =           0
+  Percent sparsity (PERSPA)         =      77.778
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =           0
+  No. rejected time points (NUMRTP) =           0
+  No. iterations (NUMNIT)           =           0
+
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations
+  Matrix load                       =        0.00
+  Matrix solution                   =        0.00               1
+  Readin                            =         .02
+  General setup                     =        2.75
+  CMI setup                     =        0.00
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =         .06
+  Total job time (using Solver 1)   =        2.77
 

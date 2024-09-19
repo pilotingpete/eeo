@@ -1,0 +1,20 @@
+1a
+the DC voltage gain is inversly proportional to the square of the bias current. Therefore an increase in bias current of 4x results in a decrease in gain by 1/2
+
+1b
+the cutoff frequency is directly proportional to the bias current, therefore, a 4x increase in bias current relates to a 4x increase if cutoff frequency.
+
+1c
+The GWB product the gain x cutoff freq, Therefore an increase in bias current of 4x results in a decrease in gain by 1/2 and 4x increase if cutoff frequency resulting in 2x increase in GBW.
+
+
+2a
+the dc current gain is directly proportional to the mosfet channel area, therefore a increase in area of 2 results in a factor of 2 increase in gain.
+
+2b
+The miller capacitance is porportional to twice the mosfet width, therefore a increase in W of 2 results in a factor of 4 for miller capacitance
+
+
+2c
+The cutoff frequency is inversly proportional to the miller capacitance, therefore given the increase in miller capacitance of 4x, the cutoff frequency will be 1/4 of the original value. 
+ 

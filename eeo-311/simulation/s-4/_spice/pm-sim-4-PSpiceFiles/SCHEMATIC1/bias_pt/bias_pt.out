@@ -1,0 +1,299 @@
+
+**** 05/05/24 08:37:00 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias_pt"  [ c:\eeo\eeo-311\simulation\s-4\_spice\pm-sim-4-PSpiceFiles\SCHEMATIC1\bias_pt.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias_pt.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ese311models.lib" 
+* From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\23.1.0\PSpice.ini file:
+.lib "nom_pspti.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 N([VOUT])
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PM-SIM-4
+V_Vdd         N01279 0 2Vdc
+V_V2         N00798 0 DC 0Vdc AC 0.5Vac 
+V_Vss         0 N01097 2Vdc
+V_V1         N00782 0 DC 0Vdc AC -0.5Vac 
+C_C2         0 VOUT  5p  TC=0,0 
+M_M6         N01036 N01036 N01279 N01279 CMOSP  
++ L=0.5u  
++ W=5u          
++ M=1
+M_M5         N00809 N01036 N01279 N01279 CMOSP  
++ L=0.5u  
++ W=5u          
++ M=1
+M_M1         N00655 N00782 N00809 N00809 CMOSP  
++ L=0.5u  
++ W=7u          
++ M=1
+M_M2         VO1 N00798 N00809 N00809 CMOSP  
++ L=0.5u  
++ W=7u          
++ M=1
+M_M3         N00655 N00655 N01097 N01097 CMOSN  
++ L=0.5u  
++ W=3u          
++ M=1
+M_M4         VO1 N00655 N01097 N01097 CMOSN  
++ L=0.5u  
++ W=3u          
++ M=1
+M_M7         VOUT N01036 N01279 N01279 CMOSP  
++ L=0.5u  
++ W=40u          
++ M=1
+M_M8         VOUT VO1 N01097 N01097 CMOSN  
++ L=0.5u  
++ W=90u          
++ M=1
+I_I1         N01036 N01097 DC 100u  
+
+**** RESUMING bias_pt.cir ****
+.END
+
+WARNING(ORPSIM-15235): Mosfet M_M6, model CMOSP: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M6, model CMOSP: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M5, model CMOSP: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M5, model CMOSP: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSP: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSP: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M2, model CMOSP: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M2, model CMOSP: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M7, model CMOSP: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M7, model CMOSP: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M3, model CMOSN: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M3, model CMOSN: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M4, model CMOSN: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M4, model CMOSN: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M8, model CMOSN: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M8, model CMOSN: Ps = 0 is less than W
+
+INFO(ORPSIM-15454): Model CMOSP: Using BSIM VERSION 3.1 or lower
+
+INFO(ORPSIM-15454): Model CMOSN: Using BSIM VERSION 3.1 or lower
+
+**** 05/05/24 08:37:00 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias_pt"  [ c:\eeo\eeo-311\simulation\s-4\_spice\pm-sim-4-PSpiceFiles\SCHEMATIC1\bias_pt.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               CMOSP           CMOSN           
+               PMOS            NMOS            
+  T_Measured   27              27            
+   T_Current   27              27            
+       LEVEL    7               7            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    -.93898          .650464     
+          KP  147.991900E-06  147.991900E-06 
+       GAMMA    0               0            
+      LAMBDA    0               0            
+         RSH  101.9            79.6          
+          IS    1.000000E-15    1.000000E-15 
+          JS  100.000000E-06  100.000000E-06 
+          PB     .950493         .99         
+        PBSW     .99             .1          
+          CJ  726.880400E-06  420.723800E-06 
+        CJSW  264.809400E-12  327.876600E-12 
+          MJ     .495407         .44673      
+        MJSW     .294044         .117014     
+        CGSO  252.000000E-12  200.000000E-12 
+        CGDO  252.000000E-12  200.000000E-12 
+        CGBO    1.000000E-09    1.000000E-09 
+         TOX   14.000000E-09   14.000000E-09 
+          XJ  150.000000E-09  150.000000E-09 
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA     .01             .01         
+          KF  350.000000E-27  200.000000E-27 
+          AF     .95             .72         
+      DIOMOD    2               2            
+          K1     .544468         .874675     
+          K2     .010635        -.095286     
+        LETA    0               0            
+        WETA    0               0            
+          U0  218.7592        452.5819       
+       XPART     .5              .5          
+        VTH0    -.93898          .650464     
+          K3    6.844851       25.86693      
+          W0   10.000000E-09   10.000000E-09 
+         NLX    1.000000E-09    1.000000E-09 
+        DVT0    2.577757        3.702709     
+        DVT1     .535562         .408127     
+          UA    3.029461E-09  100.000000E-15 
+          UB    1.000000E-21    1.351173E-18 
+          UC  -56.350800E-12   13.200030E-12 
+        VSAT  180.265300E+03  163.416100E+03 
+        RDSW    2.794425E+03    1.119403E+03 
+        VOFF    -.049952        0            
+     NFACTOR     .905627         .675259     
+        PCLM    2.180432        2.627889     
+      PDIBL1     .084068        -.10571      
+      PDIBL2    4.063444E-03    2.351583E-03 
+       DROUT     .268639         .524785     
+      PSCBE1   13.238990E+09  577.927100E+06 
+      PSCBE2    1.289795E-09   79.674190E-06 
+          A0     .853557         .584538     
+          A1    0              26.381370E-06 
+          A2     .3              .356878     
+       NPEAK  170.000000E+15  170.000000E+15 
+         LDD    0               0            
+        LITL   79.372540E-09   79.372540E-09 
+         UA1    4.310000E-09    4.310000E-09 
+         UB1   -7.610000E-18   -7.610000E-18 
+         UC1  -56.000000E-12  -56.000000E-12 
+        KETA   -2.317380E-03   -1.873074E-03 
+        ETA0     .157391         .033081     
+        ETAB    -.067905     -866.809300E-06 
+         K3B    -.958659       -8.132957     
+        DVT2    -.115073        -.095138     
+        DSUB     .99424          .269658     
+      MOBMOD    1               1            
+         AGS     .14044          .130113     
+       DVT1W    0               0            
+       DVT2W    0               0            
+        PRWG    -.048095         .096515     
+        PRWB    -.049755         .052593     
+     PDIBLCB    -.051069        -.108329     
+         DWG  -19.468120E-09   -5.327466E-09 
+         DWB   17.193090E-09   50.590050E-09 
+          B0  975.001300E-09    2.597673E-06 
+          B1    5.000000E-06    5.000000E-06 
+        LINT   59.756600E-09   27.854900E-09 
+        WINT  310.801400E-09  234.158000E-09 
+         DLC   59.756600E-09   27.854900E-09 
+         DWC  310.801400E-09  234.158000E-09 
+          CF    0               0            
+        NOIA    9.900000E+18  100.000000E+18 
+        NOIB    2.400000E+03   50.000000E+03 
+        NOIC    1.400000E-12   -1.400000E-12 
+       LKETA   -5.675893E-03    2.322883E-03 
+       WKETA    1.999387E-03    -.031361     
+       PVTH0    5.980160E-03     .092253     
+       PRDSW   14.85984       -82.82922      
+         PK2    3.739810E-03    -.034671     
+         VTM     .025864         .025864     
+     VERSION    3.1             3.1          
+       PBSWG     .99             .1          
+       MJSWG     .294044         .117014     
+       CJSWG   64.000000E-12  164.000000E-12 
+
+
+WARNING(ORPSIM-15235): Mosfet M_M6, model CMOSP: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M6, model CMOSP: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSP: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model CMOSP: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M7, model CMOSP: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M7, model CMOSP: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M3, model CMOSN: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M3, model CMOSN: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M8, model CMOSN: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M8, model CMOSN: Ps = 0 is less than W
+
+**** 05/05/24 08:37:00 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias_pt"  [ c:\eeo\eeo-311\simulation\s-4\_spice\pm-sim-4-PSpiceFiles\SCHEMATIC1\bias_pt.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VO1)    -.9523  ( VOUT)   -1.8632  (N00655)    -.9523 (N00782)    0.0000     
+
+(N00798)    0.0000 (N00809)    1.1498 (N01036)     .4531 (N01097)   -2.0000     
+
+(N01279)    2.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -1.422E-03
+    V_V2         0.000E+00
+    V_Vss       -1.422E-03
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.69E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/05/24 08:37:00 **** PSpice 23.1.0 (30 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias_pt"  [ c:\eeo\eeo-311\simulation\s-4\_spice\pm-sim-4-PSpiceFiles\SCHEMATIC1\bias_pt.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .36
+

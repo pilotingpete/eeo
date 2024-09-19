@@ -1,0 +1,134 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+\pdfminorversion=6
+
+\begin{document}
+	
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.45\textwidth]{sbu}\par\vspace{1cm}
+	{\LARGE \textsc{EEO335}\par}
+	\vspace{1cm}
+	{\Large \textsc{Spring 2024}\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Delta-Sigma Modulator\par}
+	\vspace{2cm}
+	{\Large\itshape Pete Mills\\ID: 115009163\par}
+	\vfill
+	Professor\par
+	Gianluigi \textsc{De Geronimo}
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+% Include the original assignment
+	\newcommand{\assName}{Assignment 9-1.pdf}
+
+	\includepdf[pages=-,pagecommand=\section*{Copy of Original Assignment}]{\assName}
+	%\includepdf[pages=2-,pagecommand={}]{\assName}
+	
+	%\listoffigures
+	
+% Begin report
+
+	\section*{Overview}
+	
+	In this lab, we design and analyze a delta-sigma modulator circuit using simulation software. By simulating the circuit, we observed the input-output relationship and explored the effects of varying the clock frequency. Then, we build the circuit using hardware components and replicate the experimental results. This lab reinforces our understanding of delta-sigma modulation through theoretical design and practical experimentation.
+	
+	\section{Using the simulator, design the circuit shown in Fig. 1}
+
+	\subsection*{a)}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{1a}
+	    \caption{simulate and show the input and the response at the output}
+	\end{figure}
+
+	\subsection*{b)}
+
+		By increasing the clock frequency from \SI{10}{\kHz} to \SI{20}{\kHz} to \SI{50}{\kHz} and then to \SI{100}{\kHz} a trend can be observed. The output accuracy improves with higher clock frequencies. With lower sampling frequencies, there is more uncertainty in the measurement result.
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{1b100u}
+			\caption{Simulation performance shown at \SI{10}{\kHz}.}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{1b50u}
+			\caption{Simulation performance shown at \SI{20}{\kHz}.}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{1b20u}
+			\caption{Simulation performance shown at \SI{50}{\kHz}.}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{1b10u}
+			\caption{Simulation performance shown at \SI{100}{\kHz}.}
+		\end{figure}
+
+	\subsection*{c)}
+
+	A delta sigma modulator has several block functions. To form the sigma portion, the op27 op-amp and capacitor C1 form an integrator function. To form the delta portion, a difference function is formed at the negative input of the op-amp. 
+
+	At the moment a clock signal arrives on the DFF clk pin, the input at D is relayed out to Q. This signal is fed back to the negative input of the opamp to calculate the difference in the input signal to output.
+
+	As described, these differences are continuously summed (integrated) at a rate proportional to the clock frequency. By increasing the number of samples, any error present becomes less significant and therefore, the system can achieve a high accuracy.
+
+	\section{Build the circuit at (1) and experimentally reproduce the simulations}
+
+	The experimental circuit comes very close to replicating the results of the simulation. The clock frequency affects the output quality in the same way as seen in the simulation.
+
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a1}
+	    \caption{Photo of circuit}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a2_10}
+	    \caption{Experimental performance shown at \SI{10}{\kHz}. }
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a2_20}
+	    \caption{Experimental performance shown at \SI{20}{\kHz}.}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a2_50}
+	    \caption{Experimental performance shown at \SI{50}{\kHz}.}
+	\end{figure}
+
+	\begin{figure}[H]
+	    \centering
+	    \includegraphics[width=0.7\textwidth]{2a2_100}
+	    \caption{Experimental performance shown at \SI{100}{\kHz}.}
+	\end{figure}
+
+
+\end{document}

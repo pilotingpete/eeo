@@ -1,0 +1,39 @@
+* source PM-SIM-4
+V_Vdd         N01279 0 2Vdc
+V_V2         N00798 0 DC 0Vdc AC 0.5Vac 
+V_Vss         0 N01097 2Vdc
+V_V1         N00782 0 DC 0Vdc AC -0.5Vac 
+C_C2         0 VOUT  5p  TC=0,0 
+M_M6         N01036 N01036 N01279 N01279 CMOSP  
++ L=0.5u  
++ W=5u          
++ M=1
+M_M5         N00809 N01036 N01279 N01279 CMOSP  
++ L=0.5u  
++ W=5u          
++ M=1
+M_M1         N00655 N00782 N00809 N00809 CMOSP  
++ L=0.5u  
++ W=7u          
++ M=1
+M_M2         VO1 N00798 N00809 N00809 CMOSP  
++ L=0.5u  
++ W=7u          
++ M=1
+M_M3         N00655 N00655 N01097 N01097 CMOSN  
++ L=0.5u  
++ W=3u          
++ M=1
+M_M4         VO1 N00655 N01097 N01097 CMOSN  
++ L=0.5u  
++ W=3u          
++ M=1
+M_M7         VOUT N01036 N01279 N01279 CMOSP  
++ L=0.5u  
++ W=200u          
++ M=1
+M_M8         VOUT VO1 N01097 N01097 CMOSN  
++ L=0.5u  
++ W=90u          
++ M=1
+I_I1         N01036 N01097 DC 100u  
