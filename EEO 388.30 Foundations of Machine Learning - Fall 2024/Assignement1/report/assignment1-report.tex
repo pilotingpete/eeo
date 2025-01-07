@@ -1,0 +1,118 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+
+
+\begin{document}
+	
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.45\textwidth]{sbu}\par\vspace{1cm}
+	{\LARGE \textsc{EEO388}\par}
+	\vspace{1cm}
+	{\Large \textsc{Fall 2024}\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Assignment 1\par}
+	\vspace{2cm}
+	{\Large\itshape Pete Mills\\ID: 115009163\par}
+	\vfill
+	Professor\par
+	Vibha \textsc{Mane}
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+% Include the original assignment
+	%\newcommand{\assName}{../ExerciseSet1a.py}
+	%\includepdf[pages=-,pagecommand=\section*{Copy of Original Assignment}]{\assName}
+	%\newcommand{\assName}{ExerciseSet1b.py}
+	%\includepdf[pages=-,pagecommand=\section*{Copy of Original Assignment}]{\assName}
+
+	%\includepdf[pages=2-,pagecommand={}]{\assName}
+	
+	%\listoffigures
+	
+% Begin report
+
+	\section*{Overview}
+	
+	 In this assignment we made use of scatter plots and histograms to analyze distributions and relationships, separabiility, and irregularities in data sets.
+
+	
+	\section{Exercise Set 1A}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{es1.png}
+			\caption{Source code.}
+		\end{figure}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.7\textwidth]{2024-09-21-12-25-38_pairplot.png}
+			\caption{The Pair plot set for these random data.}
+		\end{figure}
+
+	\section{Exercise Set 1B}
+
+		\subsection{Raisin}
+
+		The data in this dataset are categorical. Based on the plots there do appear to be some outliers. There are 450 samples in the Kecimen class, and 450 samples in the Bensi class.
+
+		By setting hue based on class, we can visualize the two classes of raisins on the same scatter plot. We can then inspect for clustering of data which reveals there is some separability in the data. We can use this to identify characteristics for class sorting.
+
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{raisin-code.png}
+				\caption{Source code.}
+			\end{figure}
+
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{raisin-scatter.png}
+				\caption{Scatter plots.}
+			\end{figure}
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{raisin-hist.png}
+				\caption{Histograms.}
+			\end{figure}
+
+		\subsection{Deep Space}
+
+		The data in this dataset are numerical. There does not appear to be any outliers.
+
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{deep-space-code.png}
+				\caption{Source code.}
+			\end{figure}
+		
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{deep-space-scatter.png}
+				\caption{Scatter Plots.}
+			\end{figure}
+
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\textwidth]{deep-space-hist.png}
+				\caption{Histograms.}
+			\end{figure}
+
+
+\end{document}
