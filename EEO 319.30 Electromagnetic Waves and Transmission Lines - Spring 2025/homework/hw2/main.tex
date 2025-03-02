@@ -1,0 +1,144 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+
+
+\begin{document}
+	
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.45\textwidth]{sbu}\par\vspace{1cm}
+	{\LARGE \textsc{EEO319}\par}
+	\vspace{1cm}
+	{\Large \textsc{Spring 2025}\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Electromagnetic Waves \& Transmission Lines\par}
+	\vspace{2cm}
+	{\Large\itshape Pete Mills\\ID: 115009163\par}
+	\vfill
+	Professor\par
+	Jayant \textsc{Parekh}
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+% Include the original assignment
+	\newcommand{\assName}{020925 Homework 2 (1).pdf}
+
+	\includepdf[pages=-,pagecommand=\section*{Copy of Original Assignment}]{\assName}
+	%\includepdf[pages=2-,pagecommand={}]{\assName}
+	
+	%\listoffigures
+	
+% Begin report
+
+\section{Wave Analysis}
+
+\subsection{Problem 1}
+A uniform plane wavefunction has the instantaneous expression:
+\begin{equation}
+    \Phi(x,t) = 5 \sin(200\pi t + 0.4\pi x + 300)
+\end{equation}
+Identify or calculate the following:
+
+\begin{enumerate}
+    \item The radian frequency $\omega$ of the wave in rad/s:
+    \begin{equation}
+        \omega = 200\pi \text{ rad/s}
+    \end{equation}
+    \item The frequency $f$ in Hz of the wave:
+    \begin{equation}
+        f = \frac{\omega}{2\pi} = \frac{200\pi}{2\pi} = 100 \text{ Hz}
+    \end{equation}
+    \item The direction of propagation of the wave:
+    \newline The wave propagates in the negative $x$-direction since the wave phase term is $(\omega t + kx + \phi)$.
+    \item The wavelength $\lambda$ in meters:
+    \begin{equation}
+        k = 0.4\pi, \quad \lambda = \frac{2\pi}{k} = \frac{2\pi}{0.4\pi} = 5 \text{ m}
+    \end{equation}
+    \item The amplitude $A$ of the wave:
+    \begin{equation}
+        A = 5
+    \end{equation}
+    \item The phase velocity $v_{ph}$ in m/s of the wave:
+    \begin{equation}
+        v_{ph} = \frac{\omega}{k} = \frac{200\pi}{0.4\pi} = 500 \text{ m/s}
+    \end{equation}
+\end{enumerate}
+
+\subsection{Problem 2}
+A uniform plane scalar wave represented by the function $\Phi(x,t)$ is given with the following properties:
+\begin{itemize}
+    \item The wave propagates in the $-x$ direction.
+    \item Wave amplitude = 10.
+    \item Wave frequency = 500 Hz.
+    \item Wave’s phase velocity = 100 m/s.
+    \item The wavefunction $\Phi(0,0)$ at $x = 0$ and $t = 0$ has the value $\Phi(0,0) = 5$.
+\end{itemize}
+Find the expression $\Phi(x,t)$ of the wave function.
+
+\begin{equation}
+    \omega = 2\pi f = 2\pi \times 500 = 1000\pi \text{ rad/s}
+\end{equation}
+\begin{equation}
+    k = \frac{\omega}{v_{ph}} = \frac{1000\pi}{100} = 10\pi \text{ rad/m}
+\end{equation}
+Since the wave propagates in the $-x$ direction, the wavefunction takes the form:
+\begin{equation}
+    \Phi(x,t) = 10 \sin(\omega t + kx + \phi)
+\end{equation}
+To satisfy $\Phi(0,0) = 5$:
+\begin{equation}
+    10 \sin(\phi) = 5 \Rightarrow \sin(\phi) = 0.5 \Rightarrow \phi = \frac{\pi}{6}
+\end{equation}
+Thus, the wave function is:
+\begin{equation}
+    \Phi(x,t) = 10 \sin(1000\pi t + 10\pi x + \frac{\pi}{6})
+\end{equation}
+
+\subsection{Problem 3}
+Consider two scalar UPW’s of the same amplitude which have incrementally different frequencies and thus incrementally different wavelengths. Both waves are given to be propagating in the $+z$ direction.
+
+Let the two waves be:
+\begin{equation}
+    \Phi_1 = A \cos(\omega_1 t - k_1 z)
+\end{equation}
+\begin{equation}
+    \Phi_2 = A \cos(\omega_2 t - k_2 z)
+\end{equation}
+Using trigonometric identities, their sum can be rewritten as an amplitude-modulated wave:
+\begin{equation}
+    \Phi = \Phi_1 + \Phi_2 = 2A \cos \left( \frac{\Delta \omega}{2} t - \frac{\Delta k}{2} z \right) \cos \left( \omega_c t - k_c z \right)
+\end{equation}
+where:
+\begin{equation}
+    \omega_c = \frac{\omega_1 + \omega_2}{2}, \quad k_c = \frac{k_1 + k_2}{2},
+\end{equation}
+\begin{equation}
+    \Delta \omega = \omega_2 - \omega_1, \quad \Delta k = k_2 - k_1
+\end{equation}
+The carrier wave propagates with phase velocity:
+\begin{equation}
+    v_p = \frac{\omega_c}{k_c}
+\end{equation}
+The envelope wave propagates with group velocity:
+\begin{equation}
+    v_g = \frac{d\omega}{dk}
+\end{equation}
+This shows that the interference of two UPWs results in an amplitude-modulated signal with the carrier wave moving at the phase velocity and the envelope moving at the group velocity.
+
+
+\end{document}

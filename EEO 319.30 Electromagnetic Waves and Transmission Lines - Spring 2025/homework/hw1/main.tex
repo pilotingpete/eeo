@@ -1,0 +1,123 @@
+\documentclass{article}
+%\usepackage{blindtext}
+\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+%\usepackage{tabularray}
+%\usepackage{hyperref}
+%\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+
+
+\begin{document}
+	
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.45\textwidth]{sbu}\par\vspace{1cm}
+	{\LARGE \textsc{EEO319}\par}
+	\vspace{1cm}
+	{\Large \textsc{Spring 2025}\par}
+	\vspace{1.5cm}
+	{\huge\bfseries Electromagnetic Waves \& Transmission Lines\par}
+	\vspace{2cm}
+	{\Large\itshape Pete Mills\\ID: 115009163\par}
+	\vfill
+	Professor\par
+	Jayant \textsc{Parekh}
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+% Include the original assignment
+	\newcommand{\assName}{012825 Homework 1.pdf}
+
+	\includepdf[pages=-,pagecommand=\section*{Copy of Original Assignment}]{\assName}
+	%\includepdf[pages=2-,pagecommand={}]{\assName}
+	
+	%\listoffigures
+	
+% Begin report
+
+\section*{Introduction}
+Electromagnetic waves in the microwave portion of the spectrum are used in a variety of applications including identification systems, altitude measurement, radar imaging, and heating processes. In Homework 1, we provide technical descriptions for four specific applications: RF Identification (RFID), radar altimeters for aircraft, RF pulse radars, and microwave ovens. For each application, we discuss the operating frequency, typical power levels, and underlying principles of operation. Illustrative schematics and diagrams are provided where appropriate.
+
+\section{RF Identification (RFID)}
+RFID systems use radio waves to identify and track objects equipped with a small electronic tag. These systems can operate at different frequency bands. Low-frequency (LF) RFID (around 125--134~kHz) and high-frequency (HF) RFID (13.56~MHz) are common; however, UHF RFID systems generally operate between 860 and 960~MHz. Recently, some systems have also explored microwave frequencies (e.g., 2.45~GHz) to improve read range and data rate.
+
+\subsection*{Operating Principle and Components}
+An RFID system consists of a reader and one or more tags. The reader emits electromagnetic waves that power a passive tag through inductive or backscatter coupling. When powered, the tag modulates the reflected signal with its stored identification data. In the microwave band (e.g., at 2.45~GHz), the use of antennas optimized for shorter wavelengths enhances spatial resolution and reading distance.
+
+\subsection*{Power Levels and Signal Propagation}
+The power output of RFID readers is typically in the range of 100~mW to a few Watts, subject to regulatory limits and application requirements. The tags, being passive, rely on the electromagnetic energy from the reader and typically have no local power source. Figure~\ref{fig:rfi_block} illustrates a simplified block diagram of an RFID system.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{rfid_block_diagram.png}
+    \caption{Block diagram of a typical RFID system.}
+    \label{fig:rfi_block}
+\end{figure}
+
+\section{Radar Altimeters}
+Radar altimeters are used in aviation to measure the distance between an aircraft and the terrain below, especially under low-visibility conditions. These devices typically operate in the microwave frequency band, most commonly between 4.3~GHz and 4.5~GHz.
+
+\subsection*{Operating Principle}
+The radar altimeter emits a continuous or pulsed microwave signal towards the ground. The transmitted signal reflects off the terrain and returns to the aircraft. By measuring the time delay ($\Delta t$) between the transmitted pulse and the received echo, the altitude can be determined using
+\begin{equation}
+    h = \frac{c \, \Delta t}{2},
+\end{equation}
+where $c$ is the speed of light.
+
+\subsection*{Power and System Design}
+The transmitted power for a radar altimeter is generally low, on the order of a few Watts, since the range requirement is relatively short (usually below 1000 meters). The design must also consider atmospheric absorption and multipath effects. Figure~\ref{fig:radar_altimeter} shows a representation of a radar altimeter system installed on an aircraft.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{radar_altimeter_schematic}
+    \caption{Diagram of a radar altimeter system.}
+    \label{fig:radar_altimeter}
+\end{figure}
+
+\section{RF Pulse Radars}
+RF pulse radars are used for long-range detection and imaging. They operate by transmitting high-power pulses of microwave energy and then receiving echoes from objects. The frequency of operation can vary, with many systems using frequencies in the 2--18~GHz range. High-power peak pulses (up to megawatts) are common, though average power remains low due to the low duty cycle.
+
+\subsection*{Operating Principle and Signal Processing}
+Pulse radars work by sending out short bursts of microwave energy. The time delay between pulse transmission and echo reception provides range information, while the Doppler shift of the returning signal helps determine the target's speed. Modern radars use advanced digital signal processing to enhance resolution and extract target features from noisy backgrounds.
+
+\subsection*{Power Considerations}
+Although the peak power of a pulse can be very high, the average transmitted power is typically in the range of several hundred Watts to a few kilowatts, due to the low duty cycle. The high peak power allows for detection of small or distant objects, and the short pulse width provides fine range resolution. Figure~\ref{fig:pulse_radar} provides an illustrative diagram of a typical RF pulse radar system.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{pulse_radar_diagram.jpg}
+    \caption{Diagram of an RF pulse radar system.}
+    \label{fig:pulse_radar}
+\end{figure}
+
+\section{Microwave Ovens}
+Microwave ovens utilize microwave radiation to heat food by agitating water molecules within the food. The standard operating frequency for microwave ovens is 2.45~GHz, which is chosen for its efficiency in energy transfer and safety regulations.
+
+\subsection*{Operating Principle and Energy Absorption}
+At 2.45~GHz, the microwave radiation causes water molecules in the food to oscillate rapidly. This molecular motion produces heat through friction and dielectric losses, effectively warming the food. The design of the oven, including the metal cavity and mode stirrer, ensures that the microwaves are evenly distributed throughout the cavity to avoid hot and cold spots.
+
+\subsection*{Power Levels and Safety Considerations}
+Microwave ovens are designed to deliver power levels typically ranging from 700 to 1200~Watts of microwave energy. The oven’s cavity is carefully shielded to prevent leakage of microwave radiation, ensuring user safety. Figure~\ref{fig:microwave_oven} shows a cross-section of a microwave oven highlighting the magnetron, waveguide, and cooking chamber.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{microwave_oven_schematic.png}
+    \caption{Schematic of a microwave oven showing the key components.}
+    \label{fig:microwave_oven}
+\end{figure}
+
+\section*{Conclusion}
+Each of the four applications discussed uses microwaves in a unique manner. RFID systems use relatively low-power microwave (or radio) signals to power and read small tags, radar altimeters rely on time-of-flight measurements for safe aircraft operations, pulse radars use high-peak-power pulses for long-range detection and imaging, and microwave ovens employ 2.45~GHz radiation to heat food efficiently. Despite differences in frequency and power, these systems illustrate the versatility and importance of microwave technology in modern applications.
+
+
+\end{document}

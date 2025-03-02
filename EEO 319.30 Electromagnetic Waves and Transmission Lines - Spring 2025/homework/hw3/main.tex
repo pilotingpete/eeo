@@ -1,0 +1,132 @@
+\documentclass{include/src/sbu-report}  % Use the custom class
+\input{include/src/macros.tex}          % Import macros
+
+% Set Title Page Parameters
+\setcoursename{EEO399}
+\setsemester{Spring 2025}
+\setreporttitle{Electromagnetic Waves \& Transmission Lines}
+\setprofessor{Jayant Parekh}
+\setstudentname{Pete Mills}
+\setstudentid{115009163}
+\setreportdate{\today}
+
+\begin{document}
+
+% Optional Includes
+\includeassignment{021325 Homework 3.pdf}
+\includelogo{sbu}
+
+\maketitle  % Generate the title page
+
+% Begin Report
+
+\section{Problem 1: Uniform Plane Electromagnetic Wave}
+Given the parameters:
+\begin{itemize}
+    \item Frequency: $f = 6$ GHz
+    \item Relative Permittivity: $\varepsilon_r = 9$
+    \item Linear Polarization: $y$ direction
+    \item Amplitude of Electric Field: $10$ V/m
+    \item Initial Electric Field: $E(0,0) = 1$ V/m
+\end{itemize}
+
+The wave number is given by:
+\begin{equation}
+    k = \frac{\omega}{v_p} = \frac{2\pi f}{c / \sqrt{\varepsilon_r}} = \frac{2\pi (6 \times 10^9)}{3 \times 10^8 / 3} = 4\pi \times 10^2 \text{ rad/m}
+\end{equation}
+
+The phase velocity is:
+\begin{equation}
+    v_p = \frac{c}{\sqrt{\varepsilon_r}} = \frac{3 \times 10^8}{3} = 10^8 \text{ m/s}
+\end{equation}
+
+\subsection{Instantaneous Electric Field Expression}
+\begin{equation}
+    E(x,t) = 10 \cos(\omega t - kx + \phi) \hat{y}
+\end{equation}
+
+\subsection{Phasor Electric Field Expression}
+\begin{equation}
+    \tilde{E}(x) = 10 e^{-jkx} \hat{y}
+\end{equation}
+
+\subsection{Instantaneous Magnetic Field Expression}
+The intrinsic impedance of the medium is:
+\begin{equation}
+    \eta = \frac{\eta_0}{\sqrt{\varepsilon_r}} = \frac{377}{3} \approx 125.67 \text{ } \Omega
+\end{equation}
+
+\begin{equation}
+    H(x,t) = \frac{E_0}{\eta} \cos(\omega t - kx + \phi) \hat{z}
+\end{equation}
+
+\subsection{Phasor Magnetic Field Expression}
+\begin{equation}
+    \tilde{H}(x) = \frac{10}{125.67} e^{-jkx} \hat{z}
+\end{equation}
+
+\section{Problem 2: Plane Wave in a Lossless Dielectric Medium}
+Given the electric field:
+\begin{equation}
+    E(r,t) = (\hat{y} + \hat{z} \sqrt{3}) \cos(24\pi \times 10^9 t + 160\sqrt{3}\pi y - 160\pi z + 200 )
+\end{equation}
+
+\subsection{Wavelength Calculation}
+The wave number magnitude is:
+\begin{equation}
+    k = \sqrt{(160\sqrt{3}\pi)^2 + (160\pi)^2}
+\end{equation}
+\begin{equation}
+    k = 320\pi \text{ rad/m}
+\end{equation}
+The wavelength is:
+\begin{equation}
+    \lambda = \frac{2\pi}{k} = \frac{2\pi}{320\pi} = \frac{1}{160} \text{ m} \approx 6.25 \text{ mm}
+\end{equation}
+
+\subsection{Propagation Direction}
+\begin{equation}
+    \hat{k} = \frac{(160\sqrt{3}\pi \hat{y} - 160\pi \hat{z})}{320\pi} = \frac{1}{2} \hat{y} - \frac{1}{2} \hat{z}
+\end{equation}
+Thus, the wave propagates in the direction $\frac{1}{2} \hat{y} - \frac{1}{2} \hat{z}$.
+
+\subsection{Relative Refractive Index}
+\begin{equation}
+    n_r = \frac{c}{v_p} = \frac{3 \times 10^8}{v_p}
+\end{equation}
+
+\subsection{Instantaneous Magnetic Field Expression}
+\begin{equation}
+    H(r,t) = \frac{1}{\eta} \left( \hat{k} \times E(r,t) \right)
+\end{equation}
+
+\subsection{Phasor Expression for the Electric Field}
+\begin{equation}
+    \tilde{E}(r) = (\hat{y} + \hat{z} \sqrt{3}) e^{j(160\sqrt{3}\pi y - 160\pi z + 200)}
+\end{equation}
+
+\section{Problem 3: Electromagnetic Wave in Vacuum}
+Given the phasor expression:
+\begin{equation}
+    E(y) = e^{-jky} \hat{x} - j 10 e^{-jky} \hat{z}
+\end{equation}
+
+\subsection{Instantaneous Electric Field Expression}
+\begin{equation}
+    E(y,t) = \operatorname{Re} \{ (e^{-jky} \hat{x} - j 10 e^{-jky} \hat{z}) e^{j\omega t} \}
+\end{equation}
+
+\subsection{Instantaneous Magnetic Field Expression}
+\begin{equation}
+    H(y,t) = \frac{1}{\eta} \left( \hat{k} \times E(y,t) \right)
+\end{equation}
+
+\subsection{Polarization of the Wave}
+Elliptical polarization.
+
+\subsection{Phasor Expression for the Magnetic Field}
+\begin{equation}
+    \tilde{H}(y) = \frac{1}{\eta} \left( \hat{k} \times \tilde{E}(y) \right)
+\end{equation}
+
+\end{document}

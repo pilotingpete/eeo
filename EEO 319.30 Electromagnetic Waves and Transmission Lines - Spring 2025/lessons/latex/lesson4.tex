@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, graphicx}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{Lesson 4: Phasor Wavefunctions}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Key Learning Objectives}
+\begin{itemize}
+    \item Understand phasors as a tool for simplifying sinusoidal steady-state analysis.
+    \item Learn how phasors simplify mathematical operations on sinusoidal signals.
+    \item Apply phasor techniques to analyze electrical circuits.
+\end{itemize}
+
+\section{Phasors in Steady-State Sinusoidal Analysis}
+Phasors allow us to represent sinusoidal signals using complex numbers, greatly simplifying calculations such as addition, subtraction, multiplication, and division.
+
+Consider the series LR circuit in Fig. 1 driven by a sinusoidal voltage source. The circuit's governing equation, derived from Kirchhoff's Voltage Law (KVL), is:
+\begin{equation}
+    L \frac{di(t)}{dt} + R i(t) = V_{\text{m}} \cos(\omega t)
+\end{equation}
+where:
+\begin{itemize}
+    \item $R$ is resistance,
+    \item $L$ is inductance,
+    \item $V_{\text{m}}$ is the voltage amplitude,
+    \item $\omega$ is the angular frequency.
+\end{itemize}
+
+\section{Trigonometric Solution}
+The steady-state solution for $i(t)$ must have the same frequency as the forcing function:
+\begin{equation}
+    i(t) = I_m \cos(\omega t - \phi)
+\end{equation}
+Substituting this into the differential equation and solving for $I_m$ and $\phi$ gives:
+\begin{align}
+    I_m &= \frac{V_m}{\sqrt{R^2 + \omega^2 L^2}} \quad \text{(Magnitude)} \\
+    \tan \phi &= \frac{\omega L}{R} \quad \text{(Phase angle)}
+\end{align}
+Thus, the final expression for $i(t)$ is:
+\begin{equation}
+    i(t) = \frac{V_m}{\sqrt{R^2 + \omega^2 L^2}} \cos(\omega t - \phi)
+\end{equation}
+
+\section{Phasor Solution}
+Rewriting the governing equation in complex form:
+\begin{equation}
+    L \frac{d i_x(t)}{dt} + R i_x(t) = V_m e^{j \omega t}
+\end{equation}
+Solving this algebraically gives:
+\begin{equation}
+    I = \frac{V_m}{R + j \omega L}
+\end{equation}
+Expressing in polar form:
+\begin{equation}
+    I = \frac{V_m}{\sqrt{R^2 + \omega^2 L^2}} e^{-j \phi}
+\end{equation}
+Using Euler's formula:
+\begin{equation}
+    i(t) = \Re\{ I e^{j \omega t} \} = \frac{V_m}{\sqrt{R^2 + \omega^2 L^2}} \cos(\omega t - \phi)
+\end{equation}
+which matches the trigonometric result.
+
+\section{Phasors and the Frequency Domain}
+A sinusoidal signal can be represented either in the time domain or frequency domain:
+\begin{itemize}
+    \item Time domain: $i(t) = I_m \cos(\omega t - \phi)$
+    \item Frequency domain: $I = \frac{V_m}{R + j \omega L}$
+\end{itemize}
+Moving to the frequency domain simplifies many calculations, making it a useful technique for circuit analysis.
+
+\section{Conclusion}
+\begin{itemize}
+    \item Phasors convert differential equations into algebraic equations, simplifying steady-state sinusoidal analysis.
+    \item The magnitude and phase of the solution are easily obtained in phasor form.
+    \item Moving between the time and frequency domains enhances problem-solving efficiency.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, graphicx}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{Lesson 3: Uniform Plane Electromagnetic Waves (UPEMWs)}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Key Learning Objectives}
+\begin{itemize}
+    \item Understand UPEMWs propagating in a lossless infinite medium (vacuum or dielectric).
+    \item Recognize that a UPEMW consists of two UPWs: one for the electric field and one for the magnetic field.
+    \item Learn the fundamental properties of UPEMWs.
+\end{itemize}
+
+\section{Wave Function of UPEMWs}
+UPEMWs are vector wave functions, meaning that both electric and magnetic fields have direction in space in addition to their spatial and temporal dependence. A simple case of a UPEMW propagating in the $z$-direction is expressed as:
+\begin{align}
+    E(z,t) &= i_E E_0 \cos(\omega t - kz) \quad \text{(1a)} \\
+    H(z,t) &= i_H H_0 \cos(\omega t - kz) \quad \text{(1b)}
+\end{align}
+where:
+\begin{itemize}
+    \item $i_E$ and $i_H$ are unit vectors representing the directions of the electric and magnetic fields, respectively.
+    \item $E_0$ and $H_0$ are amplitude constants.
+    \item $k$ is the wavenumber.
+    \item $\omega$ is the angular frequency.
+\end{itemize}
+A more general form of the wave function is:
+\begin{align}
+    E(z,t) &= i_E E_0 \cos(\omega t - \mathbf{k} \cdot \mathbf{r}) \quad \text{(2a)} \\
+    H(z,t) &= i_H H_0 \cos(\omega t - \mathbf{k} \cdot \mathbf{r}) \quad \text{(2b)}
+\end{align}
+where $\mathbf{k}$ is the wave vector.
+
+\section{Properties of UPEMWs}
+\subsection{Property 1: Synchronization of Fields}
+The space-time factor $\cos(\omega t - \mathbf{k} \cdot \mathbf{r})$ is the same for both $E$ and $H$, meaning:
+\begin{itemize}
+    \item Electric and magnetic fields are in phase.
+    \item Their maxima and minima occur at the same points in space and time.
+\end{itemize}
+
+\subsection{Property 2: Right-Handed Triad of Unit Vectors}
+The unit vectors $i_E$, $i_H$, and $i_K$ form a right-handed coordinate system:
+\begin{align}
+    i_E \times i_H &= i_K \quad \text{(3a)} \\
+    i_H \times i_K &= i_E \quad \text{(3b)} \\
+    i_K \times i_E &= i_H \quad \text{(3c)}
+\end{align}
+These relationships provide a mnemonic for determining an unknown unit vector given two known vectors. The right-hand rule can also be used to determine the direction of the unknown unit vector.
+
+\subsection{Property 3: Relationship Between $E_0$ and $H_0$}
+The amplitudes of the electric and magnetic fields are related by the characteristic impedance $\eta$ of the medium:
+\begin{equation}
+    \frac{E_0}{H_0} = \eta \quad \text{(4)}
+\end{equation}
+where $\eta$ is given by:
+\begin{equation}
+    \eta = \sqrt{\frac{\mu_0 \mu_r}{\epsilon_0 \epsilon_r}} \quad \text{(5)}
+\end{equation}
+with:
+\begin{itemize}
+    \item $\mu_0 = 4\pi \times 10^{-7} \text{ H/m}$ (permeability of free space).
+    \item $\mu_r$ = relative permeability of the medium ($\mu_r = 1$ for a nonmagnetic medium).
+    \item $\epsilon_0 = 8.854 \times 10^{-12} \text{ F/m}$ (permittivity of free space).
+    \item $\epsilon_r$ = relative permittivity (dielectric constant of the medium).
+\end{itemize}
+For free space:
+\begin{equation}
+    \eta_0 = 377 \Omega \quad \text{(6)}
+\end{equation}
+
+\section{Phase Velocity of UPEMWs}
+The phase velocity of UPEMWs is given by:
+\begin{equation}
+    v_p = \frac{c}{n_r} \quad \text{(7)}
+\end{equation}
+where $n_r$ is the relative refractive index, defined as the velocity reduction factor relative to the speed of light in vacuum ($c = 3 \times 10^8$ m/s). The refractive index is:
+\begin{equation}
+    n_r = \sqrt{\mu_r \epsilon_r} \quad \text{(8)}
+\end{equation}
+
+\section{Conclusion}
+\begin{itemize}
+    \item A UPEMW consists of an electric and magnetic field propagating together.
+    \item Both fields are in phase and perpendicular to each other and to the direction of propagation.
+    \item The amplitudes of the fields are related through the characteristic impedance of the medium.
+    \item The phase velocity depends on the refractive index of the medium.
+\end{itemize}
+
+\end{document}

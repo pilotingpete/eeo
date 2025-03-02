@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, graphicx}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{Lesson 2: UPW Propagating in an Arbitrary Direction in Space}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Key Learning Objectives}
+\begin{itemize}
+    \item Understand how to write and interpret the expression for a UPW propagating in an arbitrary direction.
+    \item Extend the understanding from Lesson 1, which covered waves along Cartesian coordinate axes, to waves in any direction.
+\end{itemize}
+
+\section{UPW Wave Function for Propagation in an Arbitrary Direction}
+For simplicity, consider a uniform plane wave (UPW) propagating in an arbitrary direction in the xz-plane. The wave function is given by:
+\begin{equation}
+    \Phi(x,z,t) = A \cos(\omega t - \mathbf{k} \cdot \mathbf{r})
+\end{equation}
+where:
+\begin{itemize}
+    \item $\mathbf{r} = x \hat{i}_x + z \hat{i}_z$ is the position vector.
+    \item $A$ is the amplitude.
+    \item $\omega$ is the radian frequency.
+    \item $\mathbf{k}$ is the wave vector, given by:
+    \begin{equation}
+        \mathbf{k} = k_x \hat{i}_x + k_z \hat{i}_z
+    \end{equation}
+    where:
+    \begin{align}
+        k_x &= k \cos \theta_x \\
+        k_z &= k \cos \theta_z
+    \end{align}
+    \item The wavenumber is given by:
+    \begin{equation}
+        k = \sqrt{k_x^2 + k_z^2}
+    \end{equation}
+\end{itemize}
+
+\subsection{Physical Interpretation of the Dot Product $\mathbf{k} \cdot \mathbf{r}$}
+By definition, the dot product of two vectors is:
+\begin{equation}
+    \mathbf{k} \cdot \mathbf{r} = k_x x + k_z z
+\end{equation}
+which represents the projection of the position vector onto the direction of wave propagation. If we introduce a new coordinate axis $z'$ along the wave vector direction, we can rewrite the wave function as:
+\begin{equation}
+    \Phi(z',t) = A \cos(\omega t - k z')
+\end{equation}
+This confirms that the wave propagates along the direction of $\mathbf{k}$.
+
+\section{Example: Dot Product of Two Vectors}
+\textbf{Problem:} What is $\mathbf{r} \cdot \hat{i}_x$ equivalent to?
+
+\textbf{Solution:} Since the magnitude of $\hat{i}_x$ is 1 and the projection of $\mathbf{r} = x \hat{i}_x + y \hat{i}_y + z \hat{i}_z$ onto the x-axis is $x$, we get:
+\begin{equation}
+    \mathbf{r} \cdot \hat{i}_x = x
+\end{equation}
+
+\section{Finding the Direction of Propagation and Phase Velocity}
+Given the instantaneous expression:
+\begin{equation}
+    \Phi(x,y,t) = 5 \cos(6 \pi \times 10^9 t - 10^4 x - 10^4 y)
+\end{equation}
+we determine the direction of propagation as follows:
+\begin{itemize}
+    \item Comparing with the general form $\Phi(x,y,t) = A \cos(\omega t - k_x x - k_y y)$, we get:
+    \begin{align}
+        k_x &= 10^4 \\
+        k_y &= 10^4
+    \end{align}
+    \item The propagation direction angle is:
+    \begin{equation}
+        \theta = \tan^{-1} \left( \frac{k_y}{k_x} \right) = 45^\circ
+    \end{equation}
+    \item The total wavenumber is:
+    \begin{equation}
+        k = \sqrt{k_x^2 + k_y^2} = 2 \times 10^4 \text{ rad/m}
+    \end{equation}
+    \item Given $\omega = 6 \pi \times 10^9$ rad/s, the phase velocity is:
+    \begin{equation}
+        v_p = \frac{\omega}{k} = 3 \times 10^8 \text{ m/s}
+    \end{equation}
+    indicating that the wave is an electromagnetic wave propagating in vacuum.
+\end{itemize}
+
+\section{Conclusion}
+\begin{itemize}
+    \item The UPW wave equation can be generalized for arbitrary propagation directions using the wave vector $\mathbf{k}$.
+    \item The dot product $\mathbf{k} \cdot \mathbf{r}$ helps determine the phase variation along the propagation direction.
+    \item The phase velocity and direction of propagation can be computed using vector components of the wavenumber.
+\end{itemize}
+
+\end{document}

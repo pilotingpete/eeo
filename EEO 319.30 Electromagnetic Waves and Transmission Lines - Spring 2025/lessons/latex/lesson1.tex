@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, graphicx}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{Lesson 1: Uniform Plane Harmonic Traveling Waves}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Key Learning Objectives}
+\begin{itemize}
+    \item Understand the concept of a uniform plane sinusoidal (harmonic) wave.
+    \item Define and quantify wave parameters: \textbf{amplitude (A), frequency (f), wavelength ($\lambda$)}.
+    \item Learn about \textbf{phase velocity (v$_p$)} and \textbf{group velocity (v$_g$)}.
+    \item Differentiate between \textbf{non-dispersive} and \textbf{dispersive} wave propagation.
+\end{itemize}
+
+\section{Uniform Plane Wave (UPW) Function}
+A traveling wave is described by the equation:
+\begin{equation}
+    \Phi(z,t) = A \cos(\omega t - k z)
+\end{equation}
+
+\subsection{Wave Parameters}
+\begin{align}
+    \omega &= 2\pi f \quad \text{(Angular frequency in radians/s)} \\
+    k &= \frac{2\pi}{\lambda} \quad \text{(Wavenumber in radians/m)} \\
+    T &= \frac{1}{f} \quad \text{(Time period in seconds)} \\
+    \lambda &= \frac{2\pi}{k} \quad \text{(Wavelength in meters)}
+\end{align}
+
+\section{Wave Propagation}
+\subsection{+z Propagation}
+If the wave propagates in the +z direction, it follows:
+\begin{equation}
+    \Phi(z,t) = A \cos(\omega t - k z)
+\end{equation}
+
+\subsection{-z Propagation}
+If the wave propagates in the -z direction, the function is:
+\begin{equation}
+    \Phi(z,t) = A \cos(\omega t + k z)
+\end{equation}
+
+\section{Phase Velocity}
+The phase velocity, \( v_p \), is the speed at which a constant phase point moves:
+\begin{equation}
+    v_p = \frac{\omega}{k}
+\end{equation}
+
+\section{Group Velocity}
+For a wave packet consisting of multiple waves, the group velocity \( v_g \) is given by:
+\begin{equation}
+    v_g = \frac{d\omega}{dk}
+\end{equation}
+
+\subsection{Key Insights}
+\begin{itemize}
+    \item \textbf{Phase velocity} (\( v_p \)) describes the motion of the wave profile.
+    \item \textbf{Group velocity} (\( v_g \)) describes the speed at which energy propagates.
+    \item In \textbf{nondispersive media}, \( v_p = v_g \).
+    \item In \textbf{dispersive media}, \( v_p \neq v_g \).
+\end{itemize}
+
+For electromagnetic waves in vacuum:
+\begin{equation}
+    v_p \cdot v_g = c^2
+\end{equation}
+where \( c \) is the speed of light in vacuum.
+
+\section{Wavefronts and Uniform Plane Waves}
+A \textbf{wavefront} is a surface of constant phase. Since \( \Phi(z,t) \) does not depend on \( x \) or \( y \), it remains uniform on any \( z = \text{constant} \) plane, defining a \textbf{uniform plane wave}.
+
+\section{Conclusion}
+\begin{itemize}
+    \item A wave is a periodic disturbance that moves with a well-defined velocity.
+    \item A \textbf{uniform plane wave (UPW)} is characterized by:
+    \begin{itemize}
+        \item Amplitude \( A \)
+        \item Frequency \( f \) (or angular frequency \( \omega \))
+        \item Wavelength \( \lambda \)
+    \end{itemize}
+    \item The \textbf{phase velocity} \( v_p \) determines wave profile motion, while the \textbf{group velocity} \( v_g \) dictates energy transport.
+    \item If \( v_p = v_g \), the wave propagates \textbf{nondispersively}; otherwise, it is \textbf{dispersive}.
+\end{itemize}
+
+\end{document}

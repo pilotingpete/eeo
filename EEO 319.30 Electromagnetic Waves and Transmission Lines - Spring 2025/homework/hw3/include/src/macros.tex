@@ -1,0 +1,137 @@
+% ===========================
+% Pete's Macros
+% ===========================
+
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{cancel}
+
+% === UNIT CONVERSION AND CANCELLATION ===
+
+% Define a macro for unit cancellation
+\newcommand{\unitcancel}[2]{\frac{#1 \cancel{#2}}{#2}}
+
+% Define a macro for unit conversion
+\newcommand{\convert}[3]{\frac{#1 \cancel{#2}}{#3}}
+
+% Define a macro for general equations (to make writing consistent)
+\newcommand{\eqn}[1]{\begin{align} #1 \end{align}}
+
+% === INCLUDING IMAGES ===
+
+% === Image Insertion Macro ===
+% Usage: \img{filename}{caption}{label}
+% 
+% #1 = Image file name
+% #2 = Caption text for the figure
+% #3 = Label for referencing (used with \ref{})
+\newcommand{\img}[3]{
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{#1}
+    \caption{#2}
+    \label{fig:#3}
+\end{figure}
+}
+
+
+% === CIRCUIT ANALYSIS ===
+
+\newcommand{\ohmslaw}{V = IR}
+\newcommand{\power}{P = VI}
+\newcommand{\powerR}{P = \frac{V^2}{R}}
+\newcommand{\powerI}{P = I^2 R}
+\newcommand{\impedance}{Z = R + jX}
+\newcommand{\admittance}{Y = \frac{1}{Z}}
+\newcommand{\xc}{X_C = \frac{1}{\omega C}}
+\newcommand{\xl}{X_L = \omega L}
+\newcommand{\voltagedivider}{V_{out} = V_{in} \times \frac{R_2}{R_1 + R_2}}
+\newcommand{\currentdivider}{I_{x} = I_{total} \times \frac{R_{total}}{R_x}}
+\newcommand{\kcl}{\sum I = 0}
+\newcommand{\kvl}{\sum V = 0}
+\newcommand{\vrms}{V_{rms} = \frac{V_{peak}}{\sqrt{2}}}
+\newcommand{\omegaeq}{\omega = 2\pi f}
+
+% === BATTERY MODELING AND MANAGEMENT ===
+
+\newcommand{\batteryECM}{V_{cell} = OCV - R_{int} I - V_{RC}}
+\newcommand{\batteryThermal}{Q = mC_p \frac{dT}{dt} + hA(T - T_{env})}
+\newcommand{\batterySOC}{SOC = SOC_0 - \int_0^t \frac{I}{C} dt}
+\newcommand{\batterySOH}{SOH = \frac{C_{actual}}{C_{nominal}} \times 100\%}
+\newcommand{\batteryPowerLimit}{P_{max} = \frac{V^2}{R}}
+\newcommand{\batteryAging}{C_{loss} = C_0 \left(1 - \frac{t}{t_{end}}\right)}
+\newcommand{\cellBalancing}{I_{bal} = \frac{V_{cell} - V_{target}}{R_{bal}}}
+
+% === POWER ELECTRONICS ===
+
+\newcommand{\dcdcGain}{V_{out} = V_{in} \times D}
+\newcommand{\buckVoltage}{V_{out} = D V_{in}}
+\newcommand{\boostVoltage}{V_{out} = \frac{V_{in}}{1 - D}}
+\newcommand{\bidirectionalDCDC}{P_{out} = P_{in} - P_{loss}}
+\newcommand{\powerFactorCorrection}{PF = \frac{P_{real}}{S}}
+\newcommand{\resonantFrequency}{f_r = \frac{1}{2\pi\sqrt{LC}}}
+
+% === MOTOR DRIVES ===
+
+\newcommand{\inductionTorque}{T = \frac{3}{2} P \frac{\phi I_r}{\omega_s}}
+\newcommand{\pmsmTorque}{T = \frac{3}{2} P \frac{\phi I_q}{\omega_s}}
+\newcommand{\synchronousSpeed}{N_s = \frac{120f}{P}}
+\newcommand{\rotorInductance}{L_r = L_m + L_{lr}}
+\newcommand{\dqTransform}{
+\begin{bmatrix} d \\ q \end{bmatrix} =
+\begin{bmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{bmatrix}
+\begin{bmatrix} \alpha \\ \beta \end{bmatrix}
+}
+
+% === CONTROL SYSTEMS ===
+
+\newcommand{\pid}{C(s) = K_p + K_i \frac{1}{s} + K_d s}
+\newcommand{\rootLocus}{\text{Plot of } 1 + G(s)H(s) = 0}
+\newcommand{\bodeGainMargin}{G_m = -1/\text{Gain at } \omega_c}
+\newcommand{\nyquist}{N = P - Z}
+\newcommand{\kalmanUpdate}{\hat{x}_k = \hat{x}_{k|k-1} + K_k (z_k - H\hat{x}_{k|k-1})}
+\newcommand{\statespace}{
+    \begin{cases}
+        \dot{x}(t) = Ax(t) + Bu(t) \\
+        y(t) = Cx(t) + Du(t)
+    \end{cases}
+}
+\newcommand{\mpc}{\min \sum_{k=0}^{N} (x_k^T Q x_k + u_k^T R u_k)}
+
+% === SYSTEM IDENTIFICATION ===
+
+\newcommand{\transferFunction}{H(s) = \frac{Y(s)}{U(s)}}
+\newcommand{\leastSquares}{\theta = (X^T X)^{-1} X^T Y}
+\newcommand{\stateEstimation}{\hat{x}_{k+1} = A \hat{x}_k + B u_k + K (y_k - C \hat{x}_k)}
+
+% === OPTIMIZATION AND ROBUST CONTROL ===
+
+\newcommand{\lqr}{J = \int_0^\infty (x^T Q x + u^T R u) dt}
+\newcommand{\hInfinity}{\min \max \|T_{zw}(s)\|_\infty}
+\newcommand{\convexOptimization}{\min f(x) \quad \text{subject to } g_i(x) \leq 0}
+
+% === EMBEDDED SYSTEMS ===
+
+\newcommand{\samplingTime}{T_s = \frac{1}{f_s}}
+\newcommand{\adcResolution}{V_{LSB} = \frac{V_{ref}}{2^N}}
+\newcommand{\pwmDutyCycle}{D = \frac{t_{on}}{t_{on} + t_{off}}}
+
+% === POWER SYSTEMS ===
+
+\newcommand{\powerBalance}{P_{in} = P_{out} + P_{loss}}
+\newcommand{\mppt}{\frac{dP}{dV} = 0}
+\newcommand{\gridInverter}{P = V I \cos \theta}
+
+% === PHASORS AND COMPLEX POWER ===
+
+\newcommand{\phasor}[2]{#1 \angle #2^\circ}
+\newcommand{\complexpower}{S = P + jQ}
+\newcommand{\powerfactor}{PF = \cos \theta}
+
+% Load macros only once
+\providecommand{\loadedmacros}{}
+\renewcommand{\loadedmacros}{loaded}
+
+% ===========================
+% End of Macros
+% ===========================
